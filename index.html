@@ -452,20 +452,20 @@ const VENDORS = [
     { name: "免洗筷", unit: "包", price: 25 },
     { name: "彎形湯匙", unit: "箱", price: 480 },
     { name: "邦提圈", unit: "包", price: 35 },
-    { name: "四兩-耐熱袋", unit: "包", price: 45 },
-    { name: "六兩-耐熱袋", unit: "包", price: 45 },
-    { name: "半斤-耐熱袋", unit: "包", price: 45 },
-    { name: "一斤-耐熱袋", unit: "包", price: 45 },
-    { name: "兩斤-耐熱袋", unit: "捲", price: 155 },
-    { name: "三斤-耐熱袋", unit: "捲", price: 155 },
-    { name: "五斤-耐熱袋", unit: "捲", price: 155 },
-    { name: "四兩-提袋", unit: "包", price: 25 },
-    { name: "半斤-提袋", unit: "包", price: 25 },
-    { name: "一斤-提袋", unit: "包", price: 25 },
-    { name: "兩斤-提袋", unit: "包", price: 25 },
-    { name: "三斤-提袋", unit: "包", price: 25 },
-    { name: "五斤-提袋", unit: "包", price: 25 },
-    { name: "七斤-提袋", unit: "包", price: 25 },
+    { name: "四兩-耐熱袋", unit: "包", price: 42 },
+    { name: "六兩-耐熱袋", unit: "包", price: 42 },
+    { name: "半斤-耐熱袋", unit: "包", price: 42 },
+    { name: "一斤-耐熱袋", unit: "包", price: 42 },
+    { name: "兩斤-耐熱袋", unit: "捲", price: 220 },
+    { name: "三斤-耐熱袋", unit: "捲", price: 220 },
+    { name: "五斤-耐熱袋", unit: "捲", price: 220 },
+    { name: "四兩-白花袋", unit: "包", price: 23, remark: "提袋" },
+    { name: "半斤-白花袋", unit: "包", price: 23, remark: "提袋" },
+    { name: "一斤-白花袋", unit: "包", price: 23, remark: "提袋" },
+    { name: "兩斤-白花袋", unit: "包", price: 23, remark: "提袋" },
+    { name: "三斤-白花袋", unit: "包", price: 23, remark: "提袋" },
+    { name: "五斤-白花袋", unit: "包", price: 23, remark: "提袋" },
+    { name: "七斤-白花袋", unit: "包", price: 45, remark: "提袋" },
     { name: "6吋防油紙墊", unit: "包", price: 100 },
     { name: "醬油碟", unit: "條", price: 65 },
     { name: "2號夾鏈袋", unit: "包", price: 12 },
@@ -654,324 +654,56 @@ const LEDGER_ONLY = [
 <div class="vendor-wrap" id="ledgerWrap" style="display: none;"><button class="vtab ledger-vtab active">雜貨-富陽行</button><button class="vtab ledger-vtab">台北-聯和</button><button class="vtab ledger-vtab">中壢-聯合</button><button class="vtab ledger-vtab">中壢-昇暉製麵</button><button class="vtab ledger-vtab">中壢-富昌</button><button class="vtab ledger-vtab">永溢麵食</button><button class="vtab ledger-vtab">三信蛋行</button><button class="vtab ledger-vtab">市場(阿潭)</button><button class="vtab ledger-vtab">其他費用</button><button class="vtab ledger-vtab">行銷費用</button><button class="vtab ledger-vtab vtab-takeout">🛍️ 外帶自取</button></div>
 
 <div class="content" id="orderPanel" style=""><div id="itemList"><div class="card">
-    <div class="card-head g"><div class="card-title g">雜貨-富陽行</div></div>
+    <div class="card-head g"><div class="card-title g">中壢-聯合</div></div>
     
-    <div class="icard-group"><button class="icard" id="ibtn-0-0" onclick="orderQuickAdd(0,0)">
-    <div class="icard-row1"><span class="icard-name">602扁碗</span></div>
-    <div class="icard-row2"><span class="icard-unit">箱</span><span class="icard-price">$1,000</span></div>
-    <span class="icard-remark" title="炒碗">炒碗</span>
-  </button><button class="icard" id="ibtn-0-1" onclick="orderQuickAdd(0,1)">
-    <div class="icard-row1"><span class="icard-name">C-165平蓋</span></div>
-    <div class="icard-row2"><span class="icard-unit">箱</span><span class="icard-price">$470</span></div>
-    <span class="icard-remark" title="炒碗(蓋)">炒碗(蓋)</span>
-  </button><button class="icard" id="ibtn-0-2" onclick="orderQuickAdd(0,2)">
-    <div class="icard-row1"><span class="icard-name">C-165凸蓋</span></div>
-    <div class="icard-row2"><span class="icard-unit">條</span><span class="icard-price">$75</span></div>
-    <span class="icard-remark" title="炸物(蓋)">炸物(蓋)</span>
-  </button><button class="icard" id="ibtn-0-3" onclick="orderQuickAdd(0,3)">
-    <div class="icard-row1"><span class="icard-name">750紙湯杯</span></div>
-    <div class="icard-row2"><span class="icard-unit">條</span><span class="icard-price">$60</span></div>
-    <span class="icard-remark" title="湯碗">湯碗</span>
-  </button><button class="icard" id="ibtn-0-4" onclick="orderQuickAdd(0,4)">
-    <div class="icard-row1"><span class="icard-name">750紙湯杯蓋</span></div>
-    <div class="icard-row2"><span class="icard-unit">條</span><span class="icard-price">$50</span></div>
-    <span class="icard-remark" title="湯碗(蓋)">湯碗(蓋)</span>
-  </button><button class="icard" id="ibtn-0-5" onclick="orderQuickAdd(0,5)">
-    <div class="icard-row1"><span class="icard-name">1000紙湯杯</span></div>
-    <div class="icard-row2"><span class="icard-unit">條</span><span class="icard-price">$100</span></div>
-    <span class="icard-remark" title="粥/湯麵碗">粥/湯麵碗</span>
-  </button><button class="icard" id="ibtn-0-6" onclick="orderQuickAdd(0,6)">
-    <div class="icard-row1"><span class="icard-name">850CC湯杯蓋</span></div>
-    <div class="icard-row2"><span class="icard-unit">條</span><span class="icard-price">$38</span></div>
-    <span class="icard-remark" title="粥/湯麵碗(蓋)">粥/湯麵碗(蓋)</span>
-  </button><button class="icard" id="ibtn-0-7" onclick="orderQuickAdd(0,7)">
-    <div class="icard-row1"><span class="icard-name">260紙湯杯</span></div>
-    <div class="icard-row2"><span class="icard-unit">條</span><span class="icard-price">$30</span></div>
-    <span class="icard-remark" title="白飯碗">白飯碗</span>
-  </button><button class="icard" id="ibtn-0-8" onclick="orderQuickAdd(0,8)">
-    <div class="icard-row1"><span class="icard-name">2632蓋</span></div>
-    <div class="icard-row2"><span class="icard-unit">條</span><span class="icard-price">$30</span></div>
-    <span class="icard-remark" title="白飯碗(蓋)">白飯碗(蓋)</span>
-  </button><button class="icard" id="ibtn-0-9" onclick="orderQuickAdd(0,9)">
-    <div class="icard-row1"><span class="icard-name">902圓碗</span></div>
-    <div class="icard-row2"><span class="icard-unit">條</span><span class="icard-price">$75</span></div>
-    <span class="icard-remark" title="深碗(加麵用)">深碗(加麵用)</span>
-  </button><button class="icard" id="ibtn-0-10" onclick="orderQuickAdd(0,10)">
-    <div class="icard-row1"><span class="icard-name">免洗筷</span></div>
-    <div class="icard-row2"><span class="icard-unit">包</span><span class="icard-price">$25</span></div>
-    
-  </button><button class="icard" id="ibtn-0-11" onclick="orderQuickAdd(0,11)">
-    <div class="icard-row1"><span class="icard-name">彎形湯匙</span></div>
-    <div class="icard-row2"><span class="icard-unit">箱</span><span class="icard-price">$480</span></div>
-    
-  </button><button class="icard" id="ibtn-0-12" onclick="orderQuickAdd(0,12)">
-    <div class="icard-row1"><span class="icard-name">邦提圈</span></div>
-    <div class="icard-row2"><span class="icard-unit">包</span><span class="icard-price">$30</span></div>
-    
-  </button><button class="icard" id="ibtn-0-13" onclick="orderQuickAdd(0,13)">
-    <div class="icard-row1"><span class="icard-name">四兩-耐熱袋</span></div>
-    <div class="icard-row2"><span class="icard-unit">包</span><span class="icard-price">$45</span></div>
-    
-  </button><button class="icard" id="ibtn-0-14" onclick="orderQuickAdd(0,14)">
-    <div class="icard-row1"><span class="icard-name">六兩-耐熱袋</span></div>
-    <div class="icard-row2"><span class="icard-unit">包</span><span class="icard-price">$45</span></div>
-    
-  </button><button class="icard" id="ibtn-0-15" onclick="orderQuickAdd(0,15)">
-    <div class="icard-row1"><span class="icard-name">半斤-耐熱袋</span></div>
-    <div class="icard-row2"><span class="icard-unit">包</span><span class="icard-price">$45</span></div>
-    
-  </button><button class="icard" id="ibtn-0-16" onclick="orderQuickAdd(0,16)">
-    <div class="icard-row1"><span class="icard-name">一斤-耐熱袋</span></div>
-    <div class="icard-row2"><span class="icard-unit">包</span><span class="icard-price">$45</span></div>
-    
-  </button><button class="icard" id="ibtn-0-17" onclick="orderQuickAdd(0,17)">
-    <div class="icard-row1"><span class="icard-name">兩斤-耐熱袋</span></div>
-    <div class="icard-row2"><span class="icard-unit">捲</span><span class="icard-price">$155</span></div>
-    
-  </button><button class="icard" id="ibtn-0-18" onclick="orderQuickAdd(0,18)">
-    <div class="icard-row1"><span class="icard-name">三斤-耐熱袋</span></div>
-    <div class="icard-row2"><span class="icard-unit">捲</span><span class="icard-price">$155</span></div>
-    
-  </button><button class="icard" id="ibtn-0-19" onclick="orderQuickAdd(0,19)">
-    <div class="icard-row1"><span class="icard-name">五斤-耐熱袋</span></div>
-    <div class="icard-row2"><span class="icard-unit">捲</span><span class="icard-price">$155</span></div>
-    
-  </button><button class="icard" id="ibtn-0-20" onclick="orderQuickAdd(0,20)">
-    <div class="icard-row1"><span class="icard-name">四兩-提袋</span></div>
-    <div class="icard-row2"><span class="icard-unit">包</span><span class="icard-price">$25</span></div>
-    
-  </button><button class="icard" id="ibtn-0-21" onclick="orderQuickAdd(0,21)">
-    <div class="icard-row1"><span class="icard-name">半斤-提袋</span></div>
-    <div class="icard-row2"><span class="icard-unit">包</span><span class="icard-price">$25</span></div>
-    
-  </button><button class="icard" id="ibtn-0-22" onclick="orderQuickAdd(0,22)">
-    <div class="icard-row1"><span class="icard-name">一斤-提袋</span></div>
-    <div class="icard-row2"><span class="icard-unit">包</span><span class="icard-price">$25</span></div>
-    
-  </button><button class="icard" id="ibtn-0-23" onclick="orderQuickAdd(0,23)">
-    <div class="icard-row1"><span class="icard-name">兩斤-提袋</span></div>
-    <div class="icard-row2"><span class="icard-unit">包</span><span class="icard-price">$25</span></div>
-    
-  </button><button class="icard" id="ibtn-0-24" onclick="orderQuickAdd(0,24)">
-    <div class="icard-row1"><span class="icard-name">三斤-提袋</span></div>
-    <div class="icard-row2"><span class="icard-unit">包</span><span class="icard-price">$25</span></div>
-    
-  </button><button class="icard" id="ibtn-0-25" onclick="orderQuickAdd(0,25)">
-    <div class="icard-row1"><span class="icard-name">五斤-提袋</span></div>
-    <div class="icard-row2"><span class="icard-unit">包</span><span class="icard-price">$25</span></div>
-    
-  </button><button class="icard" id="ibtn-0-26" onclick="orderQuickAdd(0,26)">
-    <div class="icard-row1"><span class="icard-name">七斤-提袋</span></div>
-    <div class="icard-row2"><span class="icard-unit">包</span><span class="icard-price">$25</span></div>
-    
-  </button><button class="icard" id="ibtn-0-27" onclick="orderQuickAdd(0,27)">
-    <div class="icard-row1"><span class="icard-name">6吋防油紙墊</span></div>
-    <div class="icard-row2"><span class="icard-unit">包</span><span class="icard-price">$100</span></div>
-    
-  </button><button class="icard" id="ibtn-0-28" onclick="orderQuickAdd(0,28)">
-    <div class="icard-row1"><span class="icard-name">醬油碟</span></div>
-    <div class="icard-row2"><span class="icard-unit">條</span><span class="icard-price">$65</span></div>
-    
-  </button><button class="icard" id="ibtn-0-29" onclick="orderQuickAdd(0,29)">
-    <div class="icard-row1"><span class="icard-name">2號夾鏈袋</span></div>
-    <div class="icard-row2"><span class="icard-unit">包</span><span class="icard-price">$12</span></div>
-    
-  </button><button class="icard" id="ibtn-0-30" onclick="orderQuickAdd(0,30)">
-    <div class="icard-row1"><span class="icard-name">國寶-美國米</span></div>
-    <div class="icard-row2"><span class="icard-unit">袋</span><span class="icard-price">$1,225</span></div>
-    
-  </button><button class="icard" id="ibtn-0-31" onclick="orderQuickAdd(0,31)">
-    <div class="icard-row1"><span class="icard-name">益康-沙拉油</span></div>
-    <div class="icard-row2"><span class="icard-unit">桶</span><span class="icard-price">$845</span></div>
-    
-  </button><button class="icard" id="ibtn-0-32" onclick="orderQuickAdd(0,32)">
-    <div class="icard-row1"><span class="icard-name">鹽巴</span></div>
-    <div class="icard-row2"><span class="icard-unit">包</span><span class="icard-price">$18</span></div>
-    
-  </button><button class="icard" id="ibtn-0-33" onclick="orderQuickAdd(0,33)">
-    <div class="icard-row1"><span class="icard-name">味精</span></div>
-    <div class="icard-row2"><span class="icard-unit">包</span><span class="icard-price">$85</span></div>
-    
-  </button><button class="icard" id="ibtn-0-34" onclick="orderQuickAdd(0,34)">
-    <div class="icard-row1"><span class="icard-name">油蔥酥</span></div>
-    <div class="icard-row2"><span class="icard-unit">包</span><span class="icard-price">$60</span></div>
-    
-  </button><button class="icard" id="ibtn-0-35" onclick="orderQuickAdd(0,35)">
-    <div class="icard-row1"><span class="icard-name">蒜頭酥</span></div>
-    <div class="icard-row2"><span class="icard-unit">包</span><span class="icard-price">$60</span></div>
-    
-  </button><button class="icard" id="ibtn-0-36" onclick="orderQuickAdd(0,36)">
-    <div class="icard-row1"><span class="icard-name">老公仔-胡椒粉</span></div>
-    <div class="icard-row2"><span class="icard-unit">盒</span><span class="icard-price">$120</span></div>
-    
-  </button><button class="icard" id="ibtn-0-37" onclick="orderQuickAdd(0,37)">
-    <div class="icard-row1"><span class="icard-name">老公仔-胡椒鹽粉</span></div>
-    <div class="icard-row2"><span class="icard-unit">盒</span><span class="icard-price">$190</span></div>
-    
-  </button><button class="icard" id="ibtn-0-38" onclick="orderQuickAdd(0,38)">
-    <div class="icard-row1"><span class="icard-name">辣椒粉</span></div>
-    <div class="icard-row2"><span class="icard-unit">包</span><span class="icard-price">$90</span></div>
-    
-  </button><button class="icard" id="ibtn-0-39" onclick="orderQuickAdd(0,39)">
-    <div class="icard-row1"><span class="icard-name">小磨坊-印度咖哩粉</span></div>
-    <div class="icard-row2"><span class="icard-unit">罐</span><span class="icard-price">$145</span></div>
-    
-  </button><button class="icard" id="ibtn-0-40" onclick="orderQuickAdd(0,40)">
-    <div class="icard-row1"><span class="icard-name">烹大師-鰹魚粉</span></div>
-    <div class="icard-row2"><span class="icard-unit">包</span><span class="icard-price">$290</span></div>
-    
-  </button><button class="icard" id="ibtn-0-41" onclick="orderQuickAdd(0,41)">
-    <div class="icard-row1"><span class="icard-name">金味王-醬油(10斤)</span></div>
-    <div class="icard-row2"><span class="icard-unit">桶</span><span class="icard-price">$220</span></div>
-    
-  </button><button class="icard" id="ibtn-0-42" onclick="orderQuickAdd(0,42)">
-    <div class="icard-row1"><span class="icard-name">金蘭-甘醇油膏(10斤)</span></div>
-    <div class="icard-row2"><span class="icard-unit">桶</span><span class="icard-price">$225</span></div>
-    
-  </button><button class="icard" id="ibtn-0-43" onclick="orderQuickAdd(0,43)">
-    <div class="icard-row1"><span class="icard-name">萬家鄉-香菇素蠔油(5L)</span></div>
-    <div class="icard-row2"><span class="icard-unit">桶</span><span class="icard-price">$250</span></div>
-    
-  </button><button class="icard" id="ibtn-0-44" onclick="orderQuickAdd(0,44)">
-    <div class="icard-row1"><span class="icard-name">牛頭牌-沙茶醬(3Kg)</span></div>
-    <div class="icard-row2"><span class="icard-unit">罐</span><span class="icard-price">$540</span></div>
-    
-  </button><button class="icard" id="ibtn-0-45" onclick="orderQuickAdd(0,45)">
-    <div class="icard-row1"><span class="icard-name">可果美-番茄醬(塑膠桶)</span></div>
-    <div class="icard-row2"><span class="icard-unit">瓶</span><span class="icard-price">$210</span></div>
-    
-  </button><button class="icard" id="ibtn-0-46" onclick="orderQuickAdd(0,46)">
-    <div class="icard-row1"><span class="icard-name">可果美-番茄醬(鐵桶)</span></div>
-    <div class="icard-row2"><span class="icard-unit">桶</span><span class="icard-price">$215</span></div>
-    
-  </button><button class="icard" id="ibtn-0-47" onclick="orderQuickAdd(0,47)">
-    <div class="icard-row1"><span class="icard-name">工研烏醋(600ml)</span></div>
-    <div class="icard-row2"><span class="icard-unit">瓶</span><span class="icard-price">$50</span></div>
-    
-  </button><button class="icard" id="ibtn-0-48" onclick="orderQuickAdd(0,48)">
-    <div class="icard-row1"><span class="icard-name">工研白醋(5L)</span></div>
-    <div class="icard-row2"><span class="icard-unit">瓶</span><span class="icard-price">$200</span></div>
-    
-  </button><button class="icard" id="ibtn-0-49" onclick="orderQuickAdd(0,49)">
-    <div class="icard-row1"><span class="icard-name">福華牌-泰雞醬</span></div>
-    <div class="icard-row2"><span class="icard-unit">瓶</span><span class="icard-price">$75</span></div>
-    
-  </button><button class="icard" id="ibtn-0-50" onclick="orderQuickAdd(0,50)">
-    <div class="icard-row1"><span class="icard-name">燈燦香油(3L)</span></div>
-    <div class="icard-row2"><span class="icard-unit">瓶</span><span class="icard-price">$270</span></div>
-    
-  </button><button class="icard" id="ibtn-0-51" onclick="orderQuickAdd(0,51)">
-    <div class="icard-row1"><span class="icard-name">豆瓣醬(2.8kg)</span></div>
-    <div class="icard-row2"><span class="icard-unit">桶</span><span class="icard-price">$130</span></div>
-    
-  </button><button class="icard" id="ibtn-0-52" onclick="orderQuickAdd(0,52)">
-    <div class="icard-row1"><span class="icard-name">飯友-切角鳳梨</span></div>
-    <div class="icard-row2"><span class="icard-unit">罐</span><span class="icard-price">$220</span></div>
-    
-  </button><button class="icard" id="ibtn-0-53" onclick="orderQuickAdd(0,53)">
-    <div class="icard-row1"><span class="icard-name">世宇-單顆沙拉</span></div>
-    <div class="icard-row2"><span class="icard-unit">顆</span><span class="icard-price">$50</span></div>
-    
-  </button><button class="icard" id="ibtn-0-54" onclick="orderQuickAdd(0,54)">
-    <div class="icard-row1"><span class="icard-name">圓紫菜</span></div>
-    <div class="icard-row2"><span class="icard-unit">包</span><span class="icard-price">$100</span></div>
-    
-  </button><button class="icard" id="ibtn-0-55" onclick="orderQuickAdd(0,55)">
-    <div class="icard-row1"><span class="icard-name">料理米酒(550ml)</span></div>
-    <div class="icard-row2"><span class="icard-unit">罐</span><span class="icard-price">$15</span></div>
-    
-  </button><button class="icard" id="ibtn-0-56" onclick="orderQuickAdd(0,56)">
-    <div class="icard-row1"><span class="icard-name">黑木耳絲(乾)</span></div>
-    <div class="icard-row2"><span class="icard-unit">包</span><span class="icard-price">$170</span></div>
-    
-  </button><button class="icard" id="ibtn-0-57" onclick="orderQuickAdd(0,57)">
-    <div class="icard-row1"><span class="icard-name">乾辣椒(切段)</span></div>
-    <div class="icard-row2"><span class="icard-unit">包</span><span class="icard-price">$180</span></div>
-    
-  </button><button class="icard" id="ibtn-0-58" onclick="orderQuickAdd(0,58)">
-    <div class="icard-row1"><span class="icard-name">辣油(2.4L)</span></div>
-    <div class="icard-row2"><span class="icard-unit">瓶</span><span class="icard-price">$210</span></div>
-    
-  </button><button class="icard" id="ibtn-0-59" onclick="orderQuickAdd(0,59)">
-    <div class="icard-row1"><span class="icard-name">八角粒</span></div>
-    <div class="icard-row2"><span class="icard-unit">包</span></div>
-    
-  </button><button class="icard" id="ibtn-0-60" onclick="orderQuickAdd(0,60)">
-    <div class="icard-row1"><span class="icard-name">花椒粒</span></div>
-    <div class="icard-row2"><span class="icard-unit">包</span></div>
-    
-  </button><button class="icard" id="ibtn-0-61" onclick="orderQuickAdd(0,61)">
-    <div class="icard-row1"><span class="icard-name">太白粉(5斤)</span></div>
-    <div class="icard-row2"><span class="icard-unit">包</span><span class="icard-price">$175</span></div>
-    
-  </button><button class="icard" id="ibtn-0-62" onclick="orderQuickAdd(0,62)">
-    <div class="icard-row1"><span class="icard-name">地瓜粉(5斤)</span></div>
-    <div class="icard-row2"><span class="icard-unit">包</span><span class="icard-price">$125</span></div>
-    
-  </button><button class="icard" id="ibtn-0-63" onclick="orderQuickAdd(0,63)">
-    <div class="icard-row1"><span class="icard-name">黏師傅</span></div>
-    <div class="icard-row2"><span class="icard-unit">包</span><span class="icard-price">$80</span></div>
-    
-  </button><button class="icard" id="ibtn-0-64" onclick="orderQuickAdd(0,64)">
-    <div class="icard-row1"><span class="icard-name">吉士粉</span></div>
-    <div class="icard-row2"><span class="icard-unit">包</span><span class="icard-price">$62</span></div>
-    
-  </button><button class="icard" id="ibtn-0-65" onclick="orderQuickAdd(0,65)">
-    <div class="icard-row1"><span class="icard-name">二號砂糖(5斤)</span></div>
-    <div class="icard-row2"><span class="icard-unit">包</span><span class="icard-price">$100</span></div>
-    
-  </button><button class="icard" id="ibtn-0-66" onclick="orderQuickAdd(0,66)">
-    <div class="icard-row1"><span class="icard-name">特砂(白糖)</span></div>
-    <div class="icard-row2"><span class="icard-unit">台斤</span></div>
-    
-  </button><button class="icard" id="ibtn-0-67" onclick="orderQuickAdd(0,67)">
-    <div class="icard-row1"><span class="icard-name">黑豆豉</span></div>
-    <div class="icard-row2"><span class="icard-unit">斤</span><span class="icard-price">$45</span></div>
-    
-  </button><button class="icard" id="ibtn-0-68" onclick="orderQuickAdd(0,68)">
-    <div class="icard-row1"><span class="icard-name">洗碗精</span></div>
-    <div class="icard-row2"><span class="icard-unit">罐</span><span class="icard-price">$55</span></div>
-    
-  </button><button class="icard" id="ibtn-0-69" onclick="orderQuickAdd(0,69)">
-    <div class="icard-row1"><span class="icard-name">漂白水</span></div>
-    <div class="icard-row2"><span class="icard-unit">罐</span><span class="icard-price">$65</span></div>
-    
-  </button><button class="icard" id="ibtn-0-70" onclick="orderQuickAdd(0,70)">
-    <div class="icard-row1"><span class="icard-name">去油劑</span></div>
-    <div class="icard-row2"><span class="icard-unit">罐</span><span class="icard-price">$220</span></div>
-    
-  </button><button class="icard" id="ibtn-0-71" onclick="orderQuickAdd(0,71)">
-    <div class="icard-row1"><span class="icard-name">礦泉水(1500ml)</span></div>
-    <div class="icard-row2"><span class="icard-unit">箱</span><span class="icard-price">$70</span></div>
-    
-  </button><button class="icard" id="ibtn-0-72" onclick="orderQuickAdd(0,72)">
-    <div class="icard-row1"><span class="icard-name">嫩精</span></div>
-    <div class="icard-row2"><span class="icard-unit">罐</span><span class="icard-price">$130</span></div>
-    
-  </button><button class="icard" id="ibtn-0-73" onclick="orderQuickAdd(0,73)">
-    <div class="icard-row1"><span class="icard-name">枸杞</span></div>
-    <div class="icard-row2"><span class="icard-unit">包</span><span class="icard-price">$195</span></div>
-    
-  </button><button class="icard" id="ibtn-0-74" onclick="orderQuickAdd(0,74)">
-    <div class="icard-row1"><span class="icard-name">人蔘鬚</span></div>
-    <div class="icard-row2"><span class="icard-unit">把</span><span class="icard-price">$75</span></div>
-    
-  </button><button class="icard" id="ibtn-0-75" onclick="orderQuickAdd(0,75)">
-    <div class="icard-row1"><span class="icard-name">冬粉翅</span></div>
+    <div class="icard-group"><button class="icard" id="ibtn-2-0" onclick="orderQuickAdd(2,0)">
+    <div class="icard-row1"><span class="icard-name">豬肉絲</span></div>
     <div class="icard-row2"><span class="icard-unit">包</span><span class="icard-price">$500</span></div>
     
-  </button><button class="icard" id="ibtn-0-76" onclick="orderQuickAdd(0,76)">
-    <div class="icard-row1"><span class="icard-name">熟白芝麻(半斤)</span></div>
-    <div class="icard-row2"><span class="icard-unit">包</span><span class="icard-price">$50</span></div>
+  </button><button class="icard" id="ibtn-2-1" onclick="orderQuickAdd(2,1)">
+    <div class="icard-row1"><span class="icard-name">牛炒片</span></div>
+    <div class="icard-row2"><span class="icard-unit">包</span><span class="icard-price">$660</span></div>
     
-  </button><button class="icard" id="ibtn-0-77" onclick="orderQuickAdd(0,77)">
-    <div class="icard-row1"><span class="icard-name">乳瑪琳(500g)</span></div>
-    <div class="icard-row2"><span class="icard-unit">罐</span><span class="icard-price">$125</span></div>
+  </button><button class="icard" id="ibtn-2-2" onclick="orderQuickAdd(2,2)">
+    <div class="icard-row1"><span class="icard-name">羊炒片</span></div>
+    <div class="icard-row2"><span class="icard-unit">包</span><span class="icard-price">$830</span></div>
+    
+  </button><button class="icard" id="ibtn-2-3" onclick="orderQuickAdd(2,3)">
+    <div class="icard-row1"><span class="icard-name">香腸片</span></div>
+    <div class="icard-row2"><span class="icard-unit">包</span><span class="icard-price">$380</span></div>
+    
+  </button><button class="icard" id="ibtn-2-4" onclick="orderQuickAdd(2,4)">
+    <div class="icard-row1"><span class="icard-name">白蝦仁</span></div>
+    <div class="icard-row2"><span class="icard-unit">包</span><span class="icard-price">$730</span></div>
+    
+  </button><button class="icard" id="ibtn-2-5" onclick="orderQuickAdd(2,5)">
+    <div class="icard-row1"><span class="icard-name">A大貢丸</span></div>
+    <div class="icard-row2"><span class="icard-unit">包</span><span class="icard-price">$450</span></div>
+    
+  </button><button class="icard" id="ibtn-2-6" onclick="orderQuickAdd(2,6)">
+    <div class="icard-row1"><span class="icard-name">鱈魚丸</span></div>
+    <div class="icard-row2"><span class="icard-unit">包</span><span class="icard-price">$350</span></div>
+    
+  </button><button class="icard" id="ibtn-2-7" onclick="orderQuickAdd(2,7)">
+    <div class="icard-row1"><span class="icard-name">虱目魚肚</span></div>
+    <div class="icard-row2"><span class="icard-unit">包</span><span class="icard-price">$65</span></div>
+    
+  </button><button class="icard" id="ibtn-2-8" onclick="orderQuickAdd(2,8)">
+    <div class="icard-row1"><span class="icard-name">玉米粒</span></div>
+    <div class="icard-row2"><span class="icard-unit">包</span><span class="icard-price">$70</span></div>
+    
+  </button><button class="icard" id="ibtn-2-9" onclick="orderQuickAdd(2,9)">
+    <div class="icard-row1"><span class="icard-name">雞胸清肉</span></div>
+    <div class="icard-row2"><span class="icard-unit">斤</span><span class="icard-price">$93</span></div>
+    
+  </button><button class="icard" id="ibtn-2-10" onclick="orderQuickAdd(2,10)">
+    <div class="icard-row1"><span class="icard-name">大雞腿</span></div>
+    <div class="icard-row2"><span class="icard-unit">斤</span><span class="icard-price">$75</span></div>
     
   </button></div></div><div class="card">
     <div class="col-hdr"><span class="cn">品項 / 備註</span><span class="cq">數量</span><span class="cd"></span></div>
-    <div id="order-rows-0"></div><div id="extra-section-0"></div><button class="add-btn g" onclick="addExtra(0)">＋ 新增臨時品項</button>
-    <div class="total-row"><span class="total-lbl">本廠商小計</span><span class="total-val g" id="vendor-sub-0">$0</span></div>
+    <div id="order-rows-2"></div><div id="extra-section-2"></div><button class="add-btn g" onclick="addExtra(2)">＋ 新增臨時品項</button>
+    <div class="total-row"><span class="total-lbl">本廠商小計</span><span class="total-val g" id="vendor-sub-2">$0</span></div>
   </div></div></div>
 <div class="ledger-wrap" id="ledgerPanel" style="display: none;"><div class="card">
     <div class="card-head a">
@@ -998,8 +730,8 @@ const LEDGER_ONLY = [
   </div></div>
 <div class="editor-wrap" id="editorPanel" style="display: none;"><div class="editor-tabs">
     <button class="etab" onclick="editorTab='shop';renderEditorContent()">🏪 店家資料</button>
-    <button class="etab" onclick="editorTab='vendors';renderEditorContent()">📦 廠商品項</button>
-    <button class="etab active" onclick="editorTab='ledger';renderEditorContent()">📒 記帳專屬</button>
+    <button class="etab active" onclick="editorTab='vendors';renderEditorContent()">📦 廠商品項</button>
+    <button class="etab" onclick="editorTab='ledger';renderEditorContent()">📒 記帳專屬</button>
   </div>
     <div class="download-bar">
       <div class="dl-desc">✅ 儲存並套用後，點此下載 HTML 檔案，可直接上傳到 GitHub</div>
@@ -1007,104 +739,1404 @@ const LEDGER_ONLY = [
     </div>
     <div class="tip-box">
     <strong>📝 使用說明</strong><br>
-    這裡是<strong>只在記帳出現</strong>的專屬群組（例如瓦斯、外帶自取）。<br>
-    叫貨廠商的品項請到「廠商品項」分頁修改。<br>
-    ⠿ 拖曳左側灰點可調整<strong>群組順序</strong>或<strong>品項順序</strong>。<br>
-    ⚠️「外帶自取」群組名稱請勿更改。
-  </div><div class="ed-vendor-card" id="edl-0" draggable="false" data-gi="0" data-dtype="ledger">
-      <div class="ed-vendor-head" onclick="toggleEdLedger(0)">
+    ✅ 這裡修改 → <strong>叫貨和記帳同步更新！</strong><br>
+    每筆品項有：品名（必填）、單位、價格、備註。<br>
+    ⠿ 拖曳左側灰點可調整<strong>廠商順序</strong>或<strong>品項順序</strong>。<br>
+    點廠商列可展開／收合，儲存後套用。
+  </div><div class="ed-vendor-card" id="edv-0" draggable="false" data-vi="0" data-dtype="vendor">
+      <div class="ed-vendor-head" onclick="toggleEdVendor(0)">
         <span class="drag-handle-vendor" onclick="event.stopPropagation()" title="拖曳排序">⠿</span>
-        <input class="ed-vendor-name-input" value="其他費用" placeholder="群組名稱" oninput="edLedgerOnly[0].group=this.value" onclick="event.stopPropagation()">
+        <input class="ed-vendor-name-input" value="雜貨-富陽行" placeholder="廠商名稱" oninput="edVendors[0].vendor=this.value" onclick="event.stopPropagation()">
+        <span class="ed-vendor-badge">78 項</span>
+        <button class="ed-del-vendor-btn" onclick="event.stopPropagation();edDelVendor(0)">✕ 刪除</button>
+        <span class="ed-vendor-toggle" id="edvt-0">▼</span>
+      </div>
+      <div class="ed-vendor-body" id="edvb-0">
+        <div class="ed-col-hdr">
+          <span class="ed-col-n">品名（必填）</span>
+          <span class="ed-col-u">單位</span>
+          <span class="ed-col-p">價格</span>
+          <span class="ed-col-nt">記帳名稱<br><small style="font-weight:400;color:#ccc">空白=同品名</small></span>
+          <span class="ed-col-rk">備註<br><small style="font-weight:400;color:#ccc">顯示在品項卡下方</small></span>
+          <span class="ed-col-d"></span>
+        </div>
+        <div id="edvi-0">
+      <div class="ed-item-row" id="editem-0-0" draggable="false" data-gi="0" data-ii="0" data-itype="vendor">
+        <span class="drag-handle" title="拖曳排序">⠿</span>
+        <input class="ed-item-name" value="602扁碗" placeholder="品名（必填）" oninput="edVendors[0].items[0].name=this.value">
+        <input class="ed-item-unit" value="箱" placeholder="單位" oninput="edVendors[0].items[0].unit=this.value">
+        <input class="ed-item-price" type="number" min="0" inputmode="decimal" value="1000" placeholder="價格" oninput="edVendors[0].items[0].price=parseFloat(this.value)||undefined">
+        <input class="ed-item-note" value="" placeholder="記帳名稱（空白=同品名）" oninput="edVendors[0].items[0].ledgerName=this.value||undefined">
+        <input class="ed-item-note" value="炒碗" placeholder="備註（選填）" style="border-color:#d1fae5;background:#f0fdf4" oninput="edVendors[0].items[0].remark=this.value||undefined">
+        <button class="ed-del-btn" onclick="edDelItem('vendor',0,0)">✕</button>
+      </div>
+      <div class="ed-item-row" id="editem-0-1" draggable="false" data-gi="0" data-ii="1" data-itype="vendor">
+        <span class="drag-handle" title="拖曳排序">⠿</span>
+        <input class="ed-item-name" value="C-165平蓋" placeholder="品名（必填）" oninput="edVendors[0].items[1].name=this.value">
+        <input class="ed-item-unit" value="箱" placeholder="單位" oninput="edVendors[0].items[1].unit=this.value">
+        <input class="ed-item-price" type="number" min="0" inputmode="decimal" value="470" placeholder="價格" oninput="edVendors[0].items[1].price=parseFloat(this.value)||undefined">
+        <input class="ed-item-note" value="" placeholder="記帳名稱（空白=同品名）" oninput="edVendors[0].items[1].ledgerName=this.value||undefined">
+        <input class="ed-item-note" value="炒碗(蓋)" placeholder="備註（選填）" style="border-color:#d1fae5;background:#f0fdf4" oninput="edVendors[0].items[1].remark=this.value||undefined">
+        <button class="ed-del-btn" onclick="edDelItem('vendor',0,1)">✕</button>
+      </div>
+      <div class="ed-item-row" id="editem-0-2" draggable="false" data-gi="0" data-ii="2" data-itype="vendor">
+        <span class="drag-handle" title="拖曳排序">⠿</span>
+        <input class="ed-item-name" value="C-165凸蓋" placeholder="品名（必填）" oninput="edVendors[0].items[2].name=this.value">
+        <input class="ed-item-unit" value="條" placeholder="單位" oninput="edVendors[0].items[2].unit=this.value">
+        <input class="ed-item-price" type="number" min="0" inputmode="decimal" value="75" placeholder="價格" oninput="edVendors[0].items[2].price=parseFloat(this.value)||undefined">
+        <input class="ed-item-note" value="" placeholder="記帳名稱（空白=同品名）" oninput="edVendors[0].items[2].ledgerName=this.value||undefined">
+        <input class="ed-item-note" value="炸物(蓋)" placeholder="備註（選填）" style="border-color:#d1fae5;background:#f0fdf4" oninput="edVendors[0].items[2].remark=this.value||undefined">
+        <button class="ed-del-btn" onclick="edDelItem('vendor',0,2)">✕</button>
+      </div>
+      <div class="ed-item-row" id="editem-0-3" draggable="false" data-gi="0" data-ii="3" data-itype="vendor">
+        <span class="drag-handle" title="拖曳排序">⠿</span>
+        <input class="ed-item-name" value="750紙湯杯" placeholder="品名（必填）" oninput="edVendors[0].items[3].name=this.value">
+        <input class="ed-item-unit" value="條" placeholder="單位" oninput="edVendors[0].items[3].unit=this.value">
+        <input class="ed-item-price" type="number" min="0" inputmode="decimal" value="60" placeholder="價格" oninput="edVendors[0].items[3].price=parseFloat(this.value)||undefined">
+        <input class="ed-item-note" value="" placeholder="記帳名稱（空白=同品名）" oninput="edVendors[0].items[3].ledgerName=this.value||undefined">
+        <input class="ed-item-note" value="湯碗" placeholder="備註（選填）" style="border-color:#d1fae5;background:#f0fdf4" oninput="edVendors[0].items[3].remark=this.value||undefined">
+        <button class="ed-del-btn" onclick="edDelItem('vendor',0,3)">✕</button>
+      </div>
+      <div class="ed-item-row" id="editem-0-4" draggable="false" data-gi="0" data-ii="4" data-itype="vendor">
+        <span class="drag-handle" title="拖曳排序">⠿</span>
+        <input class="ed-item-name" value="750紙湯杯蓋" placeholder="品名（必填）" oninput="edVendors[0].items[4].name=this.value">
+        <input class="ed-item-unit" value="條" placeholder="單位" oninput="edVendors[0].items[4].unit=this.value">
+        <input class="ed-item-price" type="number" min="0" inputmode="decimal" value="39" placeholder="價格" oninput="edVendors[0].items[4].price=parseFloat(this.value)||undefined">
+        <input class="ed-item-note" value="" placeholder="記帳名稱（空白=同品名）" oninput="edVendors[0].items[4].ledgerName=this.value||undefined">
+        <input class="ed-item-note" value="湯碗(蓋)" placeholder="備註（選填）" style="border-color:#d1fae5;background:#f0fdf4" oninput="edVendors[0].items[4].remark=this.value||undefined">
+        <button class="ed-del-btn" onclick="edDelItem('vendor',0,4)">✕</button>
+      </div>
+      <div class="ed-item-row" id="editem-0-5" draggable="false" data-gi="0" data-ii="5" data-itype="vendor">
+        <span class="drag-handle" title="拖曳排序">⠿</span>
+        <input class="ed-item-name" value="1000紙湯杯" placeholder="品名（必填）" oninput="edVendors[0].items[5].name=this.value">
+        <input class="ed-item-unit" value="條" placeholder="單位" oninput="edVendors[0].items[5].unit=this.value">
+        <input class="ed-item-price" type="number" min="0" inputmode="decimal" value="100" placeholder="價格" oninput="edVendors[0].items[5].price=parseFloat(this.value)||undefined">
+        <input class="ed-item-note" value="" placeholder="記帳名稱（空白=同品名）" oninput="edVendors[0].items[5].ledgerName=this.value||undefined">
+        <input class="ed-item-note" value="粥/湯麵碗" placeholder="備註（選填）" style="border-color:#d1fae5;background:#f0fdf4" oninput="edVendors[0].items[5].remark=this.value||undefined">
+        <button class="ed-del-btn" onclick="edDelItem('vendor',0,5)">✕</button>
+      </div>
+      <div class="ed-item-row" id="editem-0-6" draggable="false" data-gi="0" data-ii="6" data-itype="vendor">
+        <span class="drag-handle" title="拖曳排序">⠿</span>
+        <input class="ed-item-name" value="850CC湯杯蓋" placeholder="品名（必填）" oninput="edVendors[0].items[6].name=this.value">
+        <input class="ed-item-unit" value="條" placeholder="單位" oninput="edVendors[0].items[6].unit=this.value">
+        <input class="ed-item-price" type="number" min="0" inputmode="decimal" value="38" placeholder="價格" oninput="edVendors[0].items[6].price=parseFloat(this.value)||undefined">
+        <input class="ed-item-note" value="" placeholder="記帳名稱（空白=同品名）" oninput="edVendors[0].items[6].ledgerName=this.value||undefined">
+        <input class="ed-item-note" value="粥/湯麵碗(蓋)" placeholder="備註（選填）" style="border-color:#d1fae5;background:#f0fdf4" oninput="edVendors[0].items[6].remark=this.value||undefined">
+        <button class="ed-del-btn" onclick="edDelItem('vendor',0,6)">✕</button>
+      </div>
+      <div class="ed-item-row" id="editem-0-7" draggable="false" data-gi="0" data-ii="7" data-itype="vendor">
+        <span class="drag-handle" title="拖曳排序">⠿</span>
+        <input class="ed-item-name" value="260紙湯杯" placeholder="品名（必填）" oninput="edVendors[0].items[7].name=this.value">
+        <input class="ed-item-unit" value="條" placeholder="單位" oninput="edVendors[0].items[7].unit=this.value">
+        <input class="ed-item-price" type="number" min="0" inputmode="decimal" value="30" placeholder="價格" oninput="edVendors[0].items[7].price=parseFloat(this.value)||undefined">
+        <input class="ed-item-note" value="" placeholder="記帳名稱（空白=同品名）" oninput="edVendors[0].items[7].ledgerName=this.value||undefined">
+        <input class="ed-item-note" value="白飯碗" placeholder="備註（選填）" style="border-color:#d1fae5;background:#f0fdf4" oninput="edVendors[0].items[7].remark=this.value||undefined">
+        <button class="ed-del-btn" onclick="edDelItem('vendor',0,7)">✕</button>
+      </div>
+      <div class="ed-item-row" id="editem-0-8" draggable="false" data-gi="0" data-ii="8" data-itype="vendor">
+        <span class="drag-handle" title="拖曳排序">⠿</span>
+        <input class="ed-item-name" value="2632蓋" placeholder="品名（必填）" oninput="edVendors[0].items[8].name=this.value">
+        <input class="ed-item-unit" value="條" placeholder="單位" oninput="edVendors[0].items[8].unit=this.value">
+        <input class="ed-item-price" type="number" min="0" inputmode="decimal" value="30" placeholder="價格" oninput="edVendors[0].items[8].price=parseFloat(this.value)||undefined">
+        <input class="ed-item-note" value="" placeholder="記帳名稱（空白=同品名）" oninput="edVendors[0].items[8].ledgerName=this.value||undefined">
+        <input class="ed-item-note" value="白飯碗(蓋)" placeholder="備註（選填）" style="border-color:#d1fae5;background:#f0fdf4" oninput="edVendors[0].items[8].remark=this.value||undefined">
+        <button class="ed-del-btn" onclick="edDelItem('vendor',0,8)">✕</button>
+      </div>
+      <div class="ed-item-row" id="editem-0-9" draggable="false" data-gi="0" data-ii="9" data-itype="vendor">
+        <span class="drag-handle" title="拖曳排序">⠿</span>
+        <input class="ed-item-name" value="902圓碗" placeholder="品名（必填）" oninput="edVendors[0].items[9].name=this.value">
+        <input class="ed-item-unit" value="條" placeholder="單位" oninput="edVendors[0].items[9].unit=this.value">
+        <input class="ed-item-price" type="number" min="0" inputmode="decimal" value="75" placeholder="價格" oninput="edVendors[0].items[9].price=parseFloat(this.value)||undefined">
+        <input class="ed-item-note" value="" placeholder="記帳名稱（空白=同品名）" oninput="edVendors[0].items[9].ledgerName=this.value||undefined">
+        <input class="ed-item-note" value="深碗(加麵用)" placeholder="備註（選填）" style="border-color:#d1fae5;background:#f0fdf4" oninput="edVendors[0].items[9].remark=this.value||undefined">
+        <button class="ed-del-btn" onclick="edDelItem('vendor',0,9)">✕</button>
+      </div>
+      <div class="ed-item-row" id="editem-0-10" draggable="false" data-gi="0" data-ii="10" data-itype="vendor">
+        <span class="drag-handle" title="拖曳排序">⠿</span>
+        <input class="ed-item-name" value="免洗筷" placeholder="品名（必填）" oninput="edVendors[0].items[10].name=this.value">
+        <input class="ed-item-unit" value="包" placeholder="單位" oninput="edVendors[0].items[10].unit=this.value">
+        <input class="ed-item-price" type="number" min="0" inputmode="decimal" value="25" placeholder="價格" oninput="edVendors[0].items[10].price=parseFloat(this.value)||undefined">
+        <input class="ed-item-note" value="" placeholder="記帳名稱（空白=同品名）" oninput="edVendors[0].items[10].ledgerName=this.value||undefined">
+        <input class="ed-item-note" value="" placeholder="備註（選填）" style="border-color:#d1fae5;background:#f0fdf4" oninput="edVendors[0].items[10].remark=this.value||undefined">
+        <button class="ed-del-btn" onclick="edDelItem('vendor',0,10)">✕</button>
+      </div>
+      <div class="ed-item-row" id="editem-0-11" draggable="false" data-gi="0" data-ii="11" data-itype="vendor">
+        <span class="drag-handle" title="拖曳排序">⠿</span>
+        <input class="ed-item-name" value="彎形湯匙" placeholder="品名（必填）" oninput="edVendors[0].items[11].name=this.value">
+        <input class="ed-item-unit" value="箱" placeholder="單位" oninput="edVendors[0].items[11].unit=this.value">
+        <input class="ed-item-price" type="number" min="0" inputmode="decimal" value="480" placeholder="價格" oninput="edVendors[0].items[11].price=parseFloat(this.value)||undefined">
+        <input class="ed-item-note" value="" placeholder="記帳名稱（空白=同品名）" oninput="edVendors[0].items[11].ledgerName=this.value||undefined">
+        <input class="ed-item-note" value="" placeholder="備註（選填）" style="border-color:#d1fae5;background:#f0fdf4" oninput="edVendors[0].items[11].remark=this.value||undefined">
+        <button class="ed-del-btn" onclick="edDelItem('vendor',0,11)">✕</button>
+      </div>
+      <div class="ed-item-row" id="editem-0-12" draggable="false" data-gi="0" data-ii="12" data-itype="vendor">
+        <span class="drag-handle" title="拖曳排序">⠿</span>
+        <input class="ed-item-name" value="邦提圈" placeholder="品名（必填）" oninput="edVendors[0].items[12].name=this.value">
+        <input class="ed-item-unit" value="包" placeholder="單位" oninput="edVendors[0].items[12].unit=this.value">
+        <input class="ed-item-price" type="number" min="0" inputmode="decimal" value="35" placeholder="價格" oninput="edVendors[0].items[12].price=parseFloat(this.value)||undefined">
+        <input class="ed-item-note" value="" placeholder="記帳名稱（空白=同品名）" oninput="edVendors[0].items[12].ledgerName=this.value||undefined">
+        <input class="ed-item-note" value="" placeholder="備註（選填）" style="border-color:#d1fae5;background:#f0fdf4" oninput="edVendors[0].items[12].remark=this.value||undefined">
+        <button class="ed-del-btn" onclick="edDelItem('vendor',0,12)">✕</button>
+      </div>
+      <div class="ed-item-row" id="editem-0-13" draggable="false" data-gi="0" data-ii="13" data-itype="vendor">
+        <span class="drag-handle" title="拖曳排序">⠿</span>
+        <input class="ed-item-name" value="四兩-耐熱袋" placeholder="品名（必填）" oninput="edVendors[0].items[13].name=this.value">
+        <input class="ed-item-unit" value="包" placeholder="單位" oninput="edVendors[0].items[13].unit=this.value">
+        <input class="ed-item-price" type="number" min="0" inputmode="decimal" value="45" placeholder="價格" oninput="edVendors[0].items[13].price=parseFloat(this.value)||undefined">
+        <input class="ed-item-note" value="" placeholder="記帳名稱（空白=同品名）" oninput="edVendors[0].items[13].ledgerName=this.value||undefined">
+        <input class="ed-item-note" value="" placeholder="備註（選填）" style="border-color:#d1fae5;background:#f0fdf4" oninput="edVendors[0].items[13].remark=this.value||undefined">
+        <button class="ed-del-btn" onclick="edDelItem('vendor',0,13)">✕</button>
+      </div>
+      <div class="ed-item-row" id="editem-0-14" draggable="false" data-gi="0" data-ii="14" data-itype="vendor">
+        <span class="drag-handle" title="拖曳排序">⠿</span>
+        <input class="ed-item-name" value="六兩-耐熱袋" placeholder="品名（必填）" oninput="edVendors[0].items[14].name=this.value">
+        <input class="ed-item-unit" value="包" placeholder="單位" oninput="edVendors[0].items[14].unit=this.value">
+        <input class="ed-item-price" type="number" min="0" inputmode="decimal" value="45" placeholder="價格" oninput="edVendors[0].items[14].price=parseFloat(this.value)||undefined">
+        <input class="ed-item-note" value="" placeholder="記帳名稱（空白=同品名）" oninput="edVendors[0].items[14].ledgerName=this.value||undefined">
+        <input class="ed-item-note" value="" placeholder="備註（選填）" style="border-color:#d1fae5;background:#f0fdf4" oninput="edVendors[0].items[14].remark=this.value||undefined">
+        <button class="ed-del-btn" onclick="edDelItem('vendor',0,14)">✕</button>
+      </div>
+      <div class="ed-item-row" id="editem-0-15" draggable="false" data-gi="0" data-ii="15" data-itype="vendor">
+        <span class="drag-handle" title="拖曳排序">⠿</span>
+        <input class="ed-item-name" value="半斤-耐熱袋" placeholder="品名（必填）" oninput="edVendors[0].items[15].name=this.value">
+        <input class="ed-item-unit" value="包" placeholder="單位" oninput="edVendors[0].items[15].unit=this.value">
+        <input class="ed-item-price" type="number" min="0" inputmode="decimal" value="45" placeholder="價格" oninput="edVendors[0].items[15].price=parseFloat(this.value)||undefined">
+        <input class="ed-item-note" value="" placeholder="記帳名稱（空白=同品名）" oninput="edVendors[0].items[15].ledgerName=this.value||undefined">
+        <input class="ed-item-note" value="" placeholder="備註（選填）" style="border-color:#d1fae5;background:#f0fdf4" oninput="edVendors[0].items[15].remark=this.value||undefined">
+        <button class="ed-del-btn" onclick="edDelItem('vendor',0,15)">✕</button>
+      </div>
+      <div class="ed-item-row" id="editem-0-16" draggable="false" data-gi="0" data-ii="16" data-itype="vendor">
+        <span class="drag-handle" title="拖曳排序">⠿</span>
+        <input class="ed-item-name" value="一斤-耐熱袋" placeholder="品名（必填）" oninput="edVendors[0].items[16].name=this.value">
+        <input class="ed-item-unit" value="包" placeholder="單位" oninput="edVendors[0].items[16].unit=this.value">
+        <input class="ed-item-price" type="number" min="0" inputmode="decimal" value="45" placeholder="價格" oninput="edVendors[0].items[16].price=parseFloat(this.value)||undefined">
+        <input class="ed-item-note" value="" placeholder="記帳名稱（空白=同品名）" oninput="edVendors[0].items[16].ledgerName=this.value||undefined">
+        <input class="ed-item-note" value="" placeholder="備註（選填）" style="border-color:#d1fae5;background:#f0fdf4" oninput="edVendors[0].items[16].remark=this.value||undefined">
+        <button class="ed-del-btn" onclick="edDelItem('vendor',0,16)">✕</button>
+      </div>
+      <div class="ed-item-row" id="editem-0-17" draggable="false" data-gi="0" data-ii="17" data-itype="vendor">
+        <span class="drag-handle" title="拖曳排序">⠿</span>
+        <input class="ed-item-name" value="兩斤-耐熱袋" placeholder="品名（必填）" oninput="edVendors[0].items[17].name=this.value">
+        <input class="ed-item-unit" value="捲" placeholder="單位" oninput="edVendors[0].items[17].unit=this.value">
+        <input class="ed-item-price" type="number" min="0" inputmode="decimal" value="155" placeholder="價格" oninput="edVendors[0].items[17].price=parseFloat(this.value)||undefined">
+        <input class="ed-item-note" value="" placeholder="記帳名稱（空白=同品名）" oninput="edVendors[0].items[17].ledgerName=this.value||undefined">
+        <input class="ed-item-note" value="" placeholder="備註（選填）" style="border-color:#d1fae5;background:#f0fdf4" oninput="edVendors[0].items[17].remark=this.value||undefined">
+        <button class="ed-del-btn" onclick="edDelItem('vendor',0,17)">✕</button>
+      </div>
+      <div class="ed-item-row" id="editem-0-18" draggable="false" data-gi="0" data-ii="18" data-itype="vendor">
+        <span class="drag-handle" title="拖曳排序">⠿</span>
+        <input class="ed-item-name" value="三斤-耐熱袋" placeholder="品名（必填）" oninput="edVendors[0].items[18].name=this.value">
+        <input class="ed-item-unit" value="捲" placeholder="單位" oninput="edVendors[0].items[18].unit=this.value">
+        <input class="ed-item-price" type="number" min="0" inputmode="decimal" value="155" placeholder="價格" oninput="edVendors[0].items[18].price=parseFloat(this.value)||undefined">
+        <input class="ed-item-note" value="" placeholder="記帳名稱（空白=同品名）" oninput="edVendors[0].items[18].ledgerName=this.value||undefined">
+        <input class="ed-item-note" value="" placeholder="備註（選填）" style="border-color:#d1fae5;background:#f0fdf4" oninput="edVendors[0].items[18].remark=this.value||undefined">
+        <button class="ed-del-btn" onclick="edDelItem('vendor',0,18)">✕</button>
+      </div>
+      <div class="ed-item-row" id="editem-0-19" draggable="false" data-gi="0" data-ii="19" data-itype="vendor">
+        <span class="drag-handle" title="拖曳排序">⠿</span>
+        <input class="ed-item-name" value="五斤-耐熱袋" placeholder="品名（必填）" oninput="edVendors[0].items[19].name=this.value">
+        <input class="ed-item-unit" value="捲" placeholder="單位" oninput="edVendors[0].items[19].unit=this.value">
+        <input class="ed-item-price" type="number" min="0" inputmode="decimal" value="155" placeholder="價格" oninput="edVendors[0].items[19].price=parseFloat(this.value)||undefined">
+        <input class="ed-item-note" value="" placeholder="記帳名稱（空白=同品名）" oninput="edVendors[0].items[19].ledgerName=this.value||undefined">
+        <input class="ed-item-note" value="" placeholder="備註（選填）" style="border-color:#d1fae5;background:#f0fdf4" oninput="edVendors[0].items[19].remark=this.value||undefined">
+        <button class="ed-del-btn" onclick="edDelItem('vendor',0,19)">✕</button>
+      </div>
+      <div class="ed-item-row" id="editem-0-20" draggable="false" data-gi="0" data-ii="20" data-itype="vendor">
+        <span class="drag-handle" title="拖曳排序">⠿</span>
+        <input class="ed-item-name" value="四兩-提袋" placeholder="品名（必填）" oninput="edVendors[0].items[20].name=this.value">
+        <input class="ed-item-unit" value="包" placeholder="單位" oninput="edVendors[0].items[20].unit=this.value">
+        <input class="ed-item-price" type="number" min="0" inputmode="decimal" value="25" placeholder="價格" oninput="edVendors[0].items[20].price=parseFloat(this.value)||undefined">
+        <input class="ed-item-note" value="" placeholder="記帳名稱（空白=同品名）" oninput="edVendors[0].items[20].ledgerName=this.value||undefined">
+        <input class="ed-item-note" value="" placeholder="備註（選填）" style="border-color:#d1fae5;background:#f0fdf4" oninput="edVendors[0].items[20].remark=this.value||undefined">
+        <button class="ed-del-btn" onclick="edDelItem('vendor',0,20)">✕</button>
+      </div>
+      <div class="ed-item-row" id="editem-0-21" draggable="false" data-gi="0" data-ii="21" data-itype="vendor">
+        <span class="drag-handle" title="拖曳排序">⠿</span>
+        <input class="ed-item-name" value="半斤-提袋" placeholder="品名（必填）" oninput="edVendors[0].items[21].name=this.value">
+        <input class="ed-item-unit" value="包" placeholder="單位" oninput="edVendors[0].items[21].unit=this.value">
+        <input class="ed-item-price" type="number" min="0" inputmode="decimal" value="25" placeholder="價格" oninput="edVendors[0].items[21].price=parseFloat(this.value)||undefined">
+        <input class="ed-item-note" value="" placeholder="記帳名稱（空白=同品名）" oninput="edVendors[0].items[21].ledgerName=this.value||undefined">
+        <input class="ed-item-note" value="" placeholder="備註（選填）" style="border-color:#d1fae5;background:#f0fdf4" oninput="edVendors[0].items[21].remark=this.value||undefined">
+        <button class="ed-del-btn" onclick="edDelItem('vendor',0,21)">✕</button>
+      </div>
+      <div class="ed-item-row" id="editem-0-22" draggable="false" data-gi="0" data-ii="22" data-itype="vendor">
+        <span class="drag-handle" title="拖曳排序">⠿</span>
+        <input class="ed-item-name" value="一斤-提袋" placeholder="品名（必填）" oninput="edVendors[0].items[22].name=this.value">
+        <input class="ed-item-unit" value="包" placeholder="單位" oninput="edVendors[0].items[22].unit=this.value">
+        <input class="ed-item-price" type="number" min="0" inputmode="decimal" value="25" placeholder="價格" oninput="edVendors[0].items[22].price=parseFloat(this.value)||undefined">
+        <input class="ed-item-note" value="" placeholder="記帳名稱（空白=同品名）" oninput="edVendors[0].items[22].ledgerName=this.value||undefined">
+        <input class="ed-item-note" value="" placeholder="備註（選填）" style="border-color:#d1fae5;background:#f0fdf4" oninput="edVendors[0].items[22].remark=this.value||undefined">
+        <button class="ed-del-btn" onclick="edDelItem('vendor',0,22)">✕</button>
+      </div>
+      <div class="ed-item-row" id="editem-0-23" draggable="false" data-gi="0" data-ii="23" data-itype="vendor">
+        <span class="drag-handle" title="拖曳排序">⠿</span>
+        <input class="ed-item-name" value="兩斤-提袋" placeholder="品名（必填）" oninput="edVendors[0].items[23].name=this.value">
+        <input class="ed-item-unit" value="包" placeholder="單位" oninput="edVendors[0].items[23].unit=this.value">
+        <input class="ed-item-price" type="number" min="0" inputmode="decimal" value="25" placeholder="價格" oninput="edVendors[0].items[23].price=parseFloat(this.value)||undefined">
+        <input class="ed-item-note" value="" placeholder="記帳名稱（空白=同品名）" oninput="edVendors[0].items[23].ledgerName=this.value||undefined">
+        <input class="ed-item-note" value="" placeholder="備註（選填）" style="border-color:#d1fae5;background:#f0fdf4" oninput="edVendors[0].items[23].remark=this.value||undefined">
+        <button class="ed-del-btn" onclick="edDelItem('vendor',0,23)">✕</button>
+      </div>
+      <div class="ed-item-row" id="editem-0-24" draggable="false" data-gi="0" data-ii="24" data-itype="vendor">
+        <span class="drag-handle" title="拖曳排序">⠿</span>
+        <input class="ed-item-name" value="三斤-提袋" placeholder="品名（必填）" oninput="edVendors[0].items[24].name=this.value">
+        <input class="ed-item-unit" value="包" placeholder="單位" oninput="edVendors[0].items[24].unit=this.value">
+        <input class="ed-item-price" type="number" min="0" inputmode="decimal" value="25" placeholder="價格" oninput="edVendors[0].items[24].price=parseFloat(this.value)||undefined">
+        <input class="ed-item-note" value="" placeholder="記帳名稱（空白=同品名）" oninput="edVendors[0].items[24].ledgerName=this.value||undefined">
+        <input class="ed-item-note" value="" placeholder="備註（選填）" style="border-color:#d1fae5;background:#f0fdf4" oninput="edVendors[0].items[24].remark=this.value||undefined">
+        <button class="ed-del-btn" onclick="edDelItem('vendor',0,24)">✕</button>
+      </div>
+      <div class="ed-item-row" id="editem-0-25" draggable="false" data-gi="0" data-ii="25" data-itype="vendor">
+        <span class="drag-handle" title="拖曳排序">⠿</span>
+        <input class="ed-item-name" value="五斤-提袋" placeholder="品名（必填）" oninput="edVendors[0].items[25].name=this.value">
+        <input class="ed-item-unit" value="包" placeholder="單位" oninput="edVendors[0].items[25].unit=this.value">
+        <input class="ed-item-price" type="number" min="0" inputmode="decimal" value="25" placeholder="價格" oninput="edVendors[0].items[25].price=parseFloat(this.value)||undefined">
+        <input class="ed-item-note" value="" placeholder="記帳名稱（空白=同品名）" oninput="edVendors[0].items[25].ledgerName=this.value||undefined">
+        <input class="ed-item-note" value="" placeholder="備註（選填）" style="border-color:#d1fae5;background:#f0fdf4" oninput="edVendors[0].items[25].remark=this.value||undefined">
+        <button class="ed-del-btn" onclick="edDelItem('vendor',0,25)">✕</button>
+      </div>
+      <div class="ed-item-row" id="editem-0-26" draggable="false" data-gi="0" data-ii="26" data-itype="vendor">
+        <span class="drag-handle" title="拖曳排序">⠿</span>
+        <input class="ed-item-name" value="七斤-提袋" placeholder="品名（必填）" oninput="edVendors[0].items[26].name=this.value">
+        <input class="ed-item-unit" value="包" placeholder="單位" oninput="edVendors[0].items[26].unit=this.value">
+        <input class="ed-item-price" type="number" min="0" inputmode="decimal" value="25" placeholder="價格" oninput="edVendors[0].items[26].price=parseFloat(this.value)||undefined">
+        <input class="ed-item-note" value="" placeholder="記帳名稱（空白=同品名）" oninput="edVendors[0].items[26].ledgerName=this.value||undefined">
+        <input class="ed-item-note" value="" placeholder="備註（選填）" style="border-color:#d1fae5;background:#f0fdf4" oninput="edVendors[0].items[26].remark=this.value||undefined">
+        <button class="ed-del-btn" onclick="edDelItem('vendor',0,26)">✕</button>
+      </div>
+      <div class="ed-item-row" id="editem-0-27" draggable="false" data-gi="0" data-ii="27" data-itype="vendor">
+        <span class="drag-handle" title="拖曳排序">⠿</span>
+        <input class="ed-item-name" value="6吋防油紙墊" placeholder="品名（必填）" oninput="edVendors[0].items[27].name=this.value">
+        <input class="ed-item-unit" value="包" placeholder="單位" oninput="edVendors[0].items[27].unit=this.value">
+        <input class="ed-item-price" type="number" min="0" inputmode="decimal" value="100" placeholder="價格" oninput="edVendors[0].items[27].price=parseFloat(this.value)||undefined">
+        <input class="ed-item-note" value="" placeholder="記帳名稱（空白=同品名）" oninput="edVendors[0].items[27].ledgerName=this.value||undefined">
+        <input class="ed-item-note" value="" placeholder="備註（選填）" style="border-color:#d1fae5;background:#f0fdf4" oninput="edVendors[0].items[27].remark=this.value||undefined">
+        <button class="ed-del-btn" onclick="edDelItem('vendor',0,27)">✕</button>
+      </div>
+      <div class="ed-item-row" id="editem-0-28" draggable="false" data-gi="0" data-ii="28" data-itype="vendor">
+        <span class="drag-handle" title="拖曳排序">⠿</span>
+        <input class="ed-item-name" value="醬油碟" placeholder="品名（必填）" oninput="edVendors[0].items[28].name=this.value">
+        <input class="ed-item-unit" value="條" placeholder="單位" oninput="edVendors[0].items[28].unit=this.value">
+        <input class="ed-item-price" type="number" min="0" inputmode="decimal" value="65" placeholder="價格" oninput="edVendors[0].items[28].price=parseFloat(this.value)||undefined">
+        <input class="ed-item-note" value="" placeholder="記帳名稱（空白=同品名）" oninput="edVendors[0].items[28].ledgerName=this.value||undefined">
+        <input class="ed-item-note" value="" placeholder="備註（選填）" style="border-color:#d1fae5;background:#f0fdf4" oninput="edVendors[0].items[28].remark=this.value||undefined">
+        <button class="ed-del-btn" onclick="edDelItem('vendor',0,28)">✕</button>
+      </div>
+      <div class="ed-item-row" id="editem-0-29" draggable="false" data-gi="0" data-ii="29" data-itype="vendor">
+        <span class="drag-handle" title="拖曳排序">⠿</span>
+        <input class="ed-item-name" value="2號夾鏈袋" placeholder="品名（必填）" oninput="edVendors[0].items[29].name=this.value">
+        <input class="ed-item-unit" value="包" placeholder="單位" oninput="edVendors[0].items[29].unit=this.value">
+        <input class="ed-item-price" type="number" min="0" inputmode="decimal" value="12" placeholder="價格" oninput="edVendors[0].items[29].price=parseFloat(this.value)||undefined">
+        <input class="ed-item-note" value="" placeholder="記帳名稱（空白=同品名）" oninput="edVendors[0].items[29].ledgerName=this.value||undefined">
+        <input class="ed-item-note" value="" placeholder="備註（選填）" style="border-color:#d1fae5;background:#f0fdf4" oninput="edVendors[0].items[29].remark=this.value||undefined">
+        <button class="ed-del-btn" onclick="edDelItem('vendor',0,29)">✕</button>
+      </div>
+      <div class="ed-item-row" id="editem-0-30" draggable="false" data-gi="0" data-ii="30" data-itype="vendor">
+        <span class="drag-handle" title="拖曳排序">⠿</span>
+        <input class="ed-item-name" value="國寶-美國米" placeholder="品名（必填）" oninput="edVendors[0].items[30].name=this.value">
+        <input class="ed-item-unit" value="袋" placeholder="單位" oninput="edVendors[0].items[30].unit=this.value">
+        <input class="ed-item-price" type="number" min="0" inputmode="decimal" value="1225" placeholder="價格" oninput="edVendors[0].items[30].price=parseFloat(this.value)||undefined">
+        <input class="ed-item-note" value="" placeholder="記帳名稱（空白=同品名）" oninput="edVendors[0].items[30].ledgerName=this.value||undefined">
+        <input class="ed-item-note" value="" placeholder="備註（選填）" style="border-color:#d1fae5;background:#f0fdf4" oninput="edVendors[0].items[30].remark=this.value||undefined">
+        <button class="ed-del-btn" onclick="edDelItem('vendor',0,30)">✕</button>
+      </div>
+      <div class="ed-item-row" id="editem-0-31" draggable="false" data-gi="0" data-ii="31" data-itype="vendor">
+        <span class="drag-handle" title="拖曳排序">⠿</span>
+        <input class="ed-item-name" value="益康-沙拉油" placeholder="品名（必填）" oninput="edVendors[0].items[31].name=this.value">
+        <input class="ed-item-unit" value="桶" placeholder="單位" oninput="edVendors[0].items[31].unit=this.value">
+        <input class="ed-item-price" type="number" min="0" inputmode="decimal" value="860" placeholder="價格" oninput="edVendors[0].items[31].price=parseFloat(this.value)||undefined">
+        <input class="ed-item-note" value="" placeholder="記帳名稱（空白=同品名）" oninput="edVendors[0].items[31].ledgerName=this.value||undefined">
+        <input class="ed-item-note" value="" placeholder="備註（選填）" style="border-color:#d1fae5;background:#f0fdf4" oninput="edVendors[0].items[31].remark=this.value||undefined">
+        <button class="ed-del-btn" onclick="edDelItem('vendor',0,31)">✕</button>
+      </div>
+      <div class="ed-item-row" id="editem-0-32" draggable="false" data-gi="0" data-ii="32" data-itype="vendor">
+        <span class="drag-handle" title="拖曳排序">⠿</span>
+        <input class="ed-item-name" value="鹽巴" placeholder="品名（必填）" oninput="edVendors[0].items[32].name=this.value">
+        <input class="ed-item-unit" value="包" placeholder="單位" oninput="edVendors[0].items[32].unit=this.value">
+        <input class="ed-item-price" type="number" min="0" inputmode="decimal" value="18" placeholder="價格" oninput="edVendors[0].items[32].price=parseFloat(this.value)||undefined">
+        <input class="ed-item-note" value="" placeholder="記帳名稱（空白=同品名）" oninput="edVendors[0].items[32].ledgerName=this.value||undefined">
+        <input class="ed-item-note" value="" placeholder="備註（選填）" style="border-color:#d1fae5;background:#f0fdf4" oninput="edVendors[0].items[32].remark=this.value||undefined">
+        <button class="ed-del-btn" onclick="edDelItem('vendor',0,32)">✕</button>
+      </div>
+      <div class="ed-item-row" id="editem-0-33" draggable="false" data-gi="0" data-ii="33" data-itype="vendor">
+        <span class="drag-handle" title="拖曳排序">⠿</span>
+        <input class="ed-item-name" value="味精" placeholder="品名（必填）" oninput="edVendors[0].items[33].name=this.value">
+        <input class="ed-item-unit" value="包" placeholder="單位" oninput="edVendors[0].items[33].unit=this.value">
+        <input class="ed-item-price" type="number" min="0" inputmode="decimal" value="85" placeholder="價格" oninput="edVendors[0].items[33].price=parseFloat(this.value)||undefined">
+        <input class="ed-item-note" value="" placeholder="記帳名稱（空白=同品名）" oninput="edVendors[0].items[33].ledgerName=this.value||undefined">
+        <input class="ed-item-note" value="" placeholder="備註（選填）" style="border-color:#d1fae5;background:#f0fdf4" oninput="edVendors[0].items[33].remark=this.value||undefined">
+        <button class="ed-del-btn" onclick="edDelItem('vendor',0,33)">✕</button>
+      </div>
+      <div class="ed-item-row" id="editem-0-34" draggable="false" data-gi="0" data-ii="34" data-itype="vendor">
+        <span class="drag-handle" title="拖曳排序">⠿</span>
+        <input class="ed-item-name" value="油蔥酥" placeholder="品名（必填）" oninput="edVendors[0].items[34].name=this.value">
+        <input class="ed-item-unit" value="包" placeholder="單位" oninput="edVendors[0].items[34].unit=this.value">
+        <input class="ed-item-price" type="number" min="0" inputmode="decimal" value="60" placeholder="價格" oninput="edVendors[0].items[34].price=parseFloat(this.value)||undefined">
+        <input class="ed-item-note" value="" placeholder="記帳名稱（空白=同品名）" oninput="edVendors[0].items[34].ledgerName=this.value||undefined">
+        <input class="ed-item-note" value="" placeholder="備註（選填）" style="border-color:#d1fae5;background:#f0fdf4" oninput="edVendors[0].items[34].remark=this.value||undefined">
+        <button class="ed-del-btn" onclick="edDelItem('vendor',0,34)">✕</button>
+      </div>
+      <div class="ed-item-row" id="editem-0-35" draggable="false" data-gi="0" data-ii="35" data-itype="vendor">
+        <span class="drag-handle" title="拖曳排序">⠿</span>
+        <input class="ed-item-name" value="蒜頭酥" placeholder="品名（必填）" oninput="edVendors[0].items[35].name=this.value">
+        <input class="ed-item-unit" value="包" placeholder="單位" oninput="edVendors[0].items[35].unit=this.value">
+        <input class="ed-item-price" type="number" min="0" inputmode="decimal" value="60" placeholder="價格" oninput="edVendors[0].items[35].price=parseFloat(this.value)||undefined">
+        <input class="ed-item-note" value="" placeholder="記帳名稱（空白=同品名）" oninput="edVendors[0].items[35].ledgerName=this.value||undefined">
+        <input class="ed-item-note" value="" placeholder="備註（選填）" style="border-color:#d1fae5;background:#f0fdf4" oninput="edVendors[0].items[35].remark=this.value||undefined">
+        <button class="ed-del-btn" onclick="edDelItem('vendor',0,35)">✕</button>
+      </div>
+      <div class="ed-item-row" id="editem-0-36" draggable="false" data-gi="0" data-ii="36" data-itype="vendor">
+        <span class="drag-handle" title="拖曳排序">⠿</span>
+        <input class="ed-item-name" value="老公仔-胡椒粉" placeholder="品名（必填）" oninput="edVendors[0].items[36].name=this.value">
+        <input class="ed-item-unit" value="盒" placeholder="單位" oninput="edVendors[0].items[36].unit=this.value">
+        <input class="ed-item-price" type="number" min="0" inputmode="decimal" value="120" placeholder="價格" oninput="edVendors[0].items[36].price=parseFloat(this.value)||undefined">
+        <input class="ed-item-note" value="" placeholder="記帳名稱（空白=同品名）" oninput="edVendors[0].items[36].ledgerName=this.value||undefined">
+        <input class="ed-item-note" value="" placeholder="備註（選填）" style="border-color:#d1fae5;background:#f0fdf4" oninput="edVendors[0].items[36].remark=this.value||undefined">
+        <button class="ed-del-btn" onclick="edDelItem('vendor',0,36)">✕</button>
+      </div>
+      <div class="ed-item-row" id="editem-0-37" draggable="false" data-gi="0" data-ii="37" data-itype="vendor">
+        <span class="drag-handle" title="拖曳排序">⠿</span>
+        <input class="ed-item-name" value="老公仔-胡椒鹽粉" placeholder="品名（必填）" oninput="edVendors[0].items[37].name=this.value">
+        <input class="ed-item-unit" value="盒" placeholder="單位" oninput="edVendors[0].items[37].unit=this.value">
+        <input class="ed-item-price" type="number" min="0" inputmode="decimal" value="190" placeholder="價格" oninput="edVendors[0].items[37].price=parseFloat(this.value)||undefined">
+        <input class="ed-item-note" value="" placeholder="記帳名稱（空白=同品名）" oninput="edVendors[0].items[37].ledgerName=this.value||undefined">
+        <input class="ed-item-note" value="" placeholder="備註（選填）" style="border-color:#d1fae5;background:#f0fdf4" oninput="edVendors[0].items[37].remark=this.value||undefined">
+        <button class="ed-del-btn" onclick="edDelItem('vendor',0,37)">✕</button>
+      </div>
+      <div class="ed-item-row" id="editem-0-38" draggable="false" data-gi="0" data-ii="38" data-itype="vendor">
+        <span class="drag-handle" title="拖曳排序">⠿</span>
+        <input class="ed-item-name" value="辣椒粉" placeholder="品名（必填）" oninput="edVendors[0].items[38].name=this.value">
+        <input class="ed-item-unit" value="包" placeholder="單位" oninput="edVendors[0].items[38].unit=this.value">
+        <input class="ed-item-price" type="number" min="0" inputmode="decimal" value="90" placeholder="價格" oninput="edVendors[0].items[38].price=parseFloat(this.value)||undefined">
+        <input class="ed-item-note" value="" placeholder="記帳名稱（空白=同品名）" oninput="edVendors[0].items[38].ledgerName=this.value||undefined">
+        <input class="ed-item-note" value="" placeholder="備註（選填）" style="border-color:#d1fae5;background:#f0fdf4" oninput="edVendors[0].items[38].remark=this.value||undefined">
+        <button class="ed-del-btn" onclick="edDelItem('vendor',0,38)">✕</button>
+      </div>
+      <div class="ed-item-row" id="editem-0-39" draggable="false" data-gi="0" data-ii="39" data-itype="vendor">
+        <span class="drag-handle" title="拖曳排序">⠿</span>
+        <input class="ed-item-name" value="小磨坊-印度咖哩粉" placeholder="品名（必填）" oninput="edVendors[0].items[39].name=this.value">
+        <input class="ed-item-unit" value="罐" placeholder="單位" oninput="edVendors[0].items[39].unit=this.value">
+        <input class="ed-item-price" type="number" min="0" inputmode="decimal" value="145" placeholder="價格" oninput="edVendors[0].items[39].price=parseFloat(this.value)||undefined">
+        <input class="ed-item-note" value="" placeholder="記帳名稱（空白=同品名）" oninput="edVendors[0].items[39].ledgerName=this.value||undefined">
+        <input class="ed-item-note" value="" placeholder="備註（選填）" style="border-color:#d1fae5;background:#f0fdf4" oninput="edVendors[0].items[39].remark=this.value||undefined">
+        <button class="ed-del-btn" onclick="edDelItem('vendor',0,39)">✕</button>
+      </div>
+      <div class="ed-item-row" id="editem-0-40" draggable="false" data-gi="0" data-ii="40" data-itype="vendor">
+        <span class="drag-handle" title="拖曳排序">⠿</span>
+        <input class="ed-item-name" value="烹大師-鰹魚粉" placeholder="品名（必填）" oninput="edVendors[0].items[40].name=this.value">
+        <input class="ed-item-unit" value="包" placeholder="單位" oninput="edVendors[0].items[40].unit=this.value">
+        <input class="ed-item-price" type="number" min="0" inputmode="decimal" value="290" placeholder="價格" oninput="edVendors[0].items[40].price=parseFloat(this.value)||undefined">
+        <input class="ed-item-note" value="" placeholder="記帳名稱（空白=同品名）" oninput="edVendors[0].items[40].ledgerName=this.value||undefined">
+        <input class="ed-item-note" value="" placeholder="備註（選填）" style="border-color:#d1fae5;background:#f0fdf4" oninput="edVendors[0].items[40].remark=this.value||undefined">
+        <button class="ed-del-btn" onclick="edDelItem('vendor',0,40)">✕</button>
+      </div>
+      <div class="ed-item-row" id="editem-0-41" draggable="false" data-gi="0" data-ii="41" data-itype="vendor">
+        <span class="drag-handle" title="拖曳排序">⠿</span>
+        <input class="ed-item-name" value="金味王-醬油(10斤)" placeholder="品名（必填）" oninput="edVendors[0].items[41].name=this.value">
+        <input class="ed-item-unit" value="桶" placeholder="單位" oninput="edVendors[0].items[41].unit=this.value">
+        <input class="ed-item-price" type="number" min="0" inputmode="decimal" value="230" placeholder="價格" oninput="edVendors[0].items[41].price=parseFloat(this.value)||undefined">
+        <input class="ed-item-note" value="金味王醬油" placeholder="記帳名稱（空白=同品名）" oninput="edVendors[0].items[41].ledgerName=this.value||undefined">
+        <input class="ed-item-note" value="" placeholder="備註（選填）" style="border-color:#d1fae5;background:#f0fdf4" oninput="edVendors[0].items[41].remark=this.value||undefined">
+        <button class="ed-del-btn" onclick="edDelItem('vendor',0,41)">✕</button>
+      </div>
+      <div class="ed-item-row" id="editem-0-42" draggable="false" data-gi="0" data-ii="42" data-itype="vendor">
+        <span class="drag-handle" title="拖曳排序">⠿</span>
+        <input class="ed-item-name" value="金蘭-甘醇油膏(10斤)" placeholder="品名（必填）" oninput="edVendors[0].items[42].name=this.value">
+        <input class="ed-item-unit" value="桶" placeholder="單位" oninput="edVendors[0].items[42].unit=this.value">
+        <input class="ed-item-price" type="number" min="0" inputmode="decimal" value="225" placeholder="價格" oninput="edVendors[0].items[42].price=parseFloat(this.value)||undefined">
+        <input class="ed-item-note" value="金蘭甘醇油膏" placeholder="記帳名稱（空白=同品名）" oninput="edVendors[0].items[42].ledgerName=this.value||undefined">
+        <input class="ed-item-note" value="" placeholder="備註（選填）" style="border-color:#d1fae5;background:#f0fdf4" oninput="edVendors[0].items[42].remark=this.value||undefined">
+        <button class="ed-del-btn" onclick="edDelItem('vendor',0,42)">✕</button>
+      </div>
+      <div class="ed-item-row" id="editem-0-43" draggable="false" data-gi="0" data-ii="43" data-itype="vendor">
+        <span class="drag-handle" title="拖曳排序">⠿</span>
+        <input class="ed-item-name" value="萬家鄉-香菇素蠔油(5L)" placeholder="品名（必填）" oninput="edVendors[0].items[43].name=this.value">
+        <input class="ed-item-unit" value="桶" placeholder="單位" oninput="edVendors[0].items[43].unit=this.value">
+        <input class="ed-item-price" type="number" min="0" inputmode="decimal" value="250" placeholder="價格" oninput="edVendors[0].items[43].price=parseFloat(this.value)||undefined">
+        <input class="ed-item-note" value="香菇素蠔油" placeholder="記帳名稱（空白=同品名）" oninput="edVendors[0].items[43].ledgerName=this.value||undefined">
+        <input class="ed-item-note" value="" placeholder="備註（選填）" style="border-color:#d1fae5;background:#f0fdf4" oninput="edVendors[0].items[43].remark=this.value||undefined">
+        <button class="ed-del-btn" onclick="edDelItem('vendor',0,43)">✕</button>
+      </div>
+      <div class="ed-item-row" id="editem-0-44" draggable="false" data-gi="0" data-ii="44" data-itype="vendor">
+        <span class="drag-handle" title="拖曳排序">⠿</span>
+        <input class="ed-item-name" value="牛頭牌-沙茶醬(3Kg)" placeholder="品名（必填）" oninput="edVendors[0].items[44].name=this.value">
+        <input class="ed-item-unit" value="罐" placeholder="單位" oninput="edVendors[0].items[44].unit=this.value">
+        <input class="ed-item-price" type="number" min="0" inputmode="decimal" value="540" placeholder="價格" oninput="edVendors[0].items[44].price=parseFloat(this.value)||undefined">
+        <input class="ed-item-note" value="沙茶醬" placeholder="記帳名稱（空白=同品名）" oninput="edVendors[0].items[44].ledgerName=this.value||undefined">
+        <input class="ed-item-note" value="" placeholder="備註（選填）" style="border-color:#d1fae5;background:#f0fdf4" oninput="edVendors[0].items[44].remark=this.value||undefined">
+        <button class="ed-del-btn" onclick="edDelItem('vendor',0,44)">✕</button>
+      </div>
+      <div class="ed-item-row" id="editem-0-45" draggable="false" data-gi="0" data-ii="45" data-itype="vendor">
+        <span class="drag-handle" title="拖曳排序">⠿</span>
+        <input class="ed-item-name" value="可果美-番茄醬(塑膠桶)" placeholder="品名（必填）" oninput="edVendors[0].items[45].name=this.value">
+        <input class="ed-item-unit" value="瓶" placeholder="單位" oninput="edVendors[0].items[45].unit=this.value">
+        <input class="ed-item-price" type="number" min="0" inputmode="decimal" value="210" placeholder="價格" oninput="edVendors[0].items[45].price=parseFloat(this.value)||undefined">
+        <input class="ed-item-note" value="番茄醬(塑)" placeholder="記帳名稱（空白=同品名）" oninput="edVendors[0].items[45].ledgerName=this.value||undefined">
+        <input class="ed-item-note" value="" placeholder="備註（選填）" style="border-color:#d1fae5;background:#f0fdf4" oninput="edVendors[0].items[45].remark=this.value||undefined">
+        <button class="ed-del-btn" onclick="edDelItem('vendor',0,45)">✕</button>
+      </div>
+      <div class="ed-item-row" id="editem-0-46" draggable="false" data-gi="0" data-ii="46" data-itype="vendor">
+        <span class="drag-handle" title="拖曳排序">⠿</span>
+        <input class="ed-item-name" value="可果美-番茄醬(鐵桶)" placeholder="品名（必填）" oninput="edVendors[0].items[46].name=this.value">
+        <input class="ed-item-unit" value="桶" placeholder="單位" oninput="edVendors[0].items[46].unit=this.value">
+        <input class="ed-item-price" type="number" min="0" inputmode="decimal" value="215" placeholder="價格" oninput="edVendors[0].items[46].price=parseFloat(this.value)||undefined">
+        <input class="ed-item-note" value="番茄醬(鐵)" placeholder="記帳名稱（空白=同品名）" oninput="edVendors[0].items[46].ledgerName=this.value||undefined">
+        <input class="ed-item-note" value="" placeholder="備註（選填）" style="border-color:#d1fae5;background:#f0fdf4" oninput="edVendors[0].items[46].remark=this.value||undefined">
+        <button class="ed-del-btn" onclick="edDelItem('vendor',0,46)">✕</button>
+      </div>
+      <div class="ed-item-row" id="editem-0-47" draggable="false" data-gi="0" data-ii="47" data-itype="vendor">
+        <span class="drag-handle" title="拖曳排序">⠿</span>
+        <input class="ed-item-name" value="工研烏醋(600ml)" placeholder="品名（必填）" oninput="edVendors[0].items[47].name=this.value">
+        <input class="ed-item-unit" value="瓶" placeholder="單位" oninput="edVendors[0].items[47].unit=this.value">
+        <input class="ed-item-price" type="number" min="0" inputmode="decimal" value="50" placeholder="價格" oninput="edVendors[0].items[47].price=parseFloat(this.value)||undefined">
+        <input class="ed-item-note" value="烏醋" placeholder="記帳名稱（空白=同品名）" oninput="edVendors[0].items[47].ledgerName=this.value||undefined">
+        <input class="ed-item-note" value="" placeholder="備註（選填）" style="border-color:#d1fae5;background:#f0fdf4" oninput="edVendors[0].items[47].remark=this.value||undefined">
+        <button class="ed-del-btn" onclick="edDelItem('vendor',0,47)">✕</button>
+      </div>
+      <div class="ed-item-row" id="editem-0-48" draggable="false" data-gi="0" data-ii="48" data-itype="vendor">
+        <span class="drag-handle" title="拖曳排序">⠿</span>
+        <input class="ed-item-name" value="工研白醋(5L)" placeholder="品名（必填）" oninput="edVendors[0].items[48].name=this.value">
+        <input class="ed-item-unit" value="瓶" placeholder="單位" oninput="edVendors[0].items[48].unit=this.value">
+        <input class="ed-item-price" type="number" min="0" inputmode="decimal" value="200" placeholder="價格" oninput="edVendors[0].items[48].price=parseFloat(this.value)||undefined">
+        <input class="ed-item-note" value="白醋" placeholder="記帳名稱（空白=同品名）" oninput="edVendors[0].items[48].ledgerName=this.value||undefined">
+        <input class="ed-item-note" value="" placeholder="備註（選填）" style="border-color:#d1fae5;background:#f0fdf4" oninput="edVendors[0].items[48].remark=this.value||undefined">
+        <button class="ed-del-btn" onclick="edDelItem('vendor',0,48)">✕</button>
+      </div>
+      <div class="ed-item-row" id="editem-0-49" draggable="false" data-gi="0" data-ii="49" data-itype="vendor">
+        <span class="drag-handle" title="拖曳排序">⠿</span>
+        <input class="ed-item-name" value="福華牌-泰雞醬" placeholder="品名（必填）" oninput="edVendors[0].items[49].name=this.value">
+        <input class="ed-item-unit" value="瓶" placeholder="單位" oninput="edVendors[0].items[49].unit=this.value">
+        <input class="ed-item-price" type="number" min="0" inputmode="decimal" value="75" placeholder="價格" oninput="edVendors[0].items[49].price=parseFloat(this.value)||undefined">
+        <input class="ed-item-note" value="泰雞醬" placeholder="記帳名稱（空白=同品名）" oninput="edVendors[0].items[49].ledgerName=this.value||undefined">
+        <input class="ed-item-note" value="" placeholder="備註（選填）" style="border-color:#d1fae5;background:#f0fdf4" oninput="edVendors[0].items[49].remark=this.value||undefined">
+        <button class="ed-del-btn" onclick="edDelItem('vendor',0,49)">✕</button>
+      </div>
+      <div class="ed-item-row" id="editem-0-50" draggable="false" data-gi="0" data-ii="50" data-itype="vendor">
+        <span class="drag-handle" title="拖曳排序">⠿</span>
+        <input class="ed-item-name" value="燈燦香油(3L)" placeholder="品名（必填）" oninput="edVendors[0].items[50].name=this.value">
+        <input class="ed-item-unit" value="瓶" placeholder="單位" oninput="edVendors[0].items[50].unit=this.value">
+        <input class="ed-item-price" type="number" min="0" inputmode="decimal" value="280" placeholder="價格" oninput="edVendors[0].items[50].price=parseFloat(this.value)||undefined">
+        <input class="ed-item-note" value="香油" placeholder="記帳名稱（空白=同品名）" oninput="edVendors[0].items[50].ledgerName=this.value||undefined">
+        <input class="ed-item-note" value="" placeholder="備註（選填）" style="border-color:#d1fae5;background:#f0fdf4" oninput="edVendors[0].items[50].remark=this.value||undefined">
+        <button class="ed-del-btn" onclick="edDelItem('vendor',0,50)">✕</button>
+      </div>
+      <div class="ed-item-row" id="editem-0-51" draggable="false" data-gi="0" data-ii="51" data-itype="vendor">
+        <span class="drag-handle" title="拖曳排序">⠿</span>
+        <input class="ed-item-name" value="豆瓣醬(2.8kg)" placeholder="品名（必填）" oninput="edVendors[0].items[51].name=this.value">
+        <input class="ed-item-unit" value="桶" placeholder="單位" oninput="edVendors[0].items[51].unit=this.value">
+        <input class="ed-item-price" type="number" min="0" inputmode="decimal" value="130" placeholder="價格" oninput="edVendors[0].items[51].price=parseFloat(this.value)||undefined">
+        <input class="ed-item-note" value="豆瓣醬" placeholder="記帳名稱（空白=同品名）" oninput="edVendors[0].items[51].ledgerName=this.value||undefined">
+        <input class="ed-item-note" value="" placeholder="備註（選填）" style="border-color:#d1fae5;background:#f0fdf4" oninput="edVendors[0].items[51].remark=this.value||undefined">
+        <button class="ed-del-btn" onclick="edDelItem('vendor',0,51)">✕</button>
+      </div>
+      <div class="ed-item-row" id="editem-0-52" draggable="false" data-gi="0" data-ii="52" data-itype="vendor">
+        <span class="drag-handle" title="拖曳排序">⠿</span>
+        <input class="ed-item-name" value="飯友-切角鳳梨" placeholder="品名（必填）" oninput="edVendors[0].items[52].name=this.value">
+        <input class="ed-item-unit" value="罐" placeholder="單位" oninput="edVendors[0].items[52].unit=this.value">
+        <input class="ed-item-price" type="number" min="0" inputmode="decimal" value="220" placeholder="價格" oninput="edVendors[0].items[52].price=parseFloat(this.value)||undefined">
+        <input class="ed-item-note" value="切角鳳梨" placeholder="記帳名稱（空白=同品名）" oninput="edVendors[0].items[52].ledgerName=this.value||undefined">
+        <input class="ed-item-note" value="" placeholder="備註（選填）" style="border-color:#d1fae5;background:#f0fdf4" oninput="edVendors[0].items[52].remark=this.value||undefined">
+        <button class="ed-del-btn" onclick="edDelItem('vendor',0,52)">✕</button>
+      </div>
+      <div class="ed-item-row" id="editem-0-53" draggable="false" data-gi="0" data-ii="53" data-itype="vendor">
+        <span class="drag-handle" title="拖曳排序">⠿</span>
+        <input class="ed-item-name" value="世宇-單顆沙拉" placeholder="品名（必填）" oninput="edVendors[0].items[53].name=this.value">
+        <input class="ed-item-unit" value="顆" placeholder="單位" oninput="edVendors[0].items[53].unit=this.value">
+        <input class="ed-item-price" type="number" min="0" inputmode="decimal" value="50" placeholder="價格" oninput="edVendors[0].items[53].price=parseFloat(this.value)||undefined">
+        <input class="ed-item-note" value="單顆沙拉" placeholder="記帳名稱（空白=同品名）" oninput="edVendors[0].items[53].ledgerName=this.value||undefined">
+        <input class="ed-item-note" value="" placeholder="備註（選填）" style="border-color:#d1fae5;background:#f0fdf4" oninput="edVendors[0].items[53].remark=this.value||undefined">
+        <button class="ed-del-btn" onclick="edDelItem('vendor',0,53)">✕</button>
+      </div>
+      <div class="ed-item-row" id="editem-0-54" draggable="false" data-gi="0" data-ii="54" data-itype="vendor">
+        <span class="drag-handle" title="拖曳排序">⠿</span>
+        <input class="ed-item-name" value="圓紫菜" placeholder="品名（必填）" oninput="edVendors[0].items[54].name=this.value">
+        <input class="ed-item-unit" value="包" placeholder="單位" oninput="edVendors[0].items[54].unit=this.value">
+        <input class="ed-item-price" type="number" min="0" inputmode="decimal" value="100" placeholder="價格" oninput="edVendors[0].items[54].price=parseFloat(this.value)||undefined">
+        <input class="ed-item-note" value="" placeholder="記帳名稱（空白=同品名）" oninput="edVendors[0].items[54].ledgerName=this.value||undefined">
+        <input class="ed-item-note" value="" placeholder="備註（選填）" style="border-color:#d1fae5;background:#f0fdf4" oninput="edVendors[0].items[54].remark=this.value||undefined">
+        <button class="ed-del-btn" onclick="edDelItem('vendor',0,54)">✕</button>
+      </div>
+      <div class="ed-item-row" id="editem-0-55" draggable="false" data-gi="0" data-ii="55" data-itype="vendor">
+        <span class="drag-handle" title="拖曳排序">⠿</span>
+        <input class="ed-item-name" value="料理米酒(550ml)" placeholder="品名（必填）" oninput="edVendors[0].items[55].name=this.value">
+        <input class="ed-item-unit" value="罐" placeholder="單位" oninput="edVendors[0].items[55].unit=this.value">
+        <input class="ed-item-price" type="number" min="0" inputmode="decimal" value="15" placeholder="價格" oninput="edVendors[0].items[55].price=parseFloat(this.value)||undefined">
+        <input class="ed-item-note" value="米酒" placeholder="記帳名稱（空白=同品名）" oninput="edVendors[0].items[55].ledgerName=this.value||undefined">
+        <input class="ed-item-note" value="" placeholder="備註（選填）" style="border-color:#d1fae5;background:#f0fdf4" oninput="edVendors[0].items[55].remark=this.value||undefined">
+        <button class="ed-del-btn" onclick="edDelItem('vendor',0,55)">✕</button>
+      </div>
+      <div class="ed-item-row" id="editem-0-56" draggable="false" data-gi="0" data-ii="56" data-itype="vendor">
+        <span class="drag-handle" title="拖曳排序">⠿</span>
+        <input class="ed-item-name" value="黑木耳絲(乾)" placeholder="品名（必填）" oninput="edVendors[0].items[56].name=this.value">
+        <input class="ed-item-unit" value="包" placeholder="單位" oninput="edVendors[0].items[56].unit=this.value">
+        <input class="ed-item-price" type="number" min="0" inputmode="decimal" value="170" placeholder="價格" oninput="edVendors[0].items[56].price=parseFloat(this.value)||undefined">
+        <input class="ed-item-note" value="" placeholder="記帳名稱（空白=同品名）" oninput="edVendors[0].items[56].ledgerName=this.value||undefined">
+        <input class="ed-item-note" value="" placeholder="備註（選填）" style="border-color:#d1fae5;background:#f0fdf4" oninput="edVendors[0].items[56].remark=this.value||undefined">
+        <button class="ed-del-btn" onclick="edDelItem('vendor',0,56)">✕</button>
+      </div>
+      <div class="ed-item-row" id="editem-0-57" draggable="false" data-gi="0" data-ii="57" data-itype="vendor">
+        <span class="drag-handle" title="拖曳排序">⠿</span>
+        <input class="ed-item-name" value="乾辣椒(切段)" placeholder="品名（必填）" oninput="edVendors[0].items[57].name=this.value">
+        <input class="ed-item-unit" value="包" placeholder="單位" oninput="edVendors[0].items[57].unit=this.value">
+        <input class="ed-item-price" type="number" min="0" inputmode="decimal" value="180" placeholder="價格" oninput="edVendors[0].items[57].price=parseFloat(this.value)||undefined">
+        <input class="ed-item-note" value="" placeholder="記帳名稱（空白=同品名）" oninput="edVendors[0].items[57].ledgerName=this.value||undefined">
+        <input class="ed-item-note" value="" placeholder="備註（選填）" style="border-color:#d1fae5;background:#f0fdf4" oninput="edVendors[0].items[57].remark=this.value||undefined">
+        <button class="ed-del-btn" onclick="edDelItem('vendor',0,57)">✕</button>
+      </div>
+      <div class="ed-item-row" id="editem-0-58" draggable="false" data-gi="0" data-ii="58" data-itype="vendor">
+        <span class="drag-handle" title="拖曳排序">⠿</span>
+        <input class="ed-item-name" value="辣油(2.4L)" placeholder="品名（必填）" oninput="edVendors[0].items[58].name=this.value">
+        <input class="ed-item-unit" value="瓶" placeholder="單位" oninput="edVendors[0].items[58].unit=this.value">
+        <input class="ed-item-price" type="number" min="0" inputmode="decimal" value="210" placeholder="價格" oninput="edVendors[0].items[58].price=parseFloat(this.value)||undefined">
+        <input class="ed-item-note" value="辣油" placeholder="記帳名稱（空白=同品名）" oninput="edVendors[0].items[58].ledgerName=this.value||undefined">
+        <input class="ed-item-note" value="" placeholder="備註（選填）" style="border-color:#d1fae5;background:#f0fdf4" oninput="edVendors[0].items[58].remark=this.value||undefined">
+        <button class="ed-del-btn" onclick="edDelItem('vendor',0,58)">✕</button>
+      </div>
+      <div class="ed-item-row" id="editem-0-59" draggable="false" data-gi="0" data-ii="59" data-itype="vendor">
+        <span class="drag-handle" title="拖曳排序">⠿</span>
+        <input class="ed-item-name" value="八角粒" placeholder="品名（必填）" oninput="edVendors[0].items[59].name=this.value">
+        <input class="ed-item-unit" value="包" placeholder="單位" oninput="edVendors[0].items[59].unit=this.value">
+        <input class="ed-item-price" type="number" min="0" inputmode="decimal" value="" placeholder="價格" oninput="edVendors[0].items[59].price=parseFloat(this.value)||undefined">
+        <input class="ed-item-note" value="" placeholder="記帳名稱（空白=同品名）" oninput="edVendors[0].items[59].ledgerName=this.value||undefined">
+        <input class="ed-item-note" value="" placeholder="備註（選填）" style="border-color:#d1fae5;background:#f0fdf4" oninput="edVendors[0].items[59].remark=this.value||undefined">
+        <button class="ed-del-btn" onclick="edDelItem('vendor',0,59)">✕</button>
+      </div>
+      <div class="ed-item-row" id="editem-0-60" draggable="false" data-gi="0" data-ii="60" data-itype="vendor">
+        <span class="drag-handle" title="拖曳排序">⠿</span>
+        <input class="ed-item-name" value="花椒粒" placeholder="品名（必填）" oninput="edVendors[0].items[60].name=this.value">
+        <input class="ed-item-unit" value="包" placeholder="單位" oninput="edVendors[0].items[60].unit=this.value">
+        <input class="ed-item-price" type="number" min="0" inputmode="decimal" value="" placeholder="價格" oninput="edVendors[0].items[60].price=parseFloat(this.value)||undefined">
+        <input class="ed-item-note" value="" placeholder="記帳名稱（空白=同品名）" oninput="edVendors[0].items[60].ledgerName=this.value||undefined">
+        <input class="ed-item-note" value="" placeholder="備註（選填）" style="border-color:#d1fae5;background:#f0fdf4" oninput="edVendors[0].items[60].remark=this.value||undefined">
+        <button class="ed-del-btn" onclick="edDelItem('vendor',0,60)">✕</button>
+      </div>
+      <div class="ed-item-row" id="editem-0-61" draggable="false" data-gi="0" data-ii="61" data-itype="vendor">
+        <span class="drag-handle" title="拖曳排序">⠿</span>
+        <input class="ed-item-name" value="太白粉(5斤)" placeholder="品名（必填）" oninput="edVendors[0].items[61].name=this.value">
+        <input class="ed-item-unit" value="包" placeholder="單位" oninput="edVendors[0].items[61].unit=this.value">
+        <input class="ed-item-price" type="number" min="0" inputmode="decimal" value="175" placeholder="價格" oninput="edVendors[0].items[61].price=parseFloat(this.value)||undefined">
+        <input class="ed-item-note" value="" placeholder="記帳名稱（空白=同品名）" oninput="edVendors[0].items[61].ledgerName=this.value||undefined">
+        <input class="ed-item-note" value="" placeholder="備註（選填）" style="border-color:#d1fae5;background:#f0fdf4" oninput="edVendors[0].items[61].remark=this.value||undefined">
+        <button class="ed-del-btn" onclick="edDelItem('vendor',0,61)">✕</button>
+      </div>
+      <div class="ed-item-row" id="editem-0-62" draggable="false" data-gi="0" data-ii="62" data-itype="vendor">
+        <span class="drag-handle" title="拖曳排序">⠿</span>
+        <input class="ed-item-name" value="地瓜粉(5斤)" placeholder="品名（必填）" oninput="edVendors[0].items[62].name=this.value">
+        <input class="ed-item-unit" value="包" placeholder="單位" oninput="edVendors[0].items[62].unit=this.value">
+        <input class="ed-item-price" type="number" min="0" inputmode="decimal" value="125" placeholder="價格" oninput="edVendors[0].items[62].price=parseFloat(this.value)||undefined">
+        <input class="ed-item-note" value="" placeholder="記帳名稱（空白=同品名）" oninput="edVendors[0].items[62].ledgerName=this.value||undefined">
+        <input class="ed-item-note" value="" placeholder="備註（選填）" style="border-color:#d1fae5;background:#f0fdf4" oninput="edVendors[0].items[62].remark=this.value||undefined">
+        <button class="ed-del-btn" onclick="edDelItem('vendor',0,62)">✕</button>
+      </div>
+      <div class="ed-item-row" id="editem-0-63" draggable="false" data-gi="0" data-ii="63" data-itype="vendor">
+        <span class="drag-handle" title="拖曳排序">⠿</span>
+        <input class="ed-item-name" value="黏師傅" placeholder="品名（必填）" oninput="edVendors[0].items[63].name=this.value">
+        <input class="ed-item-unit" value="包" placeholder="單位" oninput="edVendors[0].items[63].unit=this.value">
+        <input class="ed-item-price" type="number" min="0" inputmode="decimal" value="80" placeholder="價格" oninput="edVendors[0].items[63].price=parseFloat(this.value)||undefined">
+        <input class="ed-item-note" value="" placeholder="記帳名稱（空白=同品名）" oninput="edVendors[0].items[63].ledgerName=this.value||undefined">
+        <input class="ed-item-note" value="" placeholder="備註（選填）" style="border-color:#d1fae5;background:#f0fdf4" oninput="edVendors[0].items[63].remark=this.value||undefined">
+        <button class="ed-del-btn" onclick="edDelItem('vendor',0,63)">✕</button>
+      </div>
+      <div class="ed-item-row" id="editem-0-64" draggable="false" data-gi="0" data-ii="64" data-itype="vendor">
+        <span class="drag-handle" title="拖曳排序">⠿</span>
+        <input class="ed-item-name" value="吉士粉" placeholder="品名（必填）" oninput="edVendors[0].items[64].name=this.value">
+        <input class="ed-item-unit" value="包" placeholder="單位" oninput="edVendors[0].items[64].unit=this.value">
+        <input class="ed-item-price" type="number" min="0" inputmode="decimal" value="62" placeholder="價格" oninput="edVendors[0].items[64].price=parseFloat(this.value)||undefined">
+        <input class="ed-item-note" value="" placeholder="記帳名稱（空白=同品名）" oninput="edVendors[0].items[64].ledgerName=this.value||undefined">
+        <input class="ed-item-note" value="" placeholder="備註（選填）" style="border-color:#d1fae5;background:#f0fdf4" oninput="edVendors[0].items[64].remark=this.value||undefined">
+        <button class="ed-del-btn" onclick="edDelItem('vendor',0,64)">✕</button>
+      </div>
+      <div class="ed-item-row" id="editem-0-65" draggable="false" data-gi="0" data-ii="65" data-itype="vendor">
+        <span class="drag-handle" title="拖曳排序">⠿</span>
+        <input class="ed-item-name" value="二號砂糖(5斤)" placeholder="品名（必填）" oninput="edVendors[0].items[65].name=this.value">
+        <input class="ed-item-unit" value="包" placeholder="單位" oninput="edVendors[0].items[65].unit=this.value">
+        <input class="ed-item-price" type="number" min="0" inputmode="decimal" value="100" placeholder="價格" oninput="edVendors[0].items[65].price=parseFloat(this.value)||undefined">
+        <input class="ed-item-note" value="" placeholder="記帳名稱（空白=同品名）" oninput="edVendors[0].items[65].ledgerName=this.value||undefined">
+        <input class="ed-item-note" value="" placeholder="備註（選填）" style="border-color:#d1fae5;background:#f0fdf4" oninput="edVendors[0].items[65].remark=this.value||undefined">
+        <button class="ed-del-btn" onclick="edDelItem('vendor',0,65)">✕</button>
+      </div>
+      <div class="ed-item-row" id="editem-0-66" draggable="false" data-gi="0" data-ii="66" data-itype="vendor">
+        <span class="drag-handle" title="拖曳排序">⠿</span>
+        <input class="ed-item-name" value="特砂(白糖)" placeholder="品名（必填）" oninput="edVendors[0].items[66].name=this.value">
+        <input class="ed-item-unit" value="台斤" placeholder="單位" oninput="edVendors[0].items[66].unit=this.value">
+        <input class="ed-item-price" type="number" min="0" inputmode="decimal" value="" placeholder="價格" oninput="edVendors[0].items[66].price=parseFloat(this.value)||undefined">
+        <input class="ed-item-note" value="" placeholder="記帳名稱（空白=同品名）" oninput="edVendors[0].items[66].ledgerName=this.value||undefined">
+        <input class="ed-item-note" value="" placeholder="備註（選填）" style="border-color:#d1fae5;background:#f0fdf4" oninput="edVendors[0].items[66].remark=this.value||undefined">
+        <button class="ed-del-btn" onclick="edDelItem('vendor',0,66)">✕</button>
+      </div>
+      <div class="ed-item-row" id="editem-0-67" draggable="false" data-gi="0" data-ii="67" data-itype="vendor">
+        <span class="drag-handle" title="拖曳排序">⠿</span>
+        <input class="ed-item-name" value="黑豆豉" placeholder="品名（必填）" oninput="edVendors[0].items[67].name=this.value">
+        <input class="ed-item-unit" value="斤" placeholder="單位" oninput="edVendors[0].items[67].unit=this.value">
+        <input class="ed-item-price" type="number" min="0" inputmode="decimal" value="45" placeholder="價格" oninput="edVendors[0].items[67].price=parseFloat(this.value)||undefined">
+        <input class="ed-item-note" value="" placeholder="記帳名稱（空白=同品名）" oninput="edVendors[0].items[67].ledgerName=this.value||undefined">
+        <input class="ed-item-note" value="" placeholder="備註（選填）" style="border-color:#d1fae5;background:#f0fdf4" oninput="edVendors[0].items[67].remark=this.value||undefined">
+        <button class="ed-del-btn" onclick="edDelItem('vendor',0,67)">✕</button>
+      </div>
+      <div class="ed-item-row" id="editem-0-68" draggable="false" data-gi="0" data-ii="68" data-itype="vendor">
+        <span class="drag-handle" title="拖曳排序">⠿</span>
+        <input class="ed-item-name" value="洗碗精" placeholder="品名（必填）" oninput="edVendors[0].items[68].name=this.value">
+        <input class="ed-item-unit" value="罐" placeholder="單位" oninput="edVendors[0].items[68].unit=this.value">
+        <input class="ed-item-price" type="number" min="0" inputmode="decimal" value="55" placeholder="價格" oninput="edVendors[0].items[68].price=parseFloat(this.value)||undefined">
+        <input class="ed-item-note" value="" placeholder="記帳名稱（空白=同品名）" oninput="edVendors[0].items[68].ledgerName=this.value||undefined">
+        <input class="ed-item-note" value="" placeholder="備註（選填）" style="border-color:#d1fae5;background:#f0fdf4" oninput="edVendors[0].items[68].remark=this.value||undefined">
+        <button class="ed-del-btn" onclick="edDelItem('vendor',0,68)">✕</button>
+      </div>
+      <div class="ed-item-row" id="editem-0-69" draggable="false" data-gi="0" data-ii="69" data-itype="vendor">
+        <span class="drag-handle" title="拖曳排序">⠿</span>
+        <input class="ed-item-name" value="漂白水" placeholder="品名（必填）" oninput="edVendors[0].items[69].name=this.value">
+        <input class="ed-item-unit" value="罐" placeholder="單位" oninput="edVendors[0].items[69].unit=this.value">
+        <input class="ed-item-price" type="number" min="0" inputmode="decimal" value="65" placeholder="價格" oninput="edVendors[0].items[69].price=parseFloat(this.value)||undefined">
+        <input class="ed-item-note" value="" placeholder="記帳名稱（空白=同品名）" oninput="edVendors[0].items[69].ledgerName=this.value||undefined">
+        <input class="ed-item-note" value="" placeholder="備註（選填）" style="border-color:#d1fae5;background:#f0fdf4" oninput="edVendors[0].items[69].remark=this.value||undefined">
+        <button class="ed-del-btn" onclick="edDelItem('vendor',0,69)">✕</button>
+      </div>
+      <div class="ed-item-row" id="editem-0-70" draggable="false" data-gi="0" data-ii="70" data-itype="vendor">
+        <span class="drag-handle" title="拖曳排序">⠿</span>
+        <input class="ed-item-name" value="去油劑" placeholder="品名（必填）" oninput="edVendors[0].items[70].name=this.value">
+        <input class="ed-item-unit" value="罐" placeholder="單位" oninput="edVendors[0].items[70].unit=this.value">
+        <input class="ed-item-price" type="number" min="0" inputmode="decimal" value="220" placeholder="價格" oninput="edVendors[0].items[70].price=parseFloat(this.value)||undefined">
+        <input class="ed-item-note" value="" placeholder="記帳名稱（空白=同品名）" oninput="edVendors[0].items[70].ledgerName=this.value||undefined">
+        <input class="ed-item-note" value="" placeholder="備註（選填）" style="border-color:#d1fae5;background:#f0fdf4" oninput="edVendors[0].items[70].remark=this.value||undefined">
+        <button class="ed-del-btn" onclick="edDelItem('vendor',0,70)">✕</button>
+      </div>
+      <div class="ed-item-row" id="editem-0-71" draggable="false" data-gi="0" data-ii="71" data-itype="vendor">
+        <span class="drag-handle" title="拖曳排序">⠿</span>
+        <input class="ed-item-name" value="礦泉水(1500ml)" placeholder="品名（必填）" oninput="edVendors[0].items[71].name=this.value">
+        <input class="ed-item-unit" value="箱" placeholder="單位" oninput="edVendors[0].items[71].unit=this.value">
+        <input class="ed-item-price" type="number" min="0" inputmode="decimal" value="75" placeholder="價格" oninput="edVendors[0].items[71].price=parseFloat(this.value)||undefined">
+        <input class="ed-item-note" value="礦泉水" placeholder="記帳名稱（空白=同品名）" oninput="edVendors[0].items[71].ledgerName=this.value||undefined">
+        <input class="ed-item-note" value="" placeholder="備註（選填）" style="border-color:#d1fae5;background:#f0fdf4" oninput="edVendors[0].items[71].remark=this.value||undefined">
+        <button class="ed-del-btn" onclick="edDelItem('vendor',0,71)">✕</button>
+      </div>
+      <div class="ed-item-row" id="editem-0-72" draggable="false" data-gi="0" data-ii="72" data-itype="vendor">
+        <span class="drag-handle" title="拖曳排序">⠿</span>
+        <input class="ed-item-name" value="木瓜粉(嫩精)" placeholder="品名（必填）" oninput="edVendors[0].items[72].name=this.value">
+        <input class="ed-item-unit" value="罐" placeholder="單位" oninput="edVendors[0].items[72].unit=this.value">
+        <input class="ed-item-price" type="number" min="0" inputmode="decimal" value="130" placeholder="價格" oninput="edVendors[0].items[72].price=parseFloat(this.value)||undefined">
+        <input class="ed-item-note" value="" placeholder="記帳名稱（空白=同品名）" oninput="edVendors[0].items[72].ledgerName=this.value||undefined">
+        <input class="ed-item-note" value="" placeholder="備註（選填）" style="border-color:#d1fae5;background:#f0fdf4" oninput="edVendors[0].items[72].remark=this.value||undefined">
+        <button class="ed-del-btn" onclick="edDelItem('vendor',0,72)">✕</button>
+      </div>
+      <div class="ed-item-row" id="editem-0-73" draggable="false" data-gi="0" data-ii="73" data-itype="vendor">
+        <span class="drag-handle" title="拖曳排序">⠿</span>
+        <input class="ed-item-name" value="枸杞" placeholder="品名（必填）" oninput="edVendors[0].items[73].name=this.value">
+        <input class="ed-item-unit" value="包" placeholder="單位" oninput="edVendors[0].items[73].unit=this.value">
+        <input class="ed-item-price" type="number" min="0" inputmode="decimal" value="195" placeholder="價格" oninput="edVendors[0].items[73].price=parseFloat(this.value)||undefined">
+        <input class="ed-item-note" value="" placeholder="記帳名稱（空白=同品名）" oninput="edVendors[0].items[73].ledgerName=this.value||undefined">
+        <input class="ed-item-note" value="" placeholder="備註（選填）" style="border-color:#d1fae5;background:#f0fdf4" oninput="edVendors[0].items[73].remark=this.value||undefined">
+        <button class="ed-del-btn" onclick="edDelItem('vendor',0,73)">✕</button>
+      </div>
+      <div class="ed-item-row" id="editem-0-74" draggable="false" data-gi="0" data-ii="74" data-itype="vendor">
+        <span class="drag-handle" title="拖曳排序">⠿</span>
+        <input class="ed-item-name" value="人蔘鬚" placeholder="品名（必填）" oninput="edVendors[0].items[74].name=this.value">
+        <input class="ed-item-unit" value="把" placeholder="單位" oninput="edVendors[0].items[74].unit=this.value">
+        <input class="ed-item-price" type="number" min="0" inputmode="decimal" value="75" placeholder="價格" oninput="edVendors[0].items[74].price=parseFloat(this.value)||undefined">
+        <input class="ed-item-note" value="" placeholder="記帳名稱（空白=同品名）" oninput="edVendors[0].items[74].ledgerName=this.value||undefined">
+        <input class="ed-item-note" value="" placeholder="備註（選填）" style="border-color:#d1fae5;background:#f0fdf4" oninput="edVendors[0].items[74].remark=this.value||undefined">
+        <button class="ed-del-btn" onclick="edDelItem('vendor',0,74)">✕</button>
+      </div>
+      <div class="ed-item-row" id="editem-0-75" draggable="false" data-gi="0" data-ii="75" data-itype="vendor">
+        <span class="drag-handle" title="拖曳排序">⠿</span>
+        <input class="ed-item-name" value="冬粉翅" placeholder="品名（必填）" oninput="edVendors[0].items[75].name=this.value">
+        <input class="ed-item-unit" value="包" placeholder="單位" oninput="edVendors[0].items[75].unit=this.value">
+        <input class="ed-item-price" type="number" min="0" inputmode="decimal" value="500" placeholder="價格" oninput="edVendors[0].items[75].price=parseFloat(this.value)||undefined">
+        <input class="ed-item-note" value="" placeholder="記帳名稱（空白=同品名）" oninput="edVendors[0].items[75].ledgerName=this.value||undefined">
+        <input class="ed-item-note" value="" placeholder="備註（選填）" style="border-color:#d1fae5;background:#f0fdf4" oninput="edVendors[0].items[75].remark=this.value||undefined">
+        <button class="ed-del-btn" onclick="edDelItem('vendor',0,75)">✕</button>
+      </div>
+      <div class="ed-item-row" id="editem-0-76" draggable="false" data-gi="0" data-ii="76" data-itype="vendor">
+        <span class="drag-handle" title="拖曳排序">⠿</span>
+        <input class="ed-item-name" value="熟白芝麻(半斤)" placeholder="品名（必填）" oninput="edVendors[0].items[76].name=this.value">
+        <input class="ed-item-unit" value="包" placeholder="單位" oninput="edVendors[0].items[76].unit=this.value">
+        <input class="ed-item-price" type="number" min="0" inputmode="decimal" value="50" placeholder="價格" oninput="edVendors[0].items[76].price=parseFloat(this.value)||undefined">
+        <input class="ed-item-note" value="" placeholder="記帳名稱（空白=同品名）" oninput="edVendors[0].items[76].ledgerName=this.value||undefined">
+        <input class="ed-item-note" value="" placeholder="備註（選填）" style="border-color:#d1fae5;background:#f0fdf4" oninput="edVendors[0].items[76].remark=this.value||undefined">
+        <button class="ed-del-btn" onclick="edDelItem('vendor',0,76)">✕</button>
+      </div>
+      <div class="ed-item-row" id="editem-0-77" draggable="false" data-gi="0" data-ii="77" data-itype="vendor">
+        <span class="drag-handle" title="拖曳排序">⠿</span>
+        <input class="ed-item-name" value="乳瑪琳(500g)" placeholder="品名（必填）" oninput="edVendors[0].items[77].name=this.value">
+        <input class="ed-item-unit" value="罐" placeholder="單位" oninput="edVendors[0].items[77].unit=this.value">
+        <input class="ed-item-price" type="number" min="0" inputmode="decimal" value="125" placeholder="價格" oninput="edVendors[0].items[77].price=parseFloat(this.value)||undefined">
+        <input class="ed-item-note" value="乳瑪琳" placeholder="記帳名稱（空白=同品名）" oninput="edVendors[0].items[77].ledgerName=this.value||undefined">
+        <input class="ed-item-note" value="" placeholder="備註（選填）" style="border-color:#d1fae5;background:#f0fdf4" oninput="edVendors[0].items[77].remark=this.value||undefined">
+        <button class="ed-del-btn" onclick="edDelItem('vendor',0,77)">✕</button>
+      </div></div>
+        <button class="ed-add-item" onclick="edAddItem('vendor',0)">＋ 新增品項</button>
+      </div>
+    </div><div class="ed-vendor-card" id="edv-1" draggable="false" data-vi="1" data-dtype="vendor">
+      <div class="ed-vendor-head" onclick="toggleEdVendor(1)">
+        <span class="drag-handle-vendor" onclick="event.stopPropagation()" title="拖曳排序">⠿</span>
+        <input class="ed-vendor-name-input" value="台北-聯和" placeholder="廠商名稱" oninput="edVendors[1].vendor=this.value" onclick="event.stopPropagation()">
+        <span class="ed-vendor-badge">16 項</span>
+        <button class="ed-del-vendor-btn" onclick="event.stopPropagation();edDelVendor(1)">✕ 刪除</button>
+        <span class="ed-vendor-toggle" id="edvt-1">▼</span>
+      </div>
+      <div class="ed-vendor-body" id="edvb-1">
+        <div class="ed-col-hdr">
+          <span class="ed-col-n">品名（必填）</span>
+          <span class="ed-col-u">單位</span>
+          <span class="ed-col-p">價格</span>
+          <span class="ed-col-nt">記帳名稱<br><small style="font-weight:400;color:#ccc">空白=同品名</small></span>
+          <span class="ed-col-rk">備註<br><small style="font-weight:400;color:#ccc">顯示在品項卡下方</small></span>
+          <span class="ed-col-d"></span>
+        </div>
+        <div id="edvi-1">
+      <div class="ed-item-row" id="editem-1-0" draggable="false" data-gi="1" data-ii="0" data-itype="vendor">
+        <span class="drag-handle" title="拖曳排序">⠿</span>
+        <input class="ed-item-name" value="魷魚清肉(10k)" placeholder="品名（必填）" oninput="edVendors[1].items[0].name=this.value">
+        <input class="ed-item-unit" value="件" placeholder="單位" oninput="edVendors[1].items[0].unit=this.value">
+        <input class="ed-item-price" type="number" min="0" inputmode="decimal" value="2250" placeholder="價格" oninput="edVendors[1].items[0].price=parseFloat(this.value)||undefined">
+        <input class="ed-item-note" value="" placeholder="記帳名稱（空白=同品名）" oninput="edVendors[1].items[0].ledgerName=this.value||undefined">
+        <input class="ed-item-note" value="" placeholder="備註（選填）" style="border-color:#d1fae5;background:#f0fdf4" oninput="edVendors[1].items[0].remark=this.value||undefined">
+        <button class="ed-del-btn" onclick="edDelItem('vendor',1,0)">✕</button>
+      </div>
+      <div class="ed-item-row" id="editem-1-1" draggable="false" data-gi="1" data-ii="1" data-itype="vendor">
+        <span class="drag-handle" title="拖曳排序">⠿</span>
+        <input class="ed-item-name" value="白蝦(南美)6/7" placeholder="品名（必填）" oninput="edVendors[1].items[1].name=this.value">
+        <input class="ed-item-unit" value="盒" placeholder="單位" oninput="edVendors[1].items[1].unit=this.value">
+        <input class="ed-item-price" type="number" min="0" inputmode="decimal" value="210" placeholder="價格" oninput="edVendors[1].items[1].price=parseFloat(this.value)||undefined">
+        <input class="ed-item-note" value="" placeholder="記帳名稱（空白=同品名）" oninput="edVendors[1].items[1].ledgerName=this.value||undefined">
+        <input class="ed-item-note" value="" placeholder="備註（選填）" style="border-color:#d1fae5;background:#f0fdf4" oninput="edVendors[1].items[1].remark=this.value||undefined">
+        <button class="ed-del-btn" onclick="edDelItem('vendor',1,1)">✕</button>
+      </div>
+      <div class="ed-item-row" id="editem-1-2" draggable="false" data-gi="1" data-ii="2" data-itype="vendor">
+        <span class="drag-handle" title="拖曳排序">⠿</span>
+        <input class="ed-item-name" value="帶殼海瓜子熟(500g)" placeholder="品名（必填）" oninput="edVendors[1].items[2].name=this.value">
+        <input class="ed-item-unit" value="包" placeholder="單位" oninput="edVendors[1].items[2].unit=this.value">
+        <input class="ed-item-price" type="number" min="0" inputmode="decimal" value="75" placeholder="價格" oninput="edVendors[1].items[2].price=parseFloat(this.value)||undefined">
+        <input class="ed-item-note" value="" placeholder="記帳名稱（空白=同品名）" oninput="edVendors[1].items[2].ledgerName=this.value||undefined">
+        <input class="ed-item-note" value="" placeholder="備註（選填）" style="border-color:#d1fae5;background:#f0fdf4" oninput="edVendors[1].items[2].remark=this.value||undefined">
+        <button class="ed-del-btn" onclick="edDelItem('vendor',1,2)">✕</button>
+      </div>
+      <div class="ed-item-row" id="editem-1-3" draggable="false" data-gi="1" data-ii="3" data-itype="vendor">
+        <span class="drag-handle" title="拖曳排序">⠿</span>
+        <input class="ed-item-name" value="蚵仔(1斤)-大" placeholder="品名（必填）" oninput="edVendors[1].items[3].name=this.value">
+        <input class="ed-item-unit" value="包" placeholder="單位" oninput="edVendors[1].items[3].unit=this.value">
+        <input class="ed-item-price" type="number" min="0" inputmode="decimal" value="130" placeholder="價格" oninput="edVendors[1].items[3].price=parseFloat(this.value)||undefined">
+        <input class="ed-item-note" value="" placeholder="記帳名稱（空白=同品名）" oninput="edVendors[1].items[3].ledgerName=this.value||undefined">
+        <input class="ed-item-note" value="" placeholder="備註（選填）" style="border-color:#d1fae5;background:#f0fdf4" oninput="edVendors[1].items[3].remark=this.value||undefined">
+        <button class="ed-del-btn" onclick="edDelItem('vendor',1,3)">✕</button>
+      </div>
+      <div class="ed-item-row" id="editem-1-4" draggable="false" data-gi="1" data-ii="4" data-itype="vendor">
+        <span class="drag-handle" title="拖曳排序">⠿</span>
+        <input class="ed-item-name" value="蛤仔(活)-大(8分)" placeholder="品名（必填）" oninput="edVendors[1].items[4].name=this.value">
+        <input class="ed-item-unit" value="斤" placeholder="單位" oninput="edVendors[1].items[4].unit=this.value">
+        <input class="ed-item-price" type="number" min="0" inputmode="decimal" value="80" placeholder="價格" oninput="edVendors[1].items[4].price=parseFloat(this.value)||undefined">
+        <input class="ed-item-note" value="" placeholder="記帳名稱（空白=同品名）" oninput="edVendors[1].items[4].ledgerName=this.value||undefined">
+        <input class="ed-item-note" value="" placeholder="備註（選填）" style="border-color:#d1fae5;background:#f0fdf4" oninput="edVendors[1].items[4].remark=this.value||undefined">
+        <button class="ed-del-btn" onclick="edDelItem('vendor',1,4)">✕</button>
+      </div>
+      <div class="ed-item-row" id="editem-1-5" draggable="false" data-gi="1" data-ii="5" data-itype="vendor">
+        <span class="drag-handle" title="拖曳排序">⠿</span>
+        <input class="ed-item-name" value="蝦仁(割)2號(1)16/20(3k)" placeholder="品名（必填）" oninput="edVendors[1].items[5].name=this.value">
+        <input class="ed-item-unit" value="包" placeholder="單位" oninput="edVendors[1].items[5].unit=this.value">
+        <input class="ed-item-price" type="number" min="0" inputmode="decimal" value="1200" placeholder="價格" oninput="edVendors[1].items[5].price=parseFloat(this.value)||undefined">
+        <input class="ed-item-note" value="" placeholder="記帳名稱（空白=同品名）" oninput="edVendors[1].items[5].ledgerName=this.value||undefined">
+        <input class="ed-item-note" value="" placeholder="備註（選填）" style="border-color:#d1fae5;background:#f0fdf4" oninput="edVendors[1].items[5].remark=this.value||undefined">
+        <button class="ed-del-btn" onclick="edDelItem('vendor',1,5)">✕</button>
+      </div>
+      <div class="ed-item-row" id="editem-1-6" draggable="false" data-gi="1" data-ii="6" data-itype="vendor">
+        <span class="drag-handle" title="拖曳排序">⠿</span>
+        <input class="ed-item-name" value="紅糟鰻(600g)" placeholder="品名（必填）" oninput="edVendors[1].items[6].name=this.value">
+        <input class="ed-item-unit" value="包" placeholder="單位" oninput="edVendors[1].items[6].unit=this.value">
+        <input class="ed-item-price" type="number" min="0" inputmode="decimal" value="155" placeholder="價格" oninput="edVendors[1].items[6].price=parseFloat(this.value)||undefined">
+        <input class="ed-item-note" value="" placeholder="記帳名稱（空白=同品名）" oninput="edVendors[1].items[6].ledgerName=this.value||undefined">
+        <input class="ed-item-note" value="" placeholder="備註（選填）" style="border-color:#d1fae5;background:#f0fdf4" oninput="edVendors[1].items[6].remark=this.value||undefined">
+        <button class="ed-del-btn" onclick="edDelItem('vendor',1,6)">✕</button>
+      </div>
+      <div class="ed-item-row" id="editem-1-7" draggable="false" data-gi="1" data-ii="7" data-itype="vendor">
+        <span class="drag-handle" title="拖曳排序">⠿</span>
+        <input class="ed-item-name" value="秋刀魚(特)(10k)" placeholder="品名（必填）" oninput="edVendors[1].items[7].name=this.value">
+        <input class="ed-item-unit" value="尾" placeholder="單位" oninput="edVendors[1].items[7].unit=this.value">
+        <input class="ed-item-price" type="number" min="0" inputmode="decimal" value="30" placeholder="價格" oninput="edVendors[1].items[7].price=parseFloat(this.value)||undefined">
+        <input class="ed-item-note" value="" placeholder="記帳名稱（空白=同品名）" oninput="edVendors[1].items[7].ledgerName=this.value||undefined">
+        <input class="ed-item-note" value="一件1300元(約55隻)" placeholder="備註（選填）" style="border-color:#d1fae5;background:#f0fdf4" oninput="edVendors[1].items[7].remark=this.value||undefined">
+        <button class="ed-del-btn" onclick="edDelItem('vendor',1,7)">✕</button>
+      </div>
+      <div class="ed-item-row" id="editem-1-8" draggable="false" data-gi="1" data-ii="8" data-itype="vendor">
+        <span class="drag-handle" title="拖曳排序">⠿</span>
+        <input class="ed-item-name" value="月亮蝦餅(蝦怪)" placeholder="品名（必填）" oninput="edVendors[1].items[8].name=this.value">
+        <input class="ed-item-unit" value="片" placeholder="單位" oninput="edVendors[1].items[8].unit=this.value">
+        <input class="ed-item-price" type="number" min="0" inputmode="decimal" value="55" placeholder="價格" oninput="edVendors[1].items[8].price=parseFloat(this.value)||undefined">
+        <input class="ed-item-note" value="" placeholder="記帳名稱（空白=同品名）" oninput="edVendors[1].items[8].ledgerName=this.value||undefined">
+        <input class="ed-item-note" value="" placeholder="備註（選填）" style="border-color:#d1fae5;background:#f0fdf4" oninput="edVendors[1].items[8].remark=this.value||undefined">
+        <button class="ed-del-btn" onclick="edDelItem('vendor',1,8)">✕</button>
+      </div>
+      <div class="ed-item-row" id="editem-1-9" draggable="false" data-gi="1" data-ii="9" data-itype="vendor">
+        <span class="drag-handle" title="拖曳排序">⠿</span>
+        <input class="ed-item-name" value="鮭魚碎肉A-袋(1k)" placeholder="品名（必填）" oninput="edVendors[1].items[9].name=this.value">
+        <input class="ed-item-unit" value="包" placeholder="單位" oninput="edVendors[1].items[9].unit=this.value">
+        <input class="ed-item-price" type="number" min="0" inputmode="decimal" value="300" placeholder="價格" oninput="edVendors[1].items[9].price=parseFloat(this.value)||undefined">
+        <input class="ed-item-note" value="" placeholder="記帳名稱（空白=同品名）" oninput="edVendors[1].items[9].ledgerName=this.value||undefined">
+        <input class="ed-item-note" value="" placeholder="備註（選填）" style="border-color:#d1fae5;background:#f0fdf4" oninput="edVendors[1].items[9].remark=this.value||undefined">
+        <button class="ed-del-btn" onclick="edDelItem('vendor',1,9)">✕</button>
+      </div>
+      <div class="ed-item-row" id="editem-1-10" draggable="false" data-gi="1" data-ii="10" data-itype="vendor">
+        <span class="drag-handle" title="拖曳排序">⠿</span>
+        <input class="ed-item-name" value="虱目魚肚(無刺)15/18-大" placeholder="品名（必填）" oninput="edVendors[1].items[10].name=this.value">
+        <input class="ed-item-unit" value="片" placeholder="單位" oninput="edVendors[1].items[10].unit=this.value">
+        <input class="ed-item-price" type="number" min="0" inputmode="decimal" value="90" placeholder="價格" oninput="edVendors[1].items[10].price=parseFloat(this.value)||undefined">
+        <input class="ed-item-note" value="" placeholder="記帳名稱（空白=同品名）" oninput="edVendors[1].items[10].ledgerName=this.value||undefined">
+        <input class="ed-item-note" value="" placeholder="備註（選填）" style="border-color:#d1fae5;background:#f0fdf4" oninput="edVendors[1].items[10].remark=this.value||undefined">
+        <button class="ed-del-btn" onclick="edDelItem('vendor',1,10)">✕</button>
+      </div>
+      <div class="ed-item-row" id="editem-1-11" draggable="false" data-gi="1" data-ii="11" data-itype="vendor">
+        <span class="drag-handle" title="拖曳排序">⠿</span>
+        <input class="ed-item-name" value="鹿茸烏骨雞(金)" placeholder="品名（必填）" oninput="edVendors[1].items[11].name=this.value">
+        <input class="ed-item-unit" value="包" placeholder="單位" oninput="edVendors[1].items[11].unit=this.value">
+        <input class="ed-item-price" type="number" min="0" inputmode="decimal" value="300" placeholder="價格" oninput="edVendors[1].items[11].price=parseFloat(this.value)||undefined">
+        <input class="ed-item-note" value="" placeholder="記帳名稱（空白=同品名）" oninput="edVendors[1].items[11].ledgerName=this.value||undefined">
+        <input class="ed-item-note" value="" placeholder="備註（選填）" style="border-color:#d1fae5;background:#f0fdf4" oninput="edVendors[1].items[11].remark=this.value||undefined">
+        <button class="ed-del-btn" onclick="edDelItem('vendor',1,11)">✕</button>
+      </div>
+      <div class="ed-item-row" id="editem-1-12" draggable="false" data-gi="1" data-ii="12" data-itype="vendor">
+        <span class="drag-handle" title="拖曳排序">⠿</span>
+        <input class="ed-item-name" value="蒲燒鯛魚排(110P)" placeholder="品名（必填）" oninput="edVendors[1].items[12].name=this.value">
+        <input class="ed-item-unit" value="盒" placeholder="單位" oninput="edVendors[1].items[12].unit=this.value">
+        <input class="ed-item-price" type="number" min="0" inputmode="decimal" value="1350" placeholder="價格" oninput="edVendors[1].items[12].price=parseFloat(this.value)||undefined">
+        <input class="ed-item-note" value="" placeholder="記帳名稱（空白=同品名）" oninput="edVendors[1].items[12].ledgerName=this.value||undefined">
+        <input class="ed-item-note" value="" placeholder="備註（選填）" style="border-color:#d1fae5;background:#f0fdf4" oninput="edVendors[1].items[12].remark=this.value||undefined">
+        <button class="ed-del-btn" onclick="edDelItem('vendor',1,12)">✕</button>
+      </div>
+      <div class="ed-item-row" id="editem-1-13" draggable="false" data-gi="1" data-ii="13" data-itype="vendor">
+        <span class="drag-handle" title="拖曳排序">⠿</span>
+        <input class="ed-item-name" value="金目鱸魚(蝴蝶切)" placeholder="品名（必填）" oninput="edVendors[1].items[13].name=this.value">
+        <input class="ed-item-unit" value="尾" placeholder="單位" oninput="edVendors[1].items[13].unit=this.value">
+        <input class="ed-item-price" type="number" min="0" inputmode="decimal" value="120" placeholder="價格" oninput="edVendors[1].items[13].price=parseFloat(this.value)||undefined">
+        <input class="ed-item-note" value="" placeholder="記帳名稱（空白=同品名）" oninput="edVendors[1].items[13].ledgerName=this.value||undefined">
+        <input class="ed-item-note" value="" placeholder="備註（選填）" style="border-color:#d1fae5;background:#f0fdf4" oninput="edVendors[1].items[13].remark=this.value||undefined">
+        <button class="ed-del-btn" onclick="edDelItem('vendor',1,13)">✕</button>
+      </div>
+      <div class="ed-item-row" id="editem-1-14" draggable="false" data-gi="1" data-ii="14" data-itype="vendor">
+        <span class="drag-handle" title="拖曳排序">⠿</span>
+        <input class="ed-item-name" value="佛跳牆(金)" placeholder="品名（必填）" oninput="edVendors[1].items[14].name=this.value">
+        <input class="ed-item-unit" value="盒" placeholder="單位" oninput="edVendors[1].items[14].unit=this.value">
+        <input class="ed-item-price" type="number" min="0" inputmode="decimal" value="280" placeholder="價格" oninput="edVendors[1].items[14].price=parseFloat(this.value)||undefined">
+        <input class="ed-item-note" value="" placeholder="記帳名稱（空白=同品名）" oninput="edVendors[1].items[14].ledgerName=this.value||undefined">
+        <input class="ed-item-note" value="" placeholder="備註（選填）" style="border-color:#d1fae5;background:#f0fdf4" oninput="edVendors[1].items[14].remark=this.value||undefined">
+        <button class="ed-del-btn" onclick="edDelItem('vendor',1,14)">✕</button>
+      </div>
+      <div class="ed-item-row" id="editem-1-15" draggable="false" data-gi="1" data-ii="15" data-itype="vendor">
+        <span class="drag-handle" title="拖曳排序">⠿</span>
+        <input class="ed-item-name" value="大比目魚切-2L" placeholder="品名（必填）" oninput="edVendors[1].items[15].name=this.value">
+        <input class="ed-item-unit" value="片" placeholder="單位" oninput="edVendors[1].items[15].unit=this.value">
+        <input class="ed-item-price" type="number" min="0" inputmode="decimal" value="230" placeholder="價格" oninput="edVendors[1].items[15].price=parseFloat(this.value)||undefined">
+        <input class="ed-item-note" value="" placeholder="記帳名稱（空白=同品名）" oninput="edVendors[1].items[15].ledgerName=this.value||undefined">
+        <input class="ed-item-note" value="" placeholder="備註（選填）" style="border-color:#d1fae5;background:#f0fdf4" oninput="edVendors[1].items[15].remark=this.value||undefined">
+        <button class="ed-del-btn" onclick="edDelItem('vendor',1,15)">✕</button>
+      </div></div>
+        <button class="ed-add-item" onclick="edAddItem('vendor',1)">＋ 新增品項</button>
+      </div>
+    </div><div class="ed-vendor-card" id="edv-2" draggable="false" data-vi="2" data-dtype="vendor">
+      <div class="ed-vendor-head" onclick="toggleEdVendor(2)">
+        <span class="drag-handle-vendor" onclick="event.stopPropagation()" title="拖曳排序">⠿</span>
+        <input class="ed-vendor-name-input" value="中壢-聯合" placeholder="廠商名稱" oninput="edVendors[2].vendor=this.value" onclick="event.stopPropagation()">
+        <span class="ed-vendor-badge">11 項</span>
+        <button class="ed-del-vendor-btn" onclick="event.stopPropagation();edDelVendor(2)">✕ 刪除</button>
+        <span class="ed-vendor-toggle open" id="edvt-2">▼</span>
+      </div>
+      <div class="ed-vendor-body open" id="edvb-2">
+        <div class="ed-col-hdr">
+          <span class="ed-col-n">品名（必填）</span>
+          <span class="ed-col-u">單位</span>
+          <span class="ed-col-p">價格</span>
+          <span class="ed-col-nt">記帳名稱<br><small style="font-weight:400;color:#ccc">空白=同品名</small></span>
+          <span class="ed-col-rk">備註<br><small style="font-weight:400;color:#ccc">顯示在品項卡下方</small></span>
+          <span class="ed-col-d"></span>
+        </div>
+        <div id="edvi-2">
+      <div class="ed-item-row" id="editem-2-0" draggable="false" data-gi="2" data-ii="0" data-itype="vendor">
+        <span class="drag-handle" title="拖曳排序">⠿</span>
+        <input class="ed-item-name" value="豬肉絲" placeholder="品名（必填）" oninput="edVendors[2].items[0].name=this.value">
+        <input class="ed-item-unit" value="包" placeholder="單位" oninput="edVendors[2].items[0].unit=this.value">
+        <input class="ed-item-price" type="number" min="0" inputmode="decimal" value="500" placeholder="價格" oninput="edVendors[2].items[0].price=parseFloat(this.value)||undefined">
+        <input class="ed-item-note" value="" placeholder="記帳名稱（空白=同品名）" oninput="edVendors[2].items[0].ledgerName=this.value||undefined">
+        <input class="ed-item-note" value="" placeholder="備註（選填）" style="border-color:#d1fae5;background:#f0fdf4" oninput="edVendors[2].items[0].remark=this.value||undefined">
+        <button class="ed-del-btn" onclick="edDelItem('vendor',2,0)">✕</button>
+      </div>
+      <div class="ed-item-row" id="editem-2-1" draggable="false" data-gi="2" data-ii="1" data-itype="vendor">
+        <span class="drag-handle" title="拖曳排序">⠿</span>
+        <input class="ed-item-name" value="牛炒片" placeholder="品名（必填）" oninput="edVendors[2].items[1].name=this.value">
+        <input class="ed-item-unit" value="包" placeholder="單位" oninput="edVendors[2].items[1].unit=this.value">
+        <input class="ed-item-price" type="number" min="0" inputmode="decimal" value="660" placeholder="價格" oninput="edVendors[2].items[1].price=parseFloat(this.value)||undefined">
+        <input class="ed-item-note" value="" placeholder="記帳名稱（空白=同品名）" oninput="edVendors[2].items[1].ledgerName=this.value||undefined">
+        <input class="ed-item-note" value="" placeholder="備註（選填）" style="border-color:#d1fae5;background:#f0fdf4" oninput="edVendors[2].items[1].remark=this.value||undefined">
+        <button class="ed-del-btn" onclick="edDelItem('vendor',2,1)">✕</button>
+      </div>
+      <div class="ed-item-row" id="editem-2-2" draggable="false" data-gi="2" data-ii="2" data-itype="vendor">
+        <span class="drag-handle" title="拖曳排序">⠿</span>
+        <input class="ed-item-name" value="羊炒片" placeholder="品名（必填）" oninput="edVendors[2].items[2].name=this.value">
+        <input class="ed-item-unit" value="包" placeholder="單位" oninput="edVendors[2].items[2].unit=this.value">
+        <input class="ed-item-price" type="number" min="0" inputmode="decimal" value="830" placeholder="價格" oninput="edVendors[2].items[2].price=parseFloat(this.value)||undefined">
+        <input class="ed-item-note" value="" placeholder="記帳名稱（空白=同品名）" oninput="edVendors[2].items[2].ledgerName=this.value||undefined">
+        <input class="ed-item-note" value="" placeholder="備註（選填）" style="border-color:#d1fae5;background:#f0fdf4" oninput="edVendors[2].items[2].remark=this.value||undefined">
+        <button class="ed-del-btn" onclick="edDelItem('vendor',2,2)">✕</button>
+      </div>
+      <div class="ed-item-row" id="editem-2-3" draggable="false" data-gi="2" data-ii="3" data-itype="vendor">
+        <span class="drag-handle" title="拖曳排序">⠿</span>
+        <input class="ed-item-name" value="香腸片" placeholder="品名（必填）" oninput="edVendors[2].items[3].name=this.value">
+        <input class="ed-item-unit" value="包" placeholder="單位" oninput="edVendors[2].items[3].unit=this.value">
+        <input class="ed-item-price" type="number" min="0" inputmode="decimal" value="380" placeholder="價格" oninput="edVendors[2].items[3].price=parseFloat(this.value)||undefined">
+        <input class="ed-item-note" value="" placeholder="記帳名稱（空白=同品名）" oninput="edVendors[2].items[3].ledgerName=this.value||undefined">
+        <input class="ed-item-note" value="" placeholder="備註（選填）" style="border-color:#d1fae5;background:#f0fdf4" oninput="edVendors[2].items[3].remark=this.value||undefined">
+        <button class="ed-del-btn" onclick="edDelItem('vendor',2,3)">✕</button>
+      </div>
+      <div class="ed-item-row" id="editem-2-4" draggable="false" data-gi="2" data-ii="4" data-itype="vendor">
+        <span class="drag-handle" title="拖曳排序">⠿</span>
+        <input class="ed-item-name" value="白蝦仁" placeholder="品名（必填）" oninput="edVendors[2].items[4].name=this.value">
+        <input class="ed-item-unit" value="包" placeholder="單位" oninput="edVendors[2].items[4].unit=this.value">
+        <input class="ed-item-price" type="number" min="0" inputmode="decimal" value="730" placeholder="價格" oninput="edVendors[2].items[4].price=parseFloat(this.value)||undefined">
+        <input class="ed-item-note" value="" placeholder="記帳名稱（空白=同品名）" oninput="edVendors[2].items[4].ledgerName=this.value||undefined">
+        <input class="ed-item-note" value="" placeholder="備註（選填）" style="border-color:#d1fae5;background:#f0fdf4" oninput="edVendors[2].items[4].remark=this.value||undefined">
+        <button class="ed-del-btn" onclick="edDelItem('vendor',2,4)">✕</button>
+      </div>
+      <div class="ed-item-row" id="editem-2-5" draggable="false" data-gi="2" data-ii="5" data-itype="vendor">
+        <span class="drag-handle" title="拖曳排序">⠿</span>
+        <input class="ed-item-name" value="A大貢丸" placeholder="品名（必填）" oninput="edVendors[2].items[5].name=this.value">
+        <input class="ed-item-unit" value="包" placeholder="單位" oninput="edVendors[2].items[5].unit=this.value">
+        <input class="ed-item-price" type="number" min="0" inputmode="decimal" value="450" placeholder="價格" oninput="edVendors[2].items[5].price=parseFloat(this.value)||undefined">
+        <input class="ed-item-note" value="" placeholder="記帳名稱（空白=同品名）" oninput="edVendors[2].items[5].ledgerName=this.value||undefined">
+        <input class="ed-item-note" value="" placeholder="備註（選填）" style="border-color:#d1fae5;background:#f0fdf4" oninput="edVendors[2].items[5].remark=this.value||undefined">
+        <button class="ed-del-btn" onclick="edDelItem('vendor',2,5)">✕</button>
+      </div>
+      <div class="ed-item-row" id="editem-2-6" draggable="false" data-gi="2" data-ii="6" data-itype="vendor">
+        <span class="drag-handle" title="拖曳排序">⠿</span>
+        <input class="ed-item-name" value="鱈魚丸" placeholder="品名（必填）" oninput="edVendors[2].items[6].name=this.value">
+        <input class="ed-item-unit" value="包" placeholder="單位" oninput="edVendors[2].items[6].unit=this.value">
+        <input class="ed-item-price" type="number" min="0" inputmode="decimal" value="350" placeholder="價格" oninput="edVendors[2].items[6].price=parseFloat(this.value)||undefined">
+        <input class="ed-item-note" value="" placeholder="記帳名稱（空白=同品名）" oninput="edVendors[2].items[6].ledgerName=this.value||undefined">
+        <input class="ed-item-note" value="" placeholder="備註（選填）" style="border-color:#d1fae5;background:#f0fdf4" oninput="edVendors[2].items[6].remark=this.value||undefined">
+        <button class="ed-del-btn" onclick="edDelItem('vendor',2,6)">✕</button>
+      </div>
+      <div class="ed-item-row" id="editem-2-7" draggable="false" data-gi="2" data-ii="7" data-itype="vendor">
+        <span class="drag-handle" title="拖曳排序">⠿</span>
+        <input class="ed-item-name" value="虱目魚肚" placeholder="品名（必填）" oninput="edVendors[2].items[7].name=this.value">
+        <input class="ed-item-unit" value="包" placeholder="單位" oninput="edVendors[2].items[7].unit=this.value">
+        <input class="ed-item-price" type="number" min="0" inputmode="decimal" value="65" placeholder="價格" oninput="edVendors[2].items[7].price=parseFloat(this.value)||undefined">
+        <input class="ed-item-note" value="" placeholder="記帳名稱（空白=同品名）" oninput="edVendors[2].items[7].ledgerName=this.value||undefined">
+        <input class="ed-item-note" value="" placeholder="備註（選填）" style="border-color:#d1fae5;background:#f0fdf4" oninput="edVendors[2].items[7].remark=this.value||undefined">
+        <button class="ed-del-btn" onclick="edDelItem('vendor',2,7)">✕</button>
+      </div>
+      <div class="ed-item-row" id="editem-2-8" draggable="false" data-gi="2" data-ii="8" data-itype="vendor">
+        <span class="drag-handle" title="拖曳排序">⠿</span>
+        <input class="ed-item-name" value="玉米粒" placeholder="品名（必填）" oninput="edVendors[2].items[8].name=this.value">
+        <input class="ed-item-unit" value="包" placeholder="單位" oninput="edVendors[2].items[8].unit=this.value">
+        <input class="ed-item-price" type="number" min="0" inputmode="decimal" value="70" placeholder="價格" oninput="edVendors[2].items[8].price=parseFloat(this.value)||undefined">
+        <input class="ed-item-note" value="" placeholder="記帳名稱（空白=同品名）" oninput="edVendors[2].items[8].ledgerName=this.value||undefined">
+        <input class="ed-item-note" value="" placeholder="備註（選填）" style="border-color:#d1fae5;background:#f0fdf4" oninput="edVendors[2].items[8].remark=this.value||undefined">
+        <button class="ed-del-btn" onclick="edDelItem('vendor',2,8)">✕</button>
+      </div>
+      <div class="ed-item-row" id="editem-2-9" draggable="false" data-gi="2" data-ii="9" data-itype="vendor">
+        <span class="drag-handle" title="拖曳排序">⠿</span>
+        <input class="ed-item-name" value="雞胸清肉" placeholder="品名（必填）" oninput="edVendors[2].items[9].name=this.value">
+        <input class="ed-item-unit" value="斤" placeholder="單位" oninput="edVendors[2].items[9].unit=this.value">
+        <input class="ed-item-price" type="number" min="0" inputmode="decimal" value="93" placeholder="價格" oninput="edVendors[2].items[9].price=parseFloat(this.value)||undefined">
+        <input class="ed-item-note" value="" placeholder="記帳名稱（空白=同品名）" oninput="edVendors[2].items[9].ledgerName=this.value||undefined">
+        <input class="ed-item-note" value="" placeholder="備註（選填）" style="border-color:#d1fae5;background:#f0fdf4" oninput="edVendors[2].items[9].remark=this.value||undefined">
+        <button class="ed-del-btn" onclick="edDelItem('vendor',2,9)">✕</button>
+      </div>
+      <div class="ed-item-row" id="editem-2-10" draggable="false" data-gi="2" data-ii="10" data-itype="vendor">
+        <span class="drag-handle" title="拖曳排序">⠿</span>
+        <input class="ed-item-name" value="大雞腿" placeholder="品名（必填）" oninput="edVendors[2].items[10].name=this.value">
+        <input class="ed-item-unit" value="斤" placeholder="單位" oninput="edVendors[2].items[10].unit=this.value">
+        <input class="ed-item-price" type="number" min="0" inputmode="decimal" value="75" placeholder="價格" oninput="edVendors[2].items[10].price=parseFloat(this.value)||undefined">
+        <input class="ed-item-note" value="" placeholder="記帳名稱（空白=同品名）" oninput="edVendors[2].items[10].ledgerName=this.value||undefined">
+        <input class="ed-item-note" value="" placeholder="備註（選填）" style="border-color:#d1fae5;background:#f0fdf4" oninput="edVendors[2].items[10].remark=this.value||undefined">
+        <button class="ed-del-btn" onclick="edDelItem('vendor',2,10)">✕</button>
+      </div></div>
+        <button class="ed-add-item" onclick="edAddItem('vendor',2)">＋ 新增品項</button>
+      </div>
+    </div><div class="ed-vendor-card" id="edv-3" draggable="false" data-vi="3" data-dtype="vendor">
+      <div class="ed-vendor-head" onclick="toggleEdVendor(3)">
+        <span class="drag-handle-vendor" onclick="event.stopPropagation()" title="拖曳排序">⠿</span>
+        <input class="ed-vendor-name-input" value="中壢-昇暉製麵" placeholder="廠商名稱" oninput="edVendors[3].vendor=this.value" onclick="event.stopPropagation()">
+        <span class="ed-vendor-badge">4 項</span>
+        <button class="ed-del-vendor-btn" onclick="event.stopPropagation();edDelVendor(3)">✕ 刪除</button>
+        <span class="ed-vendor-toggle" id="edvt-3">▼</span>
+      </div>
+      <div class="ed-vendor-body" id="edvb-3">
+        <div class="ed-col-hdr">
+          <span class="ed-col-n">品名（必填）</span>
+          <span class="ed-col-u">單位</span>
+          <span class="ed-col-p">價格</span>
+          <span class="ed-col-nt">記帳名稱<br><small style="font-weight:400;color:#ccc">空白=同品名</small></span>
+          <span class="ed-col-rk">備註<br><small style="font-weight:400;color:#ccc">顯示在品項卡下方</small></span>
+          <span class="ed-col-d"></span>
+        </div>
+        <div id="edvi-3">
+      <div class="ed-item-row" id="editem-3-0" draggable="false" data-gi="3" data-ii="0" data-itype="vendor">
+        <span class="drag-handle" title="拖曳排序">⠿</span>
+        <input class="ed-item-name" value="烏龍麵(5斤)" placeholder="品名（必填）" oninput="edVendors[3].items[0].name=this.value">
+        <input class="ed-item-unit" value="包" placeholder="單位" oninput="edVendors[3].items[0].unit=this.value">
+        <input class="ed-item-price" type="number" min="0" inputmode="decimal" value="80" placeholder="價格" oninput="edVendors[3].items[0].price=parseFloat(this.value)||undefined">
+        <input class="ed-item-note" value="" placeholder="記帳名稱（空白=同品名）" oninput="edVendors[3].items[0].ledgerName=this.value||undefined">
+        <input class="ed-item-note" value="" placeholder="備註（選填）" style="border-color:#d1fae5;background:#f0fdf4" oninput="edVendors[3].items[0].remark=this.value||undefined">
+        <button class="ed-del-btn" onclick="edDelItem('vendor',3,0)">✕</button>
+      </div>
+      <div class="ed-item-row" id="editem-3-1" draggable="false" data-gi="3" data-ii="1" data-itype="vendor">
+        <span class="drag-handle" title="拖曳排序">⠿</span>
+        <input class="ed-item-name" value="豆菜麵(5斤)" placeholder="品名（必填）" oninput="edVendors[3].items[1].name=this.value">
+        <input class="ed-item-unit" value="包" placeholder="單位" oninput="edVendors[3].items[1].unit=this.value">
+        <input class="ed-item-price" type="number" min="0" inputmode="decimal" value="80" placeholder="價格" oninput="edVendors[3].items[1].price=parseFloat(this.value)||undefined">
+        <input class="ed-item-note" value="" placeholder="記帳名稱（空白=同品名）" oninput="edVendors[3].items[1].ledgerName=this.value||undefined">
+        <input class="ed-item-note" value="" placeholder="備註（選填）" style="border-color:#d1fae5;background:#f0fdf4" oninput="edVendors[3].items[1].remark=this.value||undefined">
+        <button class="ed-del-btn" onclick="edDelItem('vendor',3,1)">✕</button>
+      </div>
+      <div class="ed-item-row" id="editem-3-2" draggable="false" data-gi="3" data-ii="2" data-itype="vendor">
+        <span class="drag-handle" title="拖曳排序">⠿</span>
+        <input class="ed-item-name" value="魚板絲" placeholder="品名（必填）" oninput="edVendors[3].items[2].name=this.value">
+        <input class="ed-item-unit" value="包" placeholder="單位" oninput="edVendors[3].items[2].unit=this.value">
+        <input class="ed-item-price" type="number" min="0" inputmode="decimal" value="360" placeholder="價格" oninput="edVendors[3].items[2].price=parseFloat(this.value)||undefined">
+        <input class="ed-item-note" value="" placeholder="記帳名稱（空白=同品名）" oninput="edVendors[3].items[2].ledgerName=this.value||undefined">
+        <input class="ed-item-note" value="" placeholder="備註（選填）" style="border-color:#d1fae5;background:#f0fdf4" oninput="edVendors[3].items[2].remark=this.value||undefined">
+        <button class="ed-del-btn" onclick="edDelItem('vendor',3,2)">✕</button>
+      </div>
+      <div class="ed-item-row" id="editem-3-3" draggable="false" data-gi="3" data-ii="3" data-itype="vendor">
+        <span class="drag-handle" title="拖曳排序">⠿</span>
+        <input class="ed-item-name" value="魚板片" placeholder="品名（必填）" oninput="edVendors[3].items[3].name=this.value">
+        <input class="ed-item-unit" value="包" placeholder="單位" oninput="edVendors[3].items[3].unit=this.value">
+        <input class="ed-item-price" type="number" min="0" inputmode="decimal" value="310" placeholder="價格" oninput="edVendors[3].items[3].price=parseFloat(this.value)||undefined">
+        <input class="ed-item-note" value="" placeholder="記帳名稱（空白=同品名）" oninput="edVendors[3].items[3].ledgerName=this.value||undefined">
+        <input class="ed-item-note" value="" placeholder="備註（選填）" style="border-color:#d1fae5;background:#f0fdf4" oninput="edVendors[3].items[3].remark=this.value||undefined">
+        <button class="ed-del-btn" onclick="edDelItem('vendor',3,3)">✕</button>
+      </div></div>
+        <button class="ed-add-item" onclick="edAddItem('vendor',3)">＋ 新增品項</button>
+      </div>
+    </div><div class="ed-vendor-card" id="edv-4" draggable="false" data-vi="4" data-dtype="vendor">
+      <div class="ed-vendor-head" onclick="toggleEdVendor(4)">
+        <span class="drag-handle-vendor" onclick="event.stopPropagation()" title="拖曳排序">⠿</span>
+        <input class="ed-vendor-name-input" value="中壢-富昌" placeholder="廠商名稱" oninput="edVendors[4].vendor=this.value" onclick="event.stopPropagation()">
         <span class="ed-vendor-badge">2 項</span>
-        <button class="ed-del-vendor-btn" onclick="event.stopPropagation();edDelLedgerOnly(0)">✕ 刪除</button>
-        <span class="ed-vendor-toggle open" id="edlt-0">▼</span>
+        <button class="ed-del-vendor-btn" onclick="event.stopPropagation();edDelVendor(4)">✕ 刪除</button>
+        <span class="ed-vendor-toggle" id="edvt-4">▼</span>
       </div>
-      <div class="ed-vendor-body open" id="edlb-0">
+      <div class="ed-vendor-body" id="edvb-4">
         <div class="ed-col-hdr">
           <span class="ed-col-n">品名（必填）</span>
+          <span class="ed-col-u">單位</span>
           <span class="ed-col-p">價格</span>
+          <span class="ed-col-nt">記帳名稱<br><small style="font-weight:400;color:#ccc">空白=同品名</small></span>
+          <span class="ed-col-rk">備註<br><small style="font-weight:400;color:#ccc">顯示在品項卡下方</small></span>
           <span class="ed-col-d"></span>
         </div>
-        <div id="edli-0">
-      <div class="ed-item-row" id="editem-0-0" draggable="false" data-gi="0" data-ii="0" data-itype="ledger">
+        <div id="edvi-4">
+      <div class="ed-item-row" id="editem-4-0" draggable="false" data-gi="4" data-ii="0" data-itype="vendor">
         <span class="drag-handle" title="拖曳排序">⠿</span>
-        <input class="ed-item-name" value="瓦斯" placeholder="品名（必填）" oninput="edLedgerOnly[0].items[0].name=this.value">
-        <input class="ed-item-price" type="number" min="0" inputmode="decimal" value="610" placeholder="價格" oninput="edLedgerOnly[0].items[0].price=parseFloat(this.value)||undefined">
-        <button class="ed-del-btn" onclick="edDelItem('ledger',0,0)">✕</button>
+        <input class="ed-item-name" value="五花肉" placeholder="品名（必填）" oninput="edVendors[4].items[0].name=this.value">
+        <input class="ed-item-unit" value="斤" placeholder="單位" oninput="edVendors[4].items[0].unit=this.value">
+        <input class="ed-item-price" type="number" min="0" inputmode="decimal" value="140" placeholder="價格" oninput="edVendors[4].items[0].price=parseFloat(this.value)||undefined">
+        <input class="ed-item-note" value="" placeholder="記帳名稱（空白=同品名）" oninput="edVendors[4].items[0].ledgerName=this.value||undefined">
+        <input class="ed-item-note" value="" placeholder="備註（選填）" style="border-color:#d1fae5;background:#f0fdf4" oninput="edVendors[4].items[0].remark=this.value||undefined">
+        <button class="ed-del-btn" onclick="edDelItem('vendor',4,0)">✕</button>
       </div>
-      <div class="ed-item-row" id="editem-0-1" draggable="false" data-gi="0" data-ii="1" data-itype="ledger">
+      <div class="ed-item-row" id="editem-4-1" draggable="false" data-gi="4" data-ii="1" data-itype="vendor">
         <span class="drag-handle" title="拖曳排序">⠿</span>
-        <input class="ed-item-name" value="德興行-602扁碗+蓋(熱炒用)" placeholder="品名（必填）" oninput="edLedgerOnly[0].items[1].name=this.value">
-        <input class="ed-item-price" type="number" min="0" inputmode="decimal" value="930" placeholder="價格" oninput="edLedgerOnly[0].items[1].price=parseFloat(this.value)||undefined">
-        <button class="ed-del-btn" onclick="edDelItem('ledger',0,1)">✕</button>
-      </div>
-      <div class="ed-item-row" id="editem-0-2" draggable="false" data-gi="0" data-ii="2" data-itype="ledger">
-        <span class="drag-handle" title="拖曳排序">⠿</span>
-        <input class="ed-item-name" value="營業稅" placeholder="品名（必填）" oninput="edLedgerOnly[0].items[2].name=this.value">
-        <input class="ed-item-price" type="number" min="0" inputmode="decimal" value="3960" placeholder="價格" oninput="edLedgerOnly[0].items[2].price=parseFloat(this.value)||undefined">
-        <button class="ed-del-btn" onclick="edDelItem('ledger',0,2)">✕</button>
-      </div>
-      <div class="ed-item-row" id="editem-0-3" draggable="false" data-gi="0" data-ii="3" data-itype="ledger">
-        <span class="drag-handle" title="拖曳排序">⠿</span>
-        <input class="ed-item-name" value="" placeholder="品名（必填）" oninput="edLedgerOnly[0].items[3].name=this.value">
-        <input class="ed-item-price" type="number" min="0" inputmode="decimal" value="" placeholder="價格" oninput="edLedgerOnly[0].items[3].price=parseFloat(this.value)||undefined">
-        <button class="ed-del-btn" onclick="edDelItem('ledger',0,3)">✕</button>
+        <input class="ed-item-name" value="軟骨排" placeholder="品名（必填）" oninput="edVendors[4].items[1].name=this.value">
+        <input class="ed-item-unit" value="斤" placeholder="單位" oninput="edVendors[4].items[1].unit=this.value">
+        <input class="ed-item-price" type="number" min="0" inputmode="decimal" value="130" placeholder="價格" oninput="edVendors[4].items[1].price=parseFloat(this.value)||undefined">
+        <input class="ed-item-note" value="" placeholder="記帳名稱（空白=同品名）" oninput="edVendors[4].items[1].ledgerName=this.value||undefined">
+        <input class="ed-item-note" value="" placeholder="備註（選填）" style="border-color:#d1fae5;background:#f0fdf4" oninput="edVendors[4].items[1].remark=this.value||undefined">
+        <button class="ed-del-btn" onclick="edDelItem('vendor',4,1)">✕</button>
       </div></div>
-        <button class="ed-add-item" onclick="edAddItem('ledger',0)">＋ 新增品項</button>
+        <button class="ed-add-item" onclick="edAddItem('vendor',4)">＋ 新增品項</button>
       </div>
-    </div><div class="ed-vendor-card" id="edl-1" draggable="false" data-gi="1" data-dtype="ledger">
-      <div class="ed-vendor-head" onclick="toggleEdLedger(1)">
+    </div><div class="ed-vendor-card" id="edv-5" draggable="false" data-vi="5" data-dtype="vendor">
+      <div class="ed-vendor-head" onclick="toggleEdVendor(5)">
         <span class="drag-handle-vendor" onclick="event.stopPropagation()" title="拖曳排序">⠿</span>
-        <input class="ed-vendor-name-input" value="行銷費用" placeholder="群組名稱" oninput="edLedgerOnly[1].group=this.value" onclick="event.stopPropagation()">
+        <input class="ed-vendor-name-input" value="永溢麵食" placeholder="廠商名稱" oninput="edVendors[5].vendor=this.value" onclick="event.stopPropagation()">
         <span class="ed-vendor-badge">2 項</span>
-        <button class="ed-del-vendor-btn" onclick="event.stopPropagation();edDelLedgerOnly(1)">✕ 刪除</button>
-        <span class="ed-vendor-toggle" id="edlt-1">▼</span>
+        <button class="ed-del-vendor-btn" onclick="event.stopPropagation();edDelVendor(5)">✕ 刪除</button>
+        <span class="ed-vendor-toggle" id="edvt-5">▼</span>
       </div>
-      <div class="ed-vendor-body" id="edlb-1">
+      <div class="ed-vendor-body" id="edvb-5">
         <div class="ed-col-hdr">
           <span class="ed-col-n">品名（必填）</span>
+          <span class="ed-col-u">單位</span>
           <span class="ed-col-p">價格</span>
+          <span class="ed-col-nt">記帳名稱<br><small style="font-weight:400;color:#ccc">空白=同品名</small></span>
+          <span class="ed-col-rk">備註<br><small style="font-weight:400;color:#ccc">顯示在品項卡下方</small></span>
           <span class="ed-col-d"></span>
         </div>
-        <div id="edli-1">
-      <div class="ed-item-row" id="editem-1-0" draggable="false" data-gi="1" data-ii="0" data-itype="ledger">
+        <div id="edvi-5">
+      <div class="ed-item-row" id="editem-5-0" draggable="false" data-gi="5" data-ii="0" data-itype="vendor">
         <span class="drag-handle" title="拖曳排序">⠿</span>
-        <input class="ed-item-name" value="傳單印刷" placeholder="品名（必填）" oninput="edLedgerOnly[1].items[0].name=this.value">
-        <input class="ed-item-price" type="number" min="0" inputmode="decimal" value="" placeholder="價格" oninput="edLedgerOnly[1].items[0].price=parseFloat(this.value)||undefined">
-        <button class="ed-del-btn" onclick="edDelItem('ledger',1,0)">✕</button>
+        <input class="ed-item-name" value="豆菜麵(5斤)" placeholder="品名（必填）" oninput="edVendors[5].items[0].name=this.value">
+        <input class="ed-item-unit" value="包" placeholder="單位" oninput="edVendors[5].items[0].unit=this.value">
+        <input class="ed-item-price" type="number" min="0" inputmode="decimal" value="90" placeholder="價格" oninput="edVendors[5].items[0].price=parseFloat(this.value)||undefined">
+        <input class="ed-item-note" value="" placeholder="記帳名稱（空白=同品名）" oninput="edVendors[5].items[0].ledgerName=this.value||undefined">
+        <input class="ed-item-note" value="" placeholder="備註（選填）" style="border-color:#d1fae5;background:#f0fdf4" oninput="edVendors[5].items[0].remark=this.value||undefined">
+        <button class="ed-del-btn" onclick="edDelItem('vendor',5,0)">✕</button>
       </div>
-      <div class="ed-item-row" id="editem-1-1" draggable="false" data-gi="1" data-ii="1" data-itype="ledger">
+      <div class="ed-item-row" id="editem-5-1" draggable="false" data-gi="5" data-ii="1" data-itype="vendor">
         <span class="drag-handle" title="拖曳排序">⠿</span>
-        <input class="ed-item-name" value="廣告費" placeholder="品名（必填）" oninput="edLedgerOnly[1].items[1].name=this.value">
-        <input class="ed-item-price" type="number" min="0" inputmode="decimal" value="" placeholder="價格" oninput="edLedgerOnly[1].items[1].price=parseFloat(this.value)||undefined">
-        <button class="ed-del-btn" onclick="edDelItem('ledger',1,1)">✕</button>
+        <input class="ed-item-name" value="烏龍麵(5斤)" placeholder="品名（必填）" oninput="edVendors[5].items[1].name=this.value">
+        <input class="ed-item-unit" value="包" placeholder="單位" oninput="edVendors[5].items[1].unit=this.value">
+        <input class="ed-item-price" type="number" min="0" inputmode="decimal" value="100" placeholder="價格" oninput="edVendors[5].items[1].price=parseFloat(this.value)||undefined">
+        <input class="ed-item-note" value="" placeholder="記帳名稱（空白=同品名）" oninput="edVendors[5].items[1].ledgerName=this.value||undefined">
+        <input class="ed-item-note" value="" placeholder="備註（選填）" style="border-color:#d1fae5;background:#f0fdf4" oninput="edVendors[5].items[1].remark=this.value||undefined">
+        <button class="ed-del-btn" onclick="edDelItem('vendor',5,1)">✕</button>
       </div></div>
-        <button class="ed-add-item" onclick="edAddItem('ledger',1)">＋ 新增品項</button>
+        <button class="ed-add-item" onclick="edAddItem('vendor',5)">＋ 新增品項</button>
       </div>
-    </div><div class="ed-vendor-card" id="edl-2" draggable="false" data-gi="2" data-dtype="ledger">
-      <div class="ed-vendor-head" onclick="toggleEdLedger(2)">
+    </div><div class="ed-vendor-card" id="edv-6" draggable="false" data-vi="6" data-dtype="vendor">
+      <div class="ed-vendor-head" onclick="toggleEdVendor(6)">
         <span class="drag-handle-vendor" onclick="event.stopPropagation()" title="拖曳排序">⠿</span>
-        <input class="ed-vendor-name-input" value="外帶自取" placeholder="群組名稱" style="color:var(--purple);font-weight:800" oninput="edLedgerOnly[2].group=this.value" onclick="event.stopPropagation()">
-        <span class="ed-vendor-badge">🛍️ 特殊</span>
-        
-        <span class="ed-vendor-toggle" id="edlt-2">▼</span>
+        <input class="ed-vendor-name-input" value="三信蛋行" placeholder="廠商名稱" oninput="edVendors[6].vendor=this.value" onclick="event.stopPropagation()">
+        <span class="ed-vendor-badge">3 項</span>
+        <button class="ed-del-vendor-btn" onclick="event.stopPropagation();edDelVendor(6)">✕ 刪除</button>
+        <span class="ed-vendor-toggle" id="edvt-6">▼</span>
       </div>
-      <div class="ed-vendor-body" id="edlb-2">
+      <div class="ed-vendor-body" id="edvb-6">
         <div class="ed-col-hdr">
           <span class="ed-col-n">品名（必填）</span>
+          <span class="ed-col-u">單位</span>
           <span class="ed-col-p">價格</span>
+          <span class="ed-col-nt">記帳名稱<br><small style="font-weight:400;color:#ccc">空白=同品名</small></span>
+          <span class="ed-col-rk">備註<br><small style="font-weight:400;color:#ccc">顯示在品項卡下方</small></span>
           <span class="ed-col-d"></span>
         </div>
-        <div id="edli-2">
-      <div class="ed-item-row" id="editem-2-0" draggable="false" data-gi="2" data-ii="0" data-itype="ledger">
+        <div id="edvi-6">
+      <div class="ed-item-row" id="editem-6-0" draggable="false" data-gi="6" data-ii="0" data-itype="vendor">
         <span class="drag-handle" title="拖曳排序">⠿</span>
-        <input class="ed-item-name" value="外帶自取" placeholder="品名（必填）" oninput="edLedgerOnly[2].items[0].name=this.value">
-        <input class="ed-item-price" type="number" min="0" inputmode="decimal" value="" placeholder="價格" oninput="edLedgerOnly[2].items[0].price=parseFloat(this.value)||undefined">
-        <button class="ed-del-btn" onclick="edDelItem('ledger',2,0)">✕</button>
-      </div></div>
-        <button class="ed-add-item" onclick="edAddItem('ledger',2)">＋ 新增品項</button>
+        <input class="ed-item-name" value="雞蛋(⚠️「大」顆的‼️)" placeholder="品名（必填）" oninput="edVendors[6].items[0].name=this.value">
+        <input class="ed-item-unit" value="籃" placeholder="單位" oninput="edVendors[6].items[0].unit=this.value">
+        <input class="ed-item-price" type="number" min="0" inputmode="decimal" value="" placeholder="價格" oninput="edVendors[6].items[0].price=parseFloat(this.value)||undefined">
+        <input class="ed-item-note" value="雞蛋" placeholder="記帳名稱（空白=同品名）" oninput="edVendors[6].items[0].ledgerName=this.value||undefined">
+        <input class="ed-item-note" value="" placeholder="備註（選填）" style="border-color:#d1fae5;background:#f0fdf4" oninput="edVendors[6].items[0].remark=this.value||undefined">
+        <button class="ed-del-btn" onclick="edDelItem('vendor',6,0)">✕</button>
       </div>
-    </div><button class="ed-add-vendor" onclick="edAddLedgerGroup()">➕ 新增記帳專屬群組</button>
+      <div class="ed-item-row" id="editem-6-1" draggable="false" data-gi="6" data-ii="1" data-itype="vendor">
+        <span class="drag-handle" title="拖曳排序">⠿</span>
+        <input class="ed-item-name" value="皮蛋" placeholder="品名（必填）" oninput="edVendors[6].items[1].name=this.value">
+        <input class="ed-item-unit" value="顆" placeholder="單位" oninput="edVendors[6].items[1].unit=this.value">
+        <input class="ed-item-price" type="number" min="0" inputmode="decimal" value="" placeholder="價格" oninput="edVendors[6].items[1].price=parseFloat(this.value)||undefined">
+        <input class="ed-item-note" value="" placeholder="記帳名稱（空白=同品名）" oninput="edVendors[6].items[1].ledgerName=this.value||undefined">
+        <input class="ed-item-note" value="" placeholder="備註（選填）" style="border-color:#d1fae5;background:#f0fdf4" oninput="edVendors[6].items[1].remark=this.value||undefined">
+        <button class="ed-del-btn" onclick="edDelItem('vendor',6,1)">✕</button>
+      </div>
+      <div class="ed-item-row" id="editem-6-2" draggable="false" data-gi="6" data-ii="2" data-itype="vendor">
+        <span class="drag-handle" title="拖曳排序">⠿</span>
+        <input class="ed-item-name" value="鹹蛋黃" placeholder="品名（必填）" oninput="edVendors[6].items[2].name=this.value">
+        <input class="ed-item-unit" value="顆" placeholder="單位" oninput="edVendors[6].items[2].unit=this.value">
+        <input class="ed-item-price" type="number" min="0" inputmode="decimal" value="" placeholder="價格" oninput="edVendors[6].items[2].price=parseFloat(this.value)||undefined">
+        <input class="ed-item-note" value="" placeholder="記帳名稱（空白=同品名）" oninput="edVendors[6].items[2].ledgerName=this.value||undefined">
+        <input class="ed-item-note" value="" placeholder="備註（選填）" style="border-color:#d1fae5;background:#f0fdf4" oninput="edVendors[6].items[2].remark=this.value||undefined">
+        <button class="ed-del-btn" onclick="edDelItem('vendor',6,2)">✕</button>
+      </div></div>
+        <button class="ed-add-item" onclick="edAddItem('vendor',6)">＋ 新增品項</button>
+      </div>
+    </div><div class="ed-vendor-card" id="edv-7" draggable="false" data-vi="7" data-dtype="vendor">
+      <div class="ed-vendor-head" onclick="toggleEdVendor(7)">
+        <span class="drag-handle-vendor" onclick="event.stopPropagation()" title="拖曳排序">⠿</span>
+        <input class="ed-vendor-name-input" value="市場(阿潭)" placeholder="廠商名稱" oninput="edVendors[7].vendor=this.value" onclick="event.stopPropagation()">
+        <span class="ed-vendor-badge">21 項</span>
+        <button class="ed-del-vendor-btn" onclick="event.stopPropagation();edDelVendor(7)">✕ 刪除</button>
+        <span class="ed-vendor-toggle" id="edvt-7">▼</span>
+      </div>
+      <div class="ed-vendor-body" id="edvb-7">
+        <div class="ed-col-hdr">
+          <span class="ed-col-n">品名（必填）</span>
+          <span class="ed-col-u">單位</span>
+          <span class="ed-col-p">價格</span>
+          <span class="ed-col-nt">記帳名稱<br><small style="font-weight:400;color:#ccc">空白=同品名</small></span>
+          <span class="ed-col-rk">備註<br><small style="font-weight:400;color:#ccc">顯示在品項卡下方</small></span>
+          <span class="ed-col-d"></span>
+        </div>
+        <div id="edvi-7">
+      <div class="ed-item-row" id="editem-7-0" draggable="false" data-gi="7" data-ii="0" data-itype="vendor">
+        <span class="drag-handle" title="拖曳排序">⠿</span>
+        <input class="ed-item-name" value="空心菜" placeholder="品名（必填）" oninput="edVendors[7].items[0].name=this.value">
+        <input class="ed-item-unit" value="把" placeholder="單位" oninput="edVendors[7].items[0].unit=this.value">
+        <input class="ed-item-price" type="number" min="0" inputmode="decimal" value="" placeholder="價格" oninput="edVendors[7].items[0].price=parseFloat(this.value)||undefined">
+        <input class="ed-item-note" value="" placeholder="記帳名稱（空白=同品名）" oninput="edVendors[7].items[0].ledgerName=this.value||undefined">
+        <input class="ed-item-note" value="" placeholder="備註（選填）" style="border-color:#d1fae5;background:#f0fdf4" oninput="edVendors[7].items[0].remark=this.value||undefined">
+        <button class="ed-del-btn" onclick="edDelItem('vendor',7,0)">✕</button>
+      </div>
+      <div class="ed-item-row" id="editem-7-1" draggable="false" data-gi="7" data-ii="1" data-itype="vendor">
+        <span class="drag-handle" title="拖曳排序">⠿</span>
+        <input class="ed-item-name" value="高麗菜" placeholder="品名（必填）" oninput="edVendors[7].items[1].name=this.value">
+        <input class="ed-item-unit" value="顆" placeholder="單位" oninput="edVendors[7].items[1].unit=this.value">
+        <input class="ed-item-price" type="number" min="0" inputmode="decimal" value="" placeholder="價格" oninput="edVendors[7].items[1].price=parseFloat(this.value)||undefined">
+        <input class="ed-item-note" value="" placeholder="記帳名稱（空白=同品名）" oninput="edVendors[7].items[1].ledgerName=this.value||undefined">
+        <input class="ed-item-note" value="" placeholder="備註（選填）" style="border-color:#d1fae5;background:#f0fdf4" oninput="edVendors[7].items[1].remark=this.value||undefined">
+        <button class="ed-del-btn" onclick="edDelItem('vendor',7,1)">✕</button>
+      </div>
+      <div class="ed-item-row" id="editem-7-2" draggable="false" data-gi="7" data-ii="2" data-itype="vendor">
+        <span class="drag-handle" title="拖曳排序">⠿</span>
+        <input class="ed-item-name" value="地瓜葉" placeholder="品名（必填）" oninput="edVendors[7].items[2].name=this.value">
+        <input class="ed-item-unit" value="" placeholder="單位" oninput="edVendors[7].items[2].unit=this.value">
+        <input class="ed-item-price" type="number" min="0" inputmode="decimal" value="" placeholder="價格" oninput="edVendors[7].items[2].price=parseFloat(this.value)||undefined">
+        <input class="ed-item-note" value="" placeholder="記帳名稱（空白=同品名）" oninput="edVendors[7].items[2].ledgerName=this.value||undefined">
+        <input class="ed-item-note" value="" placeholder="備註（選填）" style="border-color:#d1fae5;background:#f0fdf4" oninput="edVendors[7].items[2].remark=this.value||undefined">
+        <button class="ed-del-btn" onclick="edDelItem('vendor',7,2)">✕</button>
+      </div>
+      <div class="ed-item-row" id="editem-7-3" draggable="false" data-gi="7" data-ii="3" data-itype="vendor">
+        <span class="drag-handle" title="拖曳排序">⠿</span>
+        <input class="ed-item-name" value="菠菜" placeholder="品名（必填）" oninput="edVendors[7].items[3].name=this.value">
+        <input class="ed-item-unit" value="把" placeholder="單位" oninput="edVendors[7].items[3].unit=this.value">
+        <input class="ed-item-price" type="number" min="0" inputmode="decimal" value="" placeholder="價格" oninput="edVendors[7].items[3].price=parseFloat(this.value)||undefined">
+        <input class="ed-item-note" value="" placeholder="記帳名稱（空白=同品名）" oninput="edVendors[7].items[3].ledgerName=this.value||undefined">
+        <input class="ed-item-note" value="" placeholder="備註（選填）" style="border-color:#d1fae5;background:#f0fdf4" oninput="edVendors[7].items[3].remark=this.value||undefined">
+        <button class="ed-del-btn" onclick="edDelItem('vendor',7,3)">✕</button>
+      </div>
+      <div class="ed-item-row" id="editem-7-4" draggable="false" data-gi="7" data-ii="4" data-itype="vendor">
+        <span class="drag-handle" title="拖曳排序">⠿</span>
+        <input class="ed-item-name" value="炒麵菜" placeholder="品名（必填）" oninput="edVendors[7].items[4].name=this.value">
+        <input class="ed-item-unit" value="把" placeholder="單位" oninput="edVendors[7].items[4].unit=this.value">
+        <input class="ed-item-price" type="number" min="0" inputmode="decimal" value="" placeholder="價格" oninput="edVendors[7].items[4].price=parseFloat(this.value)||undefined">
+        <input class="ed-item-note" value="" placeholder="記帳名稱（空白=同品名）" oninput="edVendors[7].items[4].ledgerName=this.value||undefined">
+        <input class="ed-item-note" value="" placeholder="備註（選填）" style="border-color:#d1fae5;background:#f0fdf4" oninput="edVendors[7].items[4].remark=this.value||undefined">
+        <button class="ed-del-btn" onclick="edDelItem('vendor',7,4)">✕</button>
+      </div>
+      <div class="ed-item-row" id="editem-7-5" draggable="false" data-gi="7" data-ii="5" data-itype="vendor">
+        <span class="drag-handle" title="拖曳排序">⠿</span>
+        <input class="ed-item-name" value="水蓮" placeholder="品名（必填）" oninput="edVendors[7].items[5].name=this.value">
+        <input class="ed-item-unit" value="包" placeholder="單位" oninput="edVendors[7].items[5].unit=this.value">
+        <input class="ed-item-price" type="number" min="0" inputmode="decimal" value="" placeholder="價格" oninput="edVendors[7].items[5].price=parseFloat(this.value)||undefined">
+        <input class="ed-item-note" value="" placeholder="記帳名稱（空白=同品名）" oninput="edVendors[7].items[5].ledgerName=this.value||undefined">
+        <input class="ed-item-note" value="" placeholder="備註（選填）" style="border-color:#d1fae5;background:#f0fdf4" oninput="edVendors[7].items[5].remark=this.value||undefined">
+        <button class="ed-del-btn" onclick="edDelItem('vendor',7,5)">✕</button>
+      </div>
+      <div class="ed-item-row" id="editem-7-6" draggable="false" data-gi="7" data-ii="6" data-itype="vendor">
+        <span class="drag-handle" title="拖曳排序">⠿</span>
+        <input class="ed-item-name" value="洋蔥" placeholder="品名（必填）" oninput="edVendors[7].items[6].name=this.value">
+        <input class="ed-item-unit" value="顆" placeholder="單位" oninput="edVendors[7].items[6].unit=this.value">
+        <input class="ed-item-price" type="number" min="0" inputmode="decimal" value="" placeholder="價格" oninput="edVendors[7].items[6].price=parseFloat(this.value)||undefined">
+        <input class="ed-item-note" value="" placeholder="記帳名稱（空白=同品名）" oninput="edVendors[7].items[6].ledgerName=this.value||undefined">
+        <input class="ed-item-note" value="" placeholder="備註（選填）" style="border-color:#d1fae5;background:#f0fdf4" oninput="edVendors[7].items[6].remark=this.value||undefined">
+        <button class="ed-del-btn" onclick="edDelItem('vendor',7,6)">✕</button>
+      </div>
+      <div class="ed-item-row" id="editem-7-7" draggable="false" data-gi="7" data-ii="7" data-itype="vendor">
+        <span class="drag-handle" title="拖曳排序">⠿</span>
+        <input class="ed-item-name" value="紅蘿蔔" placeholder="品名（必填）" oninput="edVendors[7].items[7].name=this.value">
+        <input class="ed-item-unit" value="條" placeholder="單位" oninput="edVendors[7].items[7].unit=this.value">
+        <input class="ed-item-price" type="number" min="0" inputmode="decimal" value="" placeholder="價格" oninput="edVendors[7].items[7].price=parseFloat(this.value)||undefined">
+        <input class="ed-item-note" value="" placeholder="記帳名稱（空白=同品名）" oninput="edVendors[7].items[7].ledgerName=this.value||undefined">
+        <input class="ed-item-note" value="" placeholder="備註（選填）" style="border-color:#d1fae5;background:#f0fdf4" oninput="edVendors[7].items[7].remark=this.value||undefined">
+        <button class="ed-del-btn" onclick="edDelItem('vendor',7,7)">✕</button>
+      </div>
+      <div class="ed-item-row" id="editem-7-8" draggable="false" data-gi="7" data-ii="8" data-itype="vendor">
+        <span class="drag-handle" title="拖曳排序">⠿</span>
+        <input class="ed-item-name" value="九層塔" placeholder="品名（必填）" oninput="edVendors[7].items[8].name=this.value">
+        <input class="ed-item-unit" value="" placeholder="單位" oninput="edVendors[7].items[8].unit=this.value">
+        <input class="ed-item-price" type="number" min="0" inputmode="decimal" value="" placeholder="價格" oninput="edVendors[7].items[8].price=parseFloat(this.value)||undefined">
+        <input class="ed-item-note" value="" placeholder="記帳名稱（空白=同品名）" oninput="edVendors[7].items[8].ledgerName=this.value||undefined">
+        <input class="ed-item-note" value="" placeholder="備註（選填）" style="border-color:#d1fae5;background:#f0fdf4" oninput="edVendors[7].items[8].remark=this.value||undefined">
+        <button class="ed-del-btn" onclick="edDelItem('vendor',7,8)">✕</button>
+      </div>
+      <div class="ed-item-row" id="editem-7-9" draggable="false" data-gi="7" data-ii="9" data-itype="vendor">
+        <span class="drag-handle" title="拖曳排序">⠿</span>
+        <input class="ed-item-name" value="蔥" placeholder="品名（必填）" oninput="edVendors[7].items[9].name=this.value">
+        <input class="ed-item-unit" value="" placeholder="單位" oninput="edVendors[7].items[9].unit=this.value">
+        <input class="ed-item-price" type="number" min="0" inputmode="decimal" value="" placeholder="價格" oninput="edVendors[7].items[9].price=parseFloat(this.value)||undefined">
+        <input class="ed-item-note" value="" placeholder="記帳名稱（空白=同品名）" oninput="edVendors[7].items[9].ledgerName=this.value||undefined">
+        <input class="ed-item-note" value="" placeholder="備註（選填）" style="border-color:#d1fae5;background:#f0fdf4" oninput="edVendors[7].items[9].remark=this.value||undefined">
+        <button class="ed-del-btn" onclick="edDelItem('vendor',7,9)">✕</button>
+      </div>
+      <div class="ed-item-row" id="editem-7-10" draggable="false" data-gi="7" data-ii="10" data-itype="vendor">
+        <span class="drag-handle" title="拖曳排序">⠿</span>
+        <input class="ed-item-name" value="蒜末" placeholder="品名（必填）" oninput="edVendors[7].items[10].name=this.value">
+        <input class="ed-item-unit" value="包" placeholder="單位" oninput="edVendors[7].items[10].unit=this.value">
+        <input class="ed-item-price" type="number" min="0" inputmode="decimal" value="" placeholder="價格" oninput="edVendors[7].items[10].price=parseFloat(this.value)||undefined">
+        <input class="ed-item-note" value="" placeholder="記帳名稱（空白=同品名）" oninput="edVendors[7].items[10].ledgerName=this.value||undefined">
+        <input class="ed-item-note" value="" placeholder="備註（選填）" style="border-color:#d1fae5;background:#f0fdf4" oninput="edVendors[7].items[10].remark=this.value||undefined">
+        <button class="ed-del-btn" onclick="edDelItem('vendor',7,10)">✕</button>
+      </div>
+      <div class="ed-item-row" id="editem-7-11" draggable="false" data-gi="7" data-ii="11" data-itype="vendor">
+        <span class="drag-handle" title="拖曳排序">⠿</span>
+        <input class="ed-item-name" value="辣椒" placeholder="品名（必填）" oninput="edVendors[7].items[11].name=this.value">
+        <input class="ed-item-unit" value="" placeholder="單位" oninput="edVendors[7].items[11].unit=this.value">
+        <input class="ed-item-price" type="number" min="0" inputmode="decimal" value="" placeholder="價格" oninput="edVendors[7].items[11].price=parseFloat(this.value)||undefined">
+        <input class="ed-item-note" value="" placeholder="記帳名稱（空白=同品名）" oninput="edVendors[7].items[11].ledgerName=this.value||undefined">
+        <input class="ed-item-note" value="" placeholder="備註（選填）" style="border-color:#d1fae5;background:#f0fdf4" oninput="edVendors[7].items[11].remark=this.value||undefined">
+        <button class="ed-del-btn" onclick="edDelItem('vendor',7,11)">✕</button>
+      </div>
+      <div class="ed-item-row" id="editem-7-12" draggable="false" data-gi="7" data-ii="12" data-itype="vendor">
+        <span class="drag-handle" title="拖曳排序">⠿</span>
+        <input class="ed-item-name" value="薑絲" placeholder="品名（必填）" oninput="edVendors[7].items[12].name=this.value">
+        <input class="ed-item-unit" value="包" placeholder="單位" oninput="edVendors[7].items[12].unit=this.value">
+        <input class="ed-item-price" type="number" min="0" inputmode="decimal" value="" placeholder="價格" oninput="edVendors[7].items[12].price=parseFloat(this.value)||undefined">
+        <input class="ed-item-note" value="" placeholder="記帳名稱（空白=同品名）" oninput="edVendors[7].items[12].ledgerName=this.value||undefined">
+        <input class="ed-item-note" value="" placeholder="備註（選填）" style="border-color:#d1fae5;background:#f0fdf4" oninput="edVendors[7].items[12].remark=this.value||undefined">
+        <button class="ed-del-btn" onclick="edDelItem('vendor',7,12)">✕</button>
+      </div>
+      <div class="ed-item-row" id="editem-7-13" draggable="false" data-gi="7" data-ii="13" data-itype="vendor">
+        <span class="drag-handle" title="拖曳排序">⠿</span>
+        <input class="ed-item-name" value="芹菜" placeholder="品名（必填）" oninput="edVendors[7].items[13].name=this.value">
+        <input class="ed-item-unit" value="" placeholder="單位" oninput="edVendors[7].items[13].unit=this.value">
+        <input class="ed-item-price" type="number" min="0" inputmode="decimal" value="" placeholder="價格" oninput="edVendors[7].items[13].price=parseFloat(this.value)||undefined">
+        <input class="ed-item-note" value="" placeholder="記帳名稱（空白=同品名）" oninput="edVendors[7].items[13].ledgerName=this.value||undefined">
+        <input class="ed-item-note" value="" placeholder="備註（選填）" style="border-color:#d1fae5;background:#f0fdf4" oninput="edVendors[7].items[13].remark=this.value||undefined">
+        <button class="ed-del-btn" onclick="edDelItem('vendor',7,13)">✕</button>
+      </div>
+      <div class="ed-item-row" id="editem-7-14" draggable="false" data-gi="7" data-ii="14" data-itype="vendor">
+        <span class="drag-handle" title="拖曳排序">⠿</span>
+        <input class="ed-item-name" value="豆腐" placeholder="品名（必填）" oninput="edVendors[7].items[14].name=this.value">
+        <input class="ed-item-unit" value="盒" placeholder="單位" oninput="edVendors[7].items[14].unit=this.value">
+        <input class="ed-item-price" type="number" min="0" inputmode="decimal" value="" placeholder="價格" oninput="edVendors[7].items[14].price=parseFloat(this.value)||undefined">
+        <input class="ed-item-note" value="" placeholder="記帳名稱（空白=同品名）" oninput="edVendors[7].items[14].ledgerName=this.value||undefined">
+        <input class="ed-item-note" value="" placeholder="備註（選填）" style="border-color:#d1fae5;background:#f0fdf4" oninput="edVendors[7].items[14].remark=this.value||undefined">
+        <button class="ed-del-btn" onclick="edDelItem('vendor',7,14)">✕</button>
+      </div>
+      <div class="ed-item-row" id="editem-7-15" draggable="false" data-gi="7" data-ii="15" data-itype="vendor">
+        <span class="drag-handle" title="拖曳排序">⠿</span>
+        <input class="ed-item-name" value="皮蛋" placeholder="品名（必填）" oninput="edVendors[7].items[15].name=this.value">
+        <input class="ed-item-unit" value="顆" placeholder="單位" oninput="edVendors[7].items[15].unit=this.value">
+        <input class="ed-item-price" type="number" min="0" inputmode="decimal" value="" placeholder="價格" oninput="edVendors[7].items[15].price=parseFloat(this.value)||undefined">
+        <input class="ed-item-note" value="" placeholder="記帳名稱（空白=同品名）" oninput="edVendors[7].items[15].ledgerName=this.value||undefined">
+        <input class="ed-item-note" value="" placeholder="備註（選填）" style="border-color:#d1fae5;background:#f0fdf4" oninput="edVendors[7].items[15].remark=this.value||undefined">
+        <button class="ed-del-btn" onclick="edDelItem('vendor',7,15)">✕</button>
+      </div>
+      <div class="ed-item-row" id="editem-7-16" draggable="false" data-gi="7" data-ii="16" data-itype="vendor">
+        <span class="drag-handle" title="拖曳排序">⠿</span>
+        <input class="ed-item-name" value="乾菜脯" placeholder="品名（必填）" oninput="edVendors[7].items[16].name=this.value">
+        <input class="ed-item-unit" value="" placeholder="單位" oninput="edVendors[7].items[16].unit=this.value">
+        <input class="ed-item-price" type="number" min="0" inputmode="decimal" value="" placeholder="價格" oninput="edVendors[7].items[16].price=parseFloat(this.value)||undefined">
+        <input class="ed-item-note" value="" placeholder="記帳名稱（空白=同品名）" oninput="edVendors[7].items[16].ledgerName=this.value||undefined">
+        <input class="ed-item-note" value="" placeholder="備註（選填）" style="border-color:#d1fae5;background:#f0fdf4" oninput="edVendors[7].items[16].remark=this.value||undefined">
+        <button class="ed-del-btn" onclick="edDelItem('vendor',7,16)">✕</button>
+      </div>
+      <div class="ed-item-row" id="editem-7-17" draggable="false" data-gi="7" data-ii="17" data-itype="vendor">
+        <span class="drag-handle" title="拖曳排序">⠿</span>
+        <input class="ed-item-name" value="蒜味花生" placeholder="品名（必填）" oninput="edVendors[7].items[17].name=this.value">
+        <input class="ed-item-unit" value="" placeholder="單位" oninput="edVendors[7].items[17].unit=this.value">
+        <input class="ed-item-price" type="number" min="0" inputmode="decimal" value="" placeholder="價格" oninput="edVendors[7].items[17].price=parseFloat(this.value)||undefined">
+        <input class="ed-item-note" value="" placeholder="記帳名稱（空白=同品名）" oninput="edVendors[7].items[17].ledgerName=this.value||undefined">
+        <input class="ed-item-note" value="" placeholder="備註（選填）" style="border-color:#d1fae5;background:#f0fdf4" oninput="edVendors[7].items[17].remark=this.value||undefined">
+        <button class="ed-del-btn" onclick="edDelItem('vendor',7,17)">✕</button>
+      </div>
+      <div class="ed-item-row" id="editem-7-18" draggable="false" data-gi="7" data-ii="18" data-itype="vendor">
+        <span class="drag-handle" title="拖曳排序">⠿</span>
+        <input class="ed-item-name" value="蛤蜊" placeholder="品名（必填）" oninput="edVendors[7].items[18].name=this.value">
+        <input class="ed-item-unit" value="斤" placeholder="單位" oninput="edVendors[7].items[18].unit=this.value">
+        <input class="ed-item-price" type="number" min="0" inputmode="decimal" value="" placeholder="價格" oninput="edVendors[7].items[18].price=parseFloat(this.value)||undefined">
+        <input class="ed-item-note" value="" placeholder="記帳名稱（空白=同品名）" oninput="edVendors[7].items[18].ledgerName=this.value||undefined">
+        <input class="ed-item-note" value="" placeholder="備註（選填）" style="border-color:#d1fae5;background:#f0fdf4" oninput="edVendors[7].items[18].remark=this.value||undefined">
+        <button class="ed-del-btn" onclick="edDelItem('vendor',7,18)">✕</button>
+      </div>
+      <div class="ed-item-row" id="editem-7-19" draggable="false" data-gi="7" data-ii="19" data-itype="vendor">
+        <span class="drag-handle" title="拖曳排序">⠿</span>
+        <input class="ed-item-name" value="豆菜麵(1斤)" placeholder="品名（必填）" oninput="edVendors[7].items[19].name=this.value">
+        <input class="ed-item-unit" value="包" placeholder="單位" oninput="edVendors[7].items[19].unit=this.value">
+        <input class="ed-item-price" type="number" min="0" inputmode="decimal" value="" placeholder="價格" oninput="edVendors[7].items[19].price=parseFloat(this.value)||undefined">
+        <input class="ed-item-note" value="" placeholder="記帳名稱（空白=同品名）" oninput="edVendors[7].items[19].ledgerName=this.value||undefined">
+        <input class="ed-item-note" value="" placeholder="備註（選填）" style="border-color:#d1fae5;background:#f0fdf4" oninput="edVendors[7].items[19].remark=this.value||undefined">
+        <button class="ed-del-btn" onclick="edDelItem('vendor',7,19)">✕</button>
+      </div>
+      <div class="ed-item-row" id="editem-7-20" draggable="false" data-gi="7" data-ii="20" data-itype="vendor">
+        <span class="drag-handle" title="拖曳排序">⠿</span>
+        <input class="ed-item-name" value="烏龍麵(1斤)" placeholder="品名（必填）" oninput="edVendors[7].items[20].name=this.value">
+        <input class="ed-item-unit" value="包" placeholder="單位" oninput="edVendors[7].items[20].unit=this.value">
+        <input class="ed-item-price" type="number" min="0" inputmode="decimal" value="" placeholder="價格" oninput="edVendors[7].items[20].price=parseFloat(this.value)||undefined">
+        <input class="ed-item-note" value="" placeholder="記帳名稱（空白=同品名）" oninput="edVendors[7].items[20].ledgerName=this.value||undefined">
+        <input class="ed-item-note" value="" placeholder="備註（選填）" style="border-color:#d1fae5;background:#f0fdf4" oninput="edVendors[7].items[20].remark=this.value||undefined">
+        <button class="ed-del-btn" onclick="edDelItem('vendor',7,20)">✕</button>
+      </div></div>
+        <button class="ed-add-item" onclick="edAddItem('vendor',7)">＋ 新增品項</button>
+      </div>
+    </div><button class="ed-add-vendor" onclick="edAddVendor()">➕ 新增廠商</button>
     <div class="save-bar">
       <button class="save-btn" onclick="editorSave()">💾 儲存並套用</button>
     </div></div>
