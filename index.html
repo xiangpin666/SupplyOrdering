@@ -481,7 +481,7 @@ const VENDORS = [
     { name: "小磨坊-印度咖哩粉", unit: "罐", price: 145 },
     { name: "烹大師-鰹魚粉", unit: "包", price: 290 },
     { name: "金味王-醬油(10斤)", unit: "桶", price: 230, ledgerName: "金味王醬油" },
-    { name: "金蘭-甘醇油膏(10斤)", unit: "桶", price: 225, ledgerName: "金蘭甘醇油膏" },
+    { name: "金蘭-甘醇油膏(10斤)", unit: "桶", price: 230, ledgerName: "金蘭甘醇油膏" },
     { name: "萬家鄉-香菇素蠔油(5L)", unit: "桶", price: 250, ledgerName: "香菇素蠔油" },
     { name: "牛頭牌-沙茶醬(3Kg)", unit: "罐", price: 540, ledgerName: "沙茶醬" },
     { name: "可果美-番茄醬(塑膠桶)", unit: "瓶", price: 210, ledgerName: "番茄醬(塑)" },
@@ -902,7 +902,7 @@ const LEDGER_ONLY = [
     
   </button><button class="icard" id="ibtn-0-61" onclick="orderQuickAdd(0,61)">
     <div class="icard-row1"><span class="icard-name">太白粉(5斤)</span></div>
-    <div class="icard-row2"><span class="icard-unit">包</span><span class="icard-price">$175</span></div>
+    <div class="icard-row2"><span class="icard-unit">包</span><span class="icard-price">$200</span></div>
     
   </button><button class="icard" id="ibtn-0-62" onclick="orderQuickAdd(0,62)">
     <div class="icard-row1"><span class="icard-name">地瓜粉(5斤)</span></div>
@@ -1582,7 +1582,7 @@ const LEDGER_ONLY = [
         <span class="drag-handle" title="拖曳排序">⠿</span>
         <input class="ed-item-name" value="太白粉(5斤)" placeholder="品名（必填）" oninput="edVendors[0].items[61].name=this.value">
         <input class="ed-item-unit" value="包" placeholder="單位" oninput="edVendors[0].items[61].unit=this.value">
-        <input class="ed-item-price" type="number" min="0" inputmode="decimal" value="175" placeholder="價格" oninput="edVendors[0].items[61].price=parseFloat(this.value)||undefined">
+        <input class="ed-item-price" type="number" min="0" inputmode="decimal" value="200" placeholder="價格" oninput="edVendors[0].items[61].price=parseFloat(this.value)||undefined">
         <input class="ed-item-note" value="" placeholder="記帳名稱（空白=同品名）" oninput="edVendors[0].items[61].ledgerName=this.value||undefined">
         <input class="ed-item-note" value="" placeholder="備註（選填）" style="border-color:#d1fae5;background:#f0fdf4" oninput="edVendors[0].items[61].remark=this.value||undefined">
         <button class="ed-del-btn" onclick="edDelItem('vendor',0,61)">✕</button>
