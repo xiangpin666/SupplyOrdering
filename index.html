@@ -459,18 +459,18 @@ const VENDORS = [
     { name: "兩斤-耐熱袋", unit: "捲", price: 220 },
     { name: "三斤-耐熱袋", unit: "捲", price: 220 },
     { name: "五斤-耐熱袋", unit: "捲", price: 220 },
-    { name: "四兩-白花袋", unit: "包", price: 23, remark: "提袋" },
-    { name: "半斤-白花袋", unit: "包", price: 23, remark: "提袋" },
-    { name: "一斤-白花袋", unit: "包", price: 23, remark: "提袋" },
-    { name: "兩斤-白花袋", unit: "包", price: 23, remark: "提袋" },
-    { name: "三斤-白花袋", unit: "包", price: 23, remark: "提袋" },
+    { name: "四兩-提袋", unit: "捆", price: 220, remark: "一捆10包" },
+    { name: "半斤-提袋", unit: "捆", price: 220, remark: "一捆10包" },
+    { name: "一斤-提袋", unit: "捆", price: 220, remark: "一捆10包" },
+    { name: "兩斤-提袋", unit: "捆", price: 220, remark: "一捆10包" },
+    { name: "三斤-提袋", unit: "捆", price: 220, remark: "一捆10包" },
     { name: "五斤-白花袋", unit: "包", price: 23, remark: "提袋" },
     { name: "七斤-白花袋", unit: "包", price: 45, remark: "提袋" },
     { name: "6吋防油紙墊", unit: "包", price: 100 },
     { name: "醬油碟", unit: "條", price: 65 },
     { name: "2號夾鏈袋", unit: "包", price: 12 },
     { name: "國寶-美國米", unit: "袋", price: 1225 },
-    { name: "益康-沙拉油", unit: "桶", price: 860 },
+    { name: "美食家-耐炸油", unit: "桶", price: 930 },
     { name: "鹽巴", unit: "包", price: 18 },
     { name: "味精", unit: "包", price: 85 },
     { name: "油蔥酥", unit: "包", price: 60 },
@@ -1017,9 +1017,9 @@ const LEDGER_ONLY = [
         <input class="ed-vendor-name-input" value="雜貨-富陽行" placeholder="廠商名稱" oninput="edVendors[0].vendor=this.value" onclick="event.stopPropagation()">
         <span class="ed-vendor-badge">78 項</span>
         <button class="ed-del-vendor-btn" onclick="event.stopPropagation();edDelVendor(0)">✕ 刪除</button>
-        <span class="ed-vendor-toggle" id="edvt-0">▼</span>
+        <span class="ed-vendor-toggle open" id="edvt-0">▼</span>
       </div>
-      <div class="ed-vendor-body" id="edvb-0">
+      <div class="ed-vendor-body open" id="edvb-0">
         <div class="ed-col-hdr">
           <span class="ed-col-n">品名（必填）</span>
           <span class="ed-col-u">單位</span>
@@ -1937,7 +1937,7 @@ const LEDGER_ONLY = [
         <span class="drag-handle" title="拖曳排序">⠿</span>
         <input class="ed-item-name" value="羊炒片" placeholder="品名（必填）" oninput="edVendors[2].items[2].name=this.value">
         <input class="ed-item-unit" value="包" placeholder="單位" oninput="edVendors[2].items[2].unit=this.value">
-        <input class="ed-item-price" type="number" min="0" inputmode="decimal" value="830" placeholder="價格" oninput="edVendors[2].items[2].price=parseFloat(this.value)||undefined">
+        <input class="ed-item-price" type="number" min="0" inputmode="decimal" value="880" placeholder="價格" oninput="edVendors[2].items[2].price=parseFloat(this.value)||undefined">
         <input class="ed-item-note" value="" placeholder="記帳名稱（空白=同品名）" oninput="edVendors[2].items[2].ledgerName=this.value||undefined">
         <input class="ed-item-note" value="" placeholder="備註（選填）" style="border-color:#d1fae5;background:#f0fdf4" oninput="edVendors[2].items[2].remark=this.value||undefined">
         <button class="ed-del-btn" onclick="edDelItem('vendor',2,2)">✕</button>
@@ -2022,9 +2022,9 @@ const LEDGER_ONLY = [
         <input class="ed-vendor-name-input" value="中壢-昇暉製麵" placeholder="廠商名稱" oninput="edVendors[3].vendor=this.value" onclick="event.stopPropagation()">
         <span class="ed-vendor-badge">4 項</span>
         <button class="ed-del-vendor-btn" onclick="event.stopPropagation();edDelVendor(3)">✕ 刪除</button>
-        <span class="ed-vendor-toggle open" id="edvt-3">▼</span>
+        <span class="ed-vendor-toggle" id="edvt-3">▼</span>
       </div>
-      <div class="ed-vendor-body open" id="edvb-3">
+      <div class="ed-vendor-body" id="edvb-3">
         <div class="ed-col-hdr">
           <span class="ed-col-n">品名（必填）</span>
           <span class="ed-col-u">單位</span>
@@ -2056,7 +2056,7 @@ const LEDGER_ONLY = [
         <span class="drag-handle" title="拖曳排序">⠿</span>
         <input class="ed-item-name" value="魚板絲" placeholder="品名（必填）" oninput="edVendors[3].items[2].name=this.value">
         <input class="ed-item-unit" value="包" placeholder="單位" oninput="edVendors[3].items[2].unit=this.value">
-        <input class="ed-item-price" type="number" min="0" inputmode="decimal" value="360" placeholder="價格" oninput="edVendors[3].items[2].price=parseFloat(this.value)||undefined">
+        <input class="ed-item-price" type="number" min="0" inputmode="decimal" value="350" placeholder="價格" oninput="edVendors[3].items[2].price=parseFloat(this.value)||undefined">
         <input class="ed-item-note" value="" placeholder="記帳名稱（空白=同品名）" oninput="edVendors[3].items[2].ledgerName=this.value||undefined">
         <input class="ed-item-note" value="" placeholder="備註（選填）" style="border-color:#d1fae5;background:#f0fdf4" oninput="edVendors[3].items[2].remark=this.value||undefined">
         <button class="ed-del-btn" onclick="edDelItem('vendor',3,2)">✕</button>
