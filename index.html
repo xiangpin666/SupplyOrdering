@@ -665,7 +665,7 @@ const LEDGER_ONLY = [
     <div class="icard-row1"><span class="icard-name">C-165平蓋</span></div>
     <div class="icard-row2"><span class="icard-unit">箱</span><span class="icard-price">$470</span></div>
     <span class="icard-remark" title="炒碗(蓋)">炒碗(蓋)</span>
-  </button><button class="icard" id="ibtn-0-2" onclick="orderQuickAdd(0,2)">
+  </button><button class="icard on" id="ibtn-0-2" onclick="orderQuickAdd(0,2)">
     <div class="icard-row1"><span class="icard-name">C-165凸蓋</span></div>
     <div class="icard-row2"><span class="icard-unit">條</span><span class="icard-price">$75</span></div>
     <span class="icard-remark" title="炸物(蓋)">炸物(蓋)</span>
@@ -975,8 +975,19 @@ const LEDGER_ONLY = [
     
   </button></div></div><div class="card">
     <div class="col-hdr"><span class="cn">品項 / 備註</span><span class="cq">數量</span><span class="cd"></span></div>
-    <div id="order-rows-0"></div><div id="extra-section-0"></div><button class="add-btn g" onclick="addExtra(0)">＋ 新增臨時品項</button>
-    <div class="total-row"><span class="total-lbl">本廠商小計</span><span class="total-val g" id="vendor-sub-0">$0</span></div>
+    <div id="order-rows-0"><div class="orow" id="orow-0-0">
+    <div class="orow-info">
+      <div class="orow-line1"><span class="orow-name">C-165凸蓋</span><span class="orow-unit">條</span><span class="orow-price">$75</span></div>
+      <div class="orow-note">炸物(蓋)</div>
+    </div>
+    <div class="qc g on" id="oqc-0-0">
+      <button class="qb" onclick="oAdj(0,0,-1)">−</button>
+      <input type="number" class="qn" id="oq-0-0" min="0" inputmode="decimal" value="1" placeholder="0" oninput="oQtyChange(0,0,this.value)">
+      <button class="qb" onclick="oAdj(0,0,1)">+</button>
+    </div>
+    <button class="del-btn" onclick="oDelRow(0,0)">🗑</button>
+  </div></div><div id="extra-section-0"></div><button class="add-btn g" onclick="addExtra(0)">＋ 新增臨時品項</button>
+    <div class="total-row"><span class="total-lbl">本廠商小計</span><span class="total-val g" id="vendor-sub-0">$75</span></div>
   </div></div></div>
 <div class="ledger-wrap" id="ledgerPanel" style="display: none;"><div class="card">
     <div class="card-head a">
@@ -1037,7 +1048,7 @@ const LEDGER_ONLY = [
     </div>
     <div class="edit-field">
       <div class="edit-label">備用電話 1</div>
-      <input class="edit-input" id="ed-shop-tel1" value="0916-550855" placeholder="例：0916-550855">
+      <input class="edit-input" id="ed-shop-tel1" value="0938-582828" placeholder="例：0916-550855">
     </div>
     <div class="edit-field">
       <div class="edit-label">備用電話 2</div>
@@ -1051,7 +1062,7 @@ const LEDGER_ONLY = [
 <div class="bottom-bar" id="bottomBar" style="">
   <div class="bottom-amt">
     <div class="lbl">總金額（僅供參考）</div>
-    <div class="amt" id="totalAmt">$0</div>
+    <div class="amt" id="totalAmt">$75</div>
   </div>
   <div class="bar-btns">
     <button class="bbtn outline" onclick="clearAll()">清除</button>
@@ -1061,8 +1072,8 @@ const LEDGER_ONLY = [
 
 <div class="qty-pop-ov" id="qtyPopOv" onclick="if(event.target===this)closeQtyPop()">
   <div class="qty-pop">
-    <div class="qty-pop-name" id="qtyPopName"></div>
-    <div class="qty-pop-meta" id="qtyPopMeta"></div>
+    <div class="qty-pop-name" id="qtyPopName" style="color: var(--green);">C-165凸蓋</div>
+    <div class="qty-pop-meta" id="qtyPopMeta">條・$75</div>
     <div class="qty-pop-row" id="qtyPopQtyRow">
       <span class="qty-pop-lbl">數量</span>
       <div class="qty-pop-qc">
@@ -1071,7 +1082,7 @@ const LEDGER_ONLY = [
         <button class="qty-pop-qb" onclick="qtyPopAdj('qty',1)">+</button>
       </div>
     </div>
-    <div class="qty-pop-row" id="qtyPopPriceRow">
+    <div class="qty-pop-row" id="qtyPopPriceRow" style="display: none;">
       <span class="qty-pop-lbl">金額</span>
       <div class="qty-pop-qc">
         <button class="qty-pop-qb" onclick="qtyPopAdj('price',-1)">−</button>
@@ -1092,7 +1103,23 @@ const LEDGER_ONLY = [
       <div class="modal-title">📦 訂貨明細確認</div>
       <div class="modal-close" onclick="closeModal()">✕</div>
     </div>
-    <div class="modal-body" id="modalBody"></div>
+    <div class="modal-body" id="modalBody"><div class="pre-vendor">雜貨-富陽行</div><div class="pre-item"><div class="pre-num">1.</div><div class="pre-name">C-165凸蓋（條）</div><div class="pre-calc">$75 × 1</div><div class="pre-sub">$75</div></div><div class="pre-total"><span>訂貨總金額（僅供參考）</span><span>$75</span></div><div class="pre-text-wrap"><div class="pre-text-lbl">傳送文字預覽（可手動修改）</div><textarea class="pre-textarea" id="preText" style="height:160px;color:#444">📦香品小食堂-訂貨單 (115/09/08)
+━━━━━━━━━━━━━━
+【雜貨-富陽行】
+
+1. C-165凸蓋 × 1 條
+
+━━━━━━━━━━━━━━
+🏠 配送地址：
+平鎮區龍南路666巷1-2號1樓
+(抵達請致電，人員會出去接應)
+
+☎️ 聯繫資訊：
+- 市話優先（03-4505582）
+- 無人接再撥
+（0938-582828 / 0938-582828）
+
+謝謝您，辛苦了！🙏</textarea></div></div>
     <div class="modal-foot">
       <button class="bbtn" style="background:#374151;color:#fff;flex:0 0 auto" onclick="copyOrderText()">📋 複製</button>
       <button class="bbtn solid" style="flex:1;text-align:center" onclick="lineOrder()">📤 傳送到 LINE</button>
