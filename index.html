@@ -452,10 +452,10 @@ const VENDORS = [
     { name: "免洗筷", unit: "包", price: 25 },
     { name: "彎形湯匙", unit: "箱", price: 480 },
     { name: "邦提圈", unit: "包", price: 35 },
-    { name: "四兩-耐熱袋", unit: "包", price: 42 },
-    { name: "六兩-耐熱袋", unit: "包", price: 42 },
-    { name: "半斤-耐熱袋", unit: "包", price: 42 },
-    { name: "一斤-耐熱袋", unit: "包", price: 42 },
+    { name: "四兩-耐熱袋", unit: "捆", price: 42 },
+    { name: "六兩-耐熱袋", unit: "捆", price: 42 },
+    { name: "半斤-耐熱袋", unit: "捆", price: 42 },
+    { name: "一斤-耐熱袋", unit: "捆", price: 42 },
     { name: "兩斤-耐熱袋", unit: "捲", price: 220 },
     { name: "三斤-耐熱袋", unit: "捲", price: 220 },
     { name: "五斤-耐熱袋", unit: "捲", price: 220 },
@@ -464,8 +464,8 @@ const VENDORS = [
     { name: "一斤-提袋", unit: "捆", price: 220, remark: "一捆10包" },
     { name: "兩斤-提袋", unit: "捆", price: 220, remark: "一捆10包" },
     { name: "三斤-提袋", unit: "捆", price: 220, remark: "一捆10包" },
-    { name: "五斤-白花袋", unit: "包", price: 23, remark: "提袋" },
-    { name: "七斤-白花袋", unit: "包", price: 45, remark: "提袋" },
+    { name: "五斤-白花袋", unit: "捆", price: 23, remark: "提袋" },
+    { name: "七斤-白花袋", unit: "捆", price: 45, remark: "提袋" },
     { name: "6吋防油紙墊", unit: "包", price: 100 },
     { name: "醬油碟", unit: "條", price: 65 },
     { name: "2號夾鏈袋", unit: "包", price: 12 },
@@ -661,9 +661,9 @@ const LEDGER_ONLY = [
     <div class="icard-row1"><span class="icard-name">602扁碗</span></div>
     <div class="icard-row2"><span class="icard-unit">箱</span><span class="icard-price">$1,000</span></div>
     <span class="icard-remark" title="炒碗">炒碗</span>
-  </button><button class="icard on" id="ibtn-0-1" onclick="orderQuickAdd(0,1)">
+  </button><button class="icard" id="ibtn-0-1" onclick="orderQuickAdd(0,1)">
     <div class="icard-row1"><span class="icard-name">C-165平蓋</span></div>
-    <div class="icard-row2"><span class="icard-unit">箱</span><span class="icard-price">$470</span></div>
+    <div class="icard-row2"><span class="icard-unit">箱</span><span class="icard-price">$600</span></div>
     <span class="icard-remark" title="炒碗(蓋)">炒碗(蓋)</span>
   </button><button class="icard" id="ibtn-0-2" onclick="orderQuickAdd(0,2)">
     <div class="icard-row1"><span class="icard-name">C-165凸蓋</span></div>
@@ -675,7 +675,7 @@ const LEDGER_ONLY = [
     <span class="icard-remark" title="湯碗">湯碗</span>
   </button><button class="icard" id="ibtn-0-4" onclick="orderQuickAdd(0,4)">
     <div class="icard-row1"><span class="icard-name">750紙湯杯蓋</span></div>
-    <div class="icard-row2"><span class="icard-unit">條</span><span class="icard-price">$39</span></div>
+    <div class="icard-row2"><span class="icard-unit">條</span><span class="icard-price">$30</span></div>
     <span class="icard-remark" title="湯碗(蓋)">湯碗(蓋)</span>
   </button><button class="icard" id="ibtn-0-5" onclick="orderQuickAdd(0,5)">
     <div class="icard-row1"><span class="icard-name">1000紙湯杯</span></div>
@@ -687,7 +687,7 @@ const LEDGER_ONLY = [
     <span class="icard-remark" title="粥/湯麵碗(蓋)">粥/湯麵碗(蓋)</span>
   </button><button class="icard" id="ibtn-0-7" onclick="orderQuickAdd(0,7)">
     <div class="icard-row1"><span class="icard-name">260紙湯杯</span></div>
-    <div class="icard-row2"><span class="icard-unit">條</span><span class="icard-price">$30</span></div>
+    <div class="icard-row2"><span class="icard-unit">條</span><span class="icard-price">$45</span></div>
     <span class="icard-remark" title="白飯碗">白飯碗</span>
   </button><button class="icard" id="ibtn-0-8" onclick="orderQuickAdd(0,8)">
     <div class="icard-row1"><span class="icard-name">2632蓋</span></div>
@@ -875,7 +875,7 @@ const LEDGER_ONLY = [
     
   </button><button class="icard" id="ibtn-0-54" onclick="orderQuickAdd(0,54)">
     <div class="icard-row1"><span class="icard-name">世宇-單顆沙拉</span></div>
-    <div class="icard-row2"><span class="icard-unit">顆</span><span class="icard-price">$50</span></div>
+    <div class="icard-row2"><span class="icard-unit">顆</span><span class="icard-price">$60</span></div>
     
   </button><button class="icard" id="ibtn-0-55" onclick="orderQuickAdd(0,55)">
     <div class="icard-row1"><span class="icard-name">圓紫菜</span></div>
@@ -895,7 +895,7 @@ const LEDGER_ONLY = [
     
   </button><button class="icard" id="ibtn-0-59" onclick="orderQuickAdd(0,59)">
     <div class="icard-row1"><span class="icard-name">辣油(2.4L)</span></div>
-    <div class="icard-row2"><span class="icard-unit">瓶</span><span class="icard-price">$210</span></div>
+    <div class="icard-row2"><span class="icard-unit">瓶</span><span class="icard-price">$211</span></div>
     
   </button><button class="icard" id="ibtn-0-60" onclick="orderQuickAdd(0,60)">
     <div class="icard-row1"><span class="icard-name">八角粒</span></div>
@@ -975,19 +975,8 @@ const LEDGER_ONLY = [
     
   </button></div></div><div class="card">
     <div class="col-hdr"><span class="cn">品項 / 備註</span><span class="cq">數量</span><span class="cd"></span></div>
-    <div id="order-rows-0"><div class="orow" id="orow-0-0">
-    <div class="orow-info">
-      <div class="orow-line1"><span class="orow-name">C-165平蓋</span><span class="orow-unit">箱</span><span class="orow-price">$470</span></div>
-      <div class="orow-note">炒碗(蓋)</div>
-    </div>
-    <div class="qc g on" id="oqc-0-0">
-      <button class="qb" onclick="oAdj(0,0,-1)">−</button>
-      <input type="number" class="qn" id="oq-0-0" min="0" inputmode="decimal" value="1" placeholder="0" oninput="oQtyChange(0,0,this.value)">
-      <button class="qb" onclick="oAdj(0,0,1)">+</button>
-    </div>
-    <button class="del-btn" onclick="oDelRow(0,0)">🗑</button>
-  </div></div><div id="extra-section-0"></div><button class="add-btn g" onclick="addExtra(0)">＋ 新增臨時品項</button>
-    <div class="total-row"><span class="total-lbl">本廠商小計</span><span class="total-val g" id="vendor-sub-0">$470</span></div>
+    <div id="order-rows-0"></div><div id="extra-section-0"></div><button class="add-btn g" onclick="addExtra(0)">＋ 新增臨時品項</button>
+    <div class="total-row"><span class="total-lbl">本廠商小計</span><span class="total-val g" id="vendor-sub-0">$0</span></div>
   </div></div></div>
 <div class="ledger-wrap" id="ledgerPanel" style="display: none;"><div class="card">
     <div class="card-head a">
@@ -1058,7 +1047,7 @@ const LEDGER_ONLY = [
         <span class="drag-handle" title="拖曳排序" data-drag-bound="1" data-touch-bound="1">⠿</span>
         <input class="ed-item-name" value="C-165平蓋" placeholder="品名（必填）" oninput="edVendors[0].items[1].name=this.value">
         <input class="ed-item-unit" value="箱" placeholder="單位" oninput="edVendors[0].items[1].unit=this.value">
-        <input class="ed-item-price" type="number" min="0" inputmode="decimal" value="470" placeholder="價格" oninput="edVendors[0].items[1].price=parseFloat(this.value)||undefined">
+        <input class="ed-item-price" type="number" min="0" inputmode="decimal" value="600" placeholder="價格" oninput="edVendors[0].items[1].price=parseFloat(this.value)||undefined">
         <input class="ed-item-note" value="" placeholder="記帳名稱（空白=同品名）" oninput="edVendors[0].items[1].ledgerName=this.value||undefined">
         <input class="ed-item-note" value="炒碗(蓋)" placeholder="備註（選填）" style="border-color:#d1fae5;background:#f0fdf4" oninput="edVendors[0].items[1].remark=this.value||undefined">
         <button class="ed-del-btn" onclick="edDelItem('vendor',0,1)">✕</button>
@@ -1085,7 +1074,7 @@ const LEDGER_ONLY = [
         <span class="drag-handle" title="拖曳排序" data-drag-bound="1" data-touch-bound="1">⠿</span>
         <input class="ed-item-name" value="750紙湯杯蓋" placeholder="品名（必填）" oninput="edVendors[0].items[4].name=this.value">
         <input class="ed-item-unit" value="條" placeholder="單位" oninput="edVendors[0].items[4].unit=this.value">
-        <input class="ed-item-price" type="number" min="0" inputmode="decimal" value="39" placeholder="價格" oninput="edVendors[0].items[4].price=parseFloat(this.value)||undefined">
+        <input class="ed-item-price" type="number" min="0" inputmode="decimal" value="30" placeholder="價格" oninput="edVendors[0].items[4].price=parseFloat(this.value)||undefined">
         <input class="ed-item-note" value="" placeholder="記帳名稱（空白=同品名）" oninput="edVendors[0].items[4].ledgerName=this.value||undefined">
         <input class="ed-item-note" value="湯碗(蓋)" placeholder="備註（選填）" style="border-color:#d1fae5;background:#f0fdf4" oninput="edVendors[0].items[4].remark=this.value||undefined">
         <button class="ed-del-btn" onclick="edDelItem('vendor',0,4)">✕</button>
@@ -1112,7 +1101,7 @@ const LEDGER_ONLY = [
         <span class="drag-handle" title="拖曳排序" data-drag-bound="1" data-touch-bound="1">⠿</span>
         <input class="ed-item-name" value="260紙湯杯" placeholder="品名（必填）" oninput="edVendors[0].items[7].name=this.value">
         <input class="ed-item-unit" value="條" placeholder="單位" oninput="edVendors[0].items[7].unit=this.value">
-        <input class="ed-item-price" type="number" min="0" inputmode="decimal" value="30" placeholder="價格" oninput="edVendors[0].items[7].price=parseFloat(this.value)||undefined">
+        <input class="ed-item-price" type="number" min="0" inputmode="decimal" value="45" placeholder="價格" oninput="edVendors[0].items[7].price=parseFloat(this.value)||undefined">
         <input class="ed-item-note" value="" placeholder="記帳名稱（空白=同品名）" oninput="edVendors[0].items[7].ledgerName=this.value||undefined">
         <input class="ed-item-note" value="白飯碗" placeholder="備註（選填）" style="border-color:#d1fae5;background:#f0fdf4" oninput="edVendors[0].items[7].remark=this.value||undefined">
         <button class="ed-del-btn" onclick="edDelItem('vendor',0,7)">✕</button>
@@ -1535,7 +1524,7 @@ const LEDGER_ONLY = [
         <span class="drag-handle" title="拖曳排序" data-drag-bound="1" data-touch-bound="1">⠿</span>
         <input class="ed-item-name" value="世宇-單顆沙拉" placeholder="品名（必填）" oninput="edVendors[0].items[54].name=this.value">
         <input class="ed-item-unit" value="顆" placeholder="單位" oninput="edVendors[0].items[54].unit=this.value">
-        <input class="ed-item-price" type="number" min="0" inputmode="decimal" value="50" placeholder="價格" oninput="edVendors[0].items[54].price=parseFloat(this.value)||undefined">
+        <input class="ed-item-price" type="number" min="0" inputmode="decimal" value="60" placeholder="價格" oninput="edVendors[0].items[54].price=parseFloat(this.value)||undefined">
         <input class="ed-item-note" value="單顆沙拉" placeholder="記帳名稱（空白=同品名）" oninput="edVendors[0].items[54].ledgerName=this.value||undefined">
         <input class="ed-item-note" value="" placeholder="備註（選填）" style="border-color:#d1fae5;background:#f0fdf4" oninput="edVendors[0].items[54].remark=this.value||undefined">
         <button class="ed-del-btn" onclick="edDelItem('vendor',0,54)">✕</button>
@@ -1580,7 +1569,7 @@ const LEDGER_ONLY = [
         <span class="drag-handle" title="拖曳排序" data-drag-bound="1" data-touch-bound="1">⠿</span>
         <input class="ed-item-name" value="辣油(2.4L)" placeholder="品名（必填）" oninput="edVendors[0].items[59].name=this.value">
         <input class="ed-item-unit" value="瓶" placeholder="單位" oninput="edVendors[0].items[59].unit=this.value">
-        <input class="ed-item-price" type="number" min="0" inputmode="decimal" value="210" placeholder="價格" oninput="edVendors[0].items[59].price=parseFloat(this.value)||undefined">
+        <input class="ed-item-price" type="number" min="0" inputmode="decimal" value="211" placeholder="價格" oninput="edVendors[0].items[59].price=parseFloat(this.value)||undefined">
         <input class="ed-item-note" value="辣油" placeholder="記帳名稱（空白=同品名）" oninput="edVendors[0].items[59].ledgerName=this.value||undefined">
         <input class="ed-item-note" value="" placeholder="備註（選填）" style="border-color:#d1fae5;background:#f0fdf4" oninput="edVendors[0].items[59].remark=this.value||undefined">
         <button class="ed-del-btn" onclick="edDelItem('vendor',0,59)">✕</button>
@@ -2437,7 +2426,7 @@ const LEDGER_ONLY = [
 <div class="bottom-bar" id="bottomBar" style="">
   <div class="bottom-amt">
     <div class="lbl">總金額（僅供參考）</div>
-    <div class="amt" id="totalAmt">$470</div>
+    <div class="amt" id="totalAmt">$0</div>
   </div>
   <div class="bar-btns">
     <button class="bbtn outline" onclick="clearAll()">清除</button>
